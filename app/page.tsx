@@ -1,65 +1,76 @@
-import Image from "next/image";
+import { LinkButton } from '@/components/ui/link-button'
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="flex min-h-screen flex-col">
+      <nav className="flex items-center justify-between px-6 py-4 border-b border-zinc-200 bg-white">
+        <span className="text-xl font-bold tracking-tight">Groundwork</span>
+        <div className="flex gap-3">
+          <LinkButton href="/login" variant="ghost">Log in</LinkButton>
+          <LinkButton href="/signup">Get started — it's free</LinkButton>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </nav>
+
+      <section className="flex flex-col items-center justify-center flex-1 text-center px-6 py-32 bg-white">
+        <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest mb-4">
+          Free education for everyone
+        </p>
+        <h1 className="text-5xl font-bold tracking-tight text-zinc-900 max-w-3xl leading-tight mb-6">
+          Learn anything.<br />Earn a real certificate.<br />Pay nothing.
+        </h1>
+        <p className="text-xl text-zinc-500 max-w-xl mb-10">
+          Groundwork is an AI-powered education platform. No paywalls. No premium tier.
+          No catch. The knowledge belongs to everyone.
+        </p>
+        <div className="flex gap-4">
+          <LinkButton href="/signup" size="lg">Start learning free</LinkButton>
+          <LinkButton href="https://github.com/harleysmodernlife/groundwork" size="lg" variant="outline" target="_blank" rel="noopener noreferrer">
+            View on GitHub
+          </LinkButton>
         </div>
-      </main>
-    </div>
-  );
+      </section>
+
+      <section className="bg-zinc-50 border-t border-zinc-200 px-6 py-24">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-16">How it works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {[
+              { step: '01', title: 'Create a free account', body: "That's all we ask. No credit card. No trial period. No upgrade prompt waiting around the corner." },
+              { step: '02', title: 'Learn with an AI tutor', body: 'Your tutor guides you through every lesson using the Socratic method — asking questions, adapting to how you think, never just handing you the answer.' },
+              { step: '03', title: 'Pass the assessment, earn your certificate', body: "Rigorous testing. If you can pass it, you've earned it. The certificate is free, verifiable, and follows the Open Badges 3.0 standard." },
+            ].map(({ step, title, body }) => (
+              <div key={step} className="flex flex-col gap-3">
+                <span className="text-4xl font-bold text-zinc-200">{step}</span>
+                <h3 className="text-lg font-semibold">{title}</h3>
+                <p className="text-zinc-500 leading-relaxed">{body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-zinc-900 text-white px-6 py-24 text-center">
+        <blockquote className="text-2xl font-medium max-w-2xl mx-auto leading-relaxed text-zinc-100">
+          "Higher education costs money. A lot of it. And the people who need it most
+          are usually the ones who can't afford it. Groundwork tears the door off."
+        </blockquote>
+        <div className="mt-10">
+          <LinkButton href="/signup" size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-zinc-900">
+            Start for free
+          </LinkButton>
+        </div>
+      </section>
+
+      <footer className="border-t border-zinc-200 px-6 py-8 text-center text-sm text-zinc-400 bg-white">
+        <p>Groundwork is open source under the AGPL-3.0 license.</p>
+        <p className="mt-1">
+          <a href="https://github.com/harleysmodernlife/groundwork" className="underline hover:text-zinc-600" target="_blank" rel="noopener noreferrer">GitHub</a>
+          {' · '}
+          <a href="/login" className="underline hover:text-zinc-600">Log in</a>
+          {' · '}
+          <a href="/signup" className="underline hover:text-zinc-600">Sign up</a>
+        </p>
+      </footer>
+    </main>
+  )
 }
