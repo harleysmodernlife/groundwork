@@ -44,6 +44,7 @@ export interface CourseDef {
   description: string
   order: number
   estimatedHours: number
+  prerequisites?: string[]   // course slugs — declared now, enforced later
   modules: ModuleDef[]
   assessment?: AssessmentDef
 }
