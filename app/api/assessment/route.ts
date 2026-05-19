@@ -1,6 +1,8 @@
 import { auth } from '@/lib/auth'
 import { db } from '@/lib/db'
 import { issueCertificate } from '@/lib/certificates/generate'
+import { resolveModel } from '@/lib/ai/providers'
+import { generateText } from 'ai'
 
 export async function POST(req: Request) {
   const session = await auth()
@@ -30,11 +32,33 @@ export async function POST(req: Request) {
         earned += question.points
       }
     }
-    // Open-ended questions are pre-scored by AI before submission
     if (question.type === 'OPEN_ENDED') {
-      const aiScore = answers[`${question.id}_score`]
-      if (typeof aiScore === 'number') {
-        earned += Math.round((aiScore / 100) * question.points)
+      const studentAnswer = answers[question.id]
+      if (studentAnswer && typeof studentAnswer === 'string' && studentAnswer.trim()) {
+        let score = 0
+        try {
+          const resolved = await resolveModel(session.user.id)
+          if (resolved.model) {
+            const { text } = await generateText({
+              model: resolved.model,
+              prompt: `Grade this student answer for a business course assessment.
+
+Question: ${question.question}
+Model answer: ${question.correctAnswer}
+Student answer: ${studentAnswer}
+
+Be generous — award full credit for any answer that shows genuine understanding of the concept, even if informal or brief.
+Respond with JSON only: {"score": <0-100>}`,
+              maxOutputTokens: 50,
+            })
+            const parsed = JSON.parse(text.replace(/```json|```/g, '').trim())
+            score = typeof parsed.score === 'number' ? parsed.score : 0
+          }
+        } catch {
+          // If AI grading fails, give partial credit for any non-empty answer
+          score = 50
+        }
+        earned += Math.round((score / 100) * question.points)
       }
     }
   }
