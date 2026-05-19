@@ -1,9 +1,9 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-import { toast } from 'sonner'
 
 interface Message { role: 'user' | 'assistant'; content: string }
 
@@ -36,14 +36,19 @@ export default function HelpWidget() {
       body: JSON.stringify({ messages: updated }),
     })
 
-    if (res.status === 429) {
-      toast.error('Daily limit reached. Add your own API key in Settings.')
+    if (res.status === 503 || res.status === 429) {
+      const data = await res.json().catch(() => ({}))
+      const isNoKey = data.error === 'no_free_model'
+      setMessages((prev) => [
+        ...prev,
+        { role: 'assistant', content: isNoKey ? '__no_key__' : '__at_limit__' },
+      ])
       setLoading(false)
       return
     }
 
     if (!res.ok || !res.body) {
-      toast.error('Assistant unavailable right now')
+      setMessages((prev) => [...prev, { role: 'assistant', content: '__error__' }])
       setLoading(false)
       return
     }
@@ -80,15 +85,42 @@ export default function HelpWidget() {
             <button onClick={() => setOpen(false)} className="text-zinc-300 hover:text-white text-lg leading-none">×</button>
           </div>
           <div className="flex-1 overflow-y-auto px-3 py-3 space-y-3">
-            {messages.map((msg, i) => (
-              <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[85%] rounded-xl px-3 py-2 text-xs leading-relaxed ${
-                  msg.role === 'user' ? 'bg-zinc-900 text-white' : 'bg-zinc-100 text-zinc-800'
-                }`}>
-                  {msg.content || <span className="text-zinc-400 animate-pulse">...</span>}
+            {messages.map((msg, i) => {
+              if (msg.content === '__no_key__' || msg.content === '__at_limit__' || msg.content === '__error__') {
+                const isNoKey = msg.content === '__no_key__'
+                const isLimit = msg.content === '__at_limit__'
+                return (
+                  <div key={i} className="flex justify-start">
+                    <div className="max-w-[85%] rounded-xl px-3 py-2 text-xs leading-relaxed bg-amber-50 border border-amber-200 text-amber-900 space-y-1">
+                      <p className="font-medium">
+                        {isNoKey ? 'No AI model available' : isLimit ? 'Daily limit reached' : 'Assistant unavailable'}
+                      </p>
+                      <p>
+                        {isNoKey
+                          ? 'No free AI tier is configured. Add your own API key and this assistant will use it.'
+                          : isLimit
+                          ? "You've hit today's free limit. Add your own API key for unlimited access."
+                          : 'Something went wrong. Try again in a moment.'}
+                      </p>
+                      {(isNoKey || isLimit) && (
+                        <Link href="/settings/api-key" className="block font-medium underline text-amber-800">
+                          Add your API key →
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                )
+              }
+              return (
+                <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                  <div className={`max-w-[85%] rounded-xl px-3 py-2 text-xs leading-relaxed ${
+                    msg.role === 'user' ? 'bg-zinc-900 text-white' : 'bg-zinc-100 text-zinc-800'
+                  }`}>
+                    {msg.content || <span className="text-zinc-400 animate-pulse">...</span>}
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
             <div ref={bottomRef} />
           </div>
           <div className="px-3 py-2 border-t border-zinc-200 flex gap-2">

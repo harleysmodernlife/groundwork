@@ -14,6 +14,10 @@ export async function POST(req: Request) {
 
   const resolved = await resolveModel(userId)
 
+  if (resolved.noFreeModel) {
+    return Response.json({ error: 'no_free_model' }, { status: 503 })
+  }
+
   if (resolved.atLimit) {
     return Response.json(
       { error: 'daily_limit_reached', tokensUsed: resolved.tokensUsed },

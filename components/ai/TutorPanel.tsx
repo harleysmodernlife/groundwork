@@ -1,9 +1,9 @@
 'use client'
 
 import { useRef, useEffect, useState } from 'react'
+import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-import { toast } from 'sonner'
 
 interface Message { role: 'user' | 'assistant'; content: string }
 
@@ -44,14 +44,24 @@ export default function TutorPanel({ lessonId, lessonName, onClose }: TutorPanel
       body: JSON.stringify({ messages: updated, lessonId }),
     })
 
-    if (res.status === 429) {
-      toast.error('Daily AI limit reached. Set up your own API key in Settings for unlimited access.')
+    if (res.status === 503 || res.status === 429) {
+      const data = await res.json().catch(() => ({}))
+      const isNoKey = data.error === 'no_free_model'
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: 'assistant',
+          content: isNoKey
+            ? '__no_key__'
+            : '__at_limit__',
+        },
+      ])
       setLoading(false)
       return
     }
 
     if (!res.ok || !res.body) {
-      toast.error('Tutor unavailable right now')
+      setMessages((prev) => [...prev, { role: 'assistant', content: '__error__' }])
       setLoading(false)
       return
     }
@@ -94,17 +104,44 @@ export default function TutorPanel({ lessonId, lessonName, onClose }: TutorPanel
       </div>
 
       <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
-        {messages.map((msg, i) => (
-          <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-            <div className={`max-w-[85%] rounded-xl px-3 py-2 text-sm leading-relaxed ${
-              msg.role === 'user'
-                ? 'bg-zinc-900 text-white'
-                : 'bg-zinc-100 text-zinc-800'
-            }`}>
-              {msg.content || <span className="text-zinc-400 animate-pulse">...</span>}
+        {messages.map((msg, i) => {
+          if (msg.content === '__no_key__' || msg.content === '__at_limit__' || msg.content === '__error__') {
+            const isNoKey = msg.content === '__no_key__'
+            const isLimit = msg.content === '__at_limit__'
+            return (
+              <div key={i} className="flex justify-start">
+                <div className="max-w-[85%] rounded-xl px-3 py-3 text-sm leading-relaxed bg-amber-50 border border-amber-200 text-amber-900 space-y-2">
+                  <p className="font-medium">
+                    {isNoKey ? 'No AI model configured' : isLimit ? 'Daily limit reached' : 'Tutor unavailable'}
+                  </p>
+                  <p className="text-xs">
+                    {isNoKey
+                      ? 'This platform has no free AI tier set up right now. Add your own API key and the tutor will use it — no limits.'
+                      : isLimit
+                      ? "You've used today's free AI quota. Add your own API key for unlimited access."
+                      : 'Something went wrong. Try again in a moment.'}
+                  </p>
+                  {(isNoKey || isLimit) && (
+                    <Link href="/settings/api-key" className="block text-xs font-medium underline text-amber-800">
+                      Add your API key →
+                    </Link>
+                  )}
+                </div>
+              </div>
+            )
+          }
+          return (
+            <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+              <div className={`max-w-[85%] rounded-xl px-3 py-2 text-sm leading-relaxed ${
+                msg.role === 'user'
+                  ? 'bg-zinc-900 text-white'
+                  : 'bg-zinc-100 text-zinc-800'
+              }`}>
+                {msg.content || <span className="text-zinc-400 animate-pulse">...</span>}
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        })}
         <div ref={bottomRef} />
       </div>
 

@@ -60,10 +60,13 @@ export async function resolveModel(userId: string) {
     return { model: null, isFree: true, tokensUsed: user.dailyTokensUsed, atLimit: true }
   }
 
-  // Platform free tier — Gemini Flash (Google's free API tier)
-  const google = createGoogleGenerativeAI({
-    apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY,
-  })
+  // Platform free tier — requires a configured Gemini API key
+  const platformKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY
+  if (!platformKey) {
+    return { model: null, isFree: true, tokensUsed: user.dailyTokensUsed, noFreeModel: true }
+  }
+
+  const google = createGoogleGenerativeAI({ apiKey: platformKey })
 
   return {
     model: google('gemini-2.0-flash'),

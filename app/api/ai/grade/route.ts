@@ -10,8 +10,11 @@ export async function POST(req: Request) {
   const { question, correctAnswer, studentAnswer, explanation } = await req.json()
 
   const resolved = await resolveModel(userId)
+  if (resolved.noFreeModel) {
+    return Response.json({ score: 0, feedback: 'AI grading is unavailable — no platform API key is configured. Add your own API key in Settings to enable AI grading.', noModel: true })
+  }
   if (resolved.atLimit) {
-    return Response.json({ score: 0, feedback: 'Daily AI limit reached. Set up your own API key for unlimited access.' })
+    return Response.json({ score: 0, feedback: 'Daily AI limit reached. Add your own API key in Settings for unlimited access.', noModel: true })
   }
 
   const { text } = await generateText({
