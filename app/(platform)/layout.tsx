@@ -24,6 +24,7 @@ export default async function PlatformLayout({ children }: { children: React.Rea
             <Link href="/dashboard" className="text-zinc-500 hover:text-zinc-900 transition-colors">Dashboard</Link>
             <Link href="/learn" className="text-zinc-500 hover:text-zinc-900 transition-colors">Learn</Link>
             <Link href="/certificates" className="text-zinc-500 hover:text-zinc-900 transition-colors">Certificates</Link>
+            <Link href="/settings/profile" className="text-zinc-500 hover:text-zinc-900 transition-colors">Profile</Link>
           </nav>
         </div>
         <div className="flex items-center gap-3">

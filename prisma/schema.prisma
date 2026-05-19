@@ -61,6 +61,10 @@ model User {
   attempts      AssessmentAttempt[]
   certificates  Certificate[]
   conversations AIConversation[]
+  companyName        String?
+  subscriptionStatus SubscriptionStatus @default(TRIAL)
+  jobPosts           JobPost[]          @relation("EmployerJobs")
+  applications       JobApplication[]   @relation("StudentApplications")
 }
 
 model Subject {
@@ -88,6 +92,7 @@ model Course {
   assessment   Assessment?
   enrollments  Enrollment[]
   certificates Certificate[]
+  jobPosts     JobPost[]
 }
 
 model Module {
@@ -232,4 +237,39 @@ enum ExerciseType {
 enum AIContext {
   LESSON_TUTOR
   PLATFORM_HELP
+}
+
+// ─── Employer Marketplace ─────────────────────────────────────────────────────
+
+model JobPost {
+  id               String           @id @default(cuid())
+  employerId       String
+  employer         User             @relation("EmployerJobs", fields: [employerId], references: [id])
+  title            String
+  description      String           @db.Text
+  location         String?
+  remote           Boolean          @default(false)
+  requiredCourseId String?
+  requiredCourse   Course?          @relation(fields: [requiredCourseId], references: [id])
+  publishedAt      DateTime?
+  closedAt         DateTime?
+  createdAt        DateTime         @default(now())
+  applications     JobApplication[]
+}
+
+model JobApplication {
+  id          String    @id @default(cuid())
+  jobPostId   String
+  jobPost     JobPost   @relation(fields: [jobPostId], references: [id])
+  applicantId String
+  applicant   User      @relation("StudentApplications", fields: [applicantId], references: [id])
+  appliedAt   DateTime  @default(now())
+  message     String?   @db.Text
+  @@unique([jobPostId, applicantId])
+}
+
+enum SubscriptionStatus {
+  TRIAL
+  ACTIVE
+  INACTIVE
 }
