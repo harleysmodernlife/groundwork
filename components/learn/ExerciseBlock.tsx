@@ -18,7 +18,8 @@ export default function ExerciseBlock({ exercise, index }: ExerciseBlockProps) {
   const [feedback, setFeedback] = useState<{ correct: boolean; explanation: string } | null>(null)
   const [checking, setChecking] = useState(false)
 
-  const options = exercise.options as string[] | null
+  const raw = exercise.options
+  const options: string[] | null = !raw ? null : Array.isArray(raw) ? raw : JSON.parse(raw as string)
 
   async function checkMultipleChoice(answer: string) {
     setSelected(answer)

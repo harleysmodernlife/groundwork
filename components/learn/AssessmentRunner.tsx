@@ -110,7 +110,8 @@ export default function AssessmentRunner({ assessment, alreadyPassed }: Assessme
 
       <div className="space-y-8">
         {assessment.questions.map((q, i) => {
-          const options = q.options as string[] | null
+          const raw = q.options
+          const options: string[] | null = !raw ? null : Array.isArray(raw) ? raw : JSON.parse(raw as string)
           return (
             <div key={q.id} className="space-y-3">
               <p className="font-medium text-sm">

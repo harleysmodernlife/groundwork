@@ -53,7 +53,7 @@ async function main() {
         lessonId: lesson1.id,
         question: 'Which of the following is NOT a requirement for something to be considered a business?',
         type: 'MULTIPLE_CHOICE',
-        options: JSON.stringify(['It provides a product or service', 'It must have at least 5 employees', 'It operates with the intent to generate value', 'It can exist as a one-person operation']),
+        options: (['It provides a product or service', 'It must have at least 5 employees', 'It operates with the intent to generate value', 'It can exist as a one-person operation']),
         correctAnswer: 'It must have at least 5 employees',
         explanation: 'Businesses can be any size, including solo operations. What defines a business is the exchange of value, not its size.',
         order: 1,
@@ -81,7 +81,7 @@ async function main() {
       lessonId: lesson2.id,
       question: 'What is the main advantage of an LLC over a sole proprietorship?',
       type: 'MULTIPLE_CHOICE',
-      options: JSON.stringify(['LLCs pay less in taxes', 'LLCs protect your personal assets from business debts', 'LLCs are easier to set up', 'LLCs do not require any paperwork']),
+      options: (['LLCs pay less in taxes', 'LLCs protect your personal assets from business debts', 'LLCs are easier to set up', 'LLCs do not require any paperwork']),
       correctAnswer: 'LLCs protect your personal assets from business debts',
       explanation: 'The key benefit of an LLC is liability protection — if the business is sued or owes debt, your personal home, car, and savings are generally protected.',
       order: 1,
@@ -98,8 +98,8 @@ async function main() {
         timeLimitMin: 30,
         questions: {
           create: [
-            { question: 'A sole proprietorship offers personal liability protection for the owner.', type: 'MULTIPLE_CHOICE', options: JSON.stringify(['True', 'False']), correctAnswer: 'False', explanation: 'Sole proprietorships offer no liability protection — the owner is personally responsible for all business debts and legal issues.', points: 1, order: 1 },
-            { question: 'Which business structure is typically best for a first-time solo business owner who wants liability protection without a lot of complexity?', type: 'MULTIPLE_CHOICE', options: JSON.stringify(['Corporation', 'LLC', 'Sole Proprietorship', 'Partnership']), correctAnswer: 'LLC', explanation: 'An LLC offers liability protection with less complexity and cost than a corporation, making it the most common choice for solo entrepreneurs.', points: 1, order: 2 },
+            { question: 'A sole proprietorship offers personal liability protection for the owner.', type: 'MULTIPLE_CHOICE', options: (['True', 'False']), correctAnswer: 'False', explanation: 'Sole proprietorships offer no liability protection — the owner is personally responsible for all business debts and legal issues.', points: 1, order: 1 },
+            { question: 'Which business structure is typically best for a first-time solo business owner who wants liability protection without a lot of complexity?', type: 'MULTIPLE_CHOICE', options: (['Corporation', 'LLC', 'Sole Proprietorship', 'Partnership']), correctAnswer: 'LLC', explanation: 'An LLC offers liability protection with less complexity and cost than a corporation, making it the most common choice for solo entrepreneurs.', points: 1, order: 2 },
             { question: 'Explain in your own words why keeping business and personal finances separate matters.', type: 'OPEN_ENDED', correctAnswer: 'Mixing personal and business finances makes bookkeeping difficult, can invalidate your LLC liability protection, complicates taxes, and makes it hard to understand if your business is actually profitable.', explanation: 'Separation protects your legal status, simplifies taxes, and gives you a clear picture of business health.', points: 2, order: 3 },
           ],
         },
