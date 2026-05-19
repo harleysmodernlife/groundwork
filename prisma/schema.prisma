@@ -1,0 +1,235 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+  @@unique([identifier, token])
+}
+
+model User {
+  id                 String    @id @default(cuid())
+  email              String    @unique
+  name               String?
+  image              String?
+  password           String?
+  role               Role      @default(STUDENT)
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+  encryptedApiKey    String?
+  apiProvider        Provider?
+  dailyTokensUsed    Int       @default(0)
+  dailyTokensResetAt DateTime  @default(now())
+  isDiscoverable     Boolean   @default(false)
+  location           String?
+  bio                String?
+  accounts      Account[]
+  sessions      Session[]
+  enrollments   Enrollment[]
+  progress      LessonProgress[]
+  attempts      AssessmentAttempt[]
+  certificates  Certificate[]
+  conversations AIConversation[]
+}
+
+model Subject {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  name        String
+  description String
+  icon        String
+  order       Int       @default(0)
+  publishedAt DateTime?
+  courses     Course[]
+}
+
+model Course {
+  id             String    @id @default(cuid())
+  subjectId      String
+  subject        Subject   @relation(fields: [subjectId], references: [id])
+  slug           String    @unique
+  name           String
+  description    String
+  order          Int       @default(0)
+  estimatedHours Int       @default(4)
+  publishedAt    DateTime?
+  modules      Module[]
+  assessment   Assessment?
+  enrollments  Enrollment[]
+  certificates Certificate[]
+}
+
+model Module {
+  id       String   @id @default(cuid())
+  courseId String
+  course   Course   @relation(fields: [courseId], references: [id])
+  slug     String
+  name     String
+  order    Int      @default(0)
+  lessons  Lesson[]
+  @@unique([courseId, slug])
+}
+
+model Lesson {
+  id          String @id @default(cuid())
+  moduleId    String
+  module      Module @relation(fields: [moduleId], references: [id])
+  slug        String
+  name        String
+  contentPath String
+  order       Int    @default(0)
+  exercises     Exercise[]
+  progress      LessonProgress[]
+  conversations AIConversation[]
+  @@unique([moduleId, slug])
+}
+
+model Exercise {
+  id            String       @id @default(cuid())
+  lessonId      String
+  lesson        Lesson       @relation(fields: [lessonId], references: [id])
+  question      String       @db.Text
+  type          ExerciseType
+  options       Json?
+  correctAnswer String?      @db.Text
+  explanation   String       @db.Text
+  order         Int          @default(0)
+}
+
+model Assessment {
+  id           String               @id @default(cuid())
+  courseId     String               @unique
+  course       Course               @relation(fields: [courseId], references: [id])
+  title        String
+  passingScore Int                  @default(75)
+  timeLimitMin Int?
+  questions    AssessmentQuestion[]
+  attempts     AssessmentAttempt[]
+}
+
+model AssessmentQuestion {
+  id            String       @id @default(cuid())
+  assessmentId  String
+  assessment    Assessment   @relation(fields: [assessmentId], references: [id])
+  question      String       @db.Text
+  type          ExerciseType
+  options       Json?
+  correctAnswer String?      @db.Text
+  explanation   String       @db.Text
+  points        Int          @default(1)
+  order         Int          @default(0)
+}
+
+model AssessmentAttempt {
+  id           String     @id @default(cuid())
+  userId       String
+  user         User       @relation(fields: [userId], references: [id])
+  assessmentId String
+  assessment   Assessment @relation(fields: [assessmentId], references: [id])
+  startedAt    DateTime   @default(now())
+  completedAt  DateTime?
+  score        Int?
+  passed       Boolean?
+  answers      Json       @default("{}")
+}
+
+model Enrollment {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id])
+  courseId    String
+  course      Course    @relation(fields: [courseId], references: [id])
+  enrolledAt  DateTime  @default(now())
+  completedAt DateTime?
+  @@unique([userId, courseId])
+}
+
+model LessonProgress {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  lessonId    String
+  lesson      Lesson   @relation(fields: [lessonId], references: [id])
+  completedAt DateTime @default(now())
+  scores      Json?
+  @@unique([userId, lessonId])
+}
+
+model Certificate {
+  id               String   @id @default(cuid())
+  userId           String
+  user             User     @relation(fields: [userId], references: [id])
+  courseId         String
+  course           Course   @relation(fields: [courseId], references: [id])
+  issuedAt         DateTime @default(now())
+  verificationCode String   @unique @default(cuid())
+  badgeJson        Json
+  @@unique([userId, courseId])
+}
+
+model AIConversation {
+  id         String    @id @default(cuid())
+  userId     String
+  user       User      @relation(fields: [userId], references: [id])
+  lessonId   String?
+  lesson     Lesson?   @relation(fields: [lessonId], references: [id])
+  context    AIContext
+  messages   Json      @default("[]")
+  tokensUsed Int       @default(0)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}
+
+enum Role {
+  STUDENT
+  ADMIN
+  EMPLOYER
+}
+
+enum Provider {
+  OPENAI
+  ANTHROPIC
+  GOOGLE
+  OLLAMA
+}
+
+enum ExerciseType {
+  MULTIPLE_CHOICE
+  OPEN_ENDED
+}
+
+enum AIContext {
+  LESSON_TUTOR
+  PLATFORM_HELP
+}
