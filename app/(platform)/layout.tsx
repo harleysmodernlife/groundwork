@@ -13,6 +13,7 @@ export default async function PlatformLayout({ children }: { children: React.Rea
 
   const initials = (session.user.name ?? session.user.email ?? 'U')
     .split(' ').map((w) => w[0]).join('').toUpperCase().slice(0, 2)
+  const isAdmin = (session.user as { role?: string }).role === 'ADMIN'
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -25,6 +26,7 @@ export default async function PlatformLayout({ children }: { children: React.Rea
             <Link href="/learn" className="text-zinc-500 hover:text-zinc-900 transition-colors">Learn</Link>
             <Link href="/certificates" className="text-zinc-500 hover:text-zinc-900 transition-colors">Certificates</Link>
             <Link href="/settings/profile" className="text-zinc-500 hover:text-zinc-900 transition-colors">Profile</Link>
+            {isAdmin && <Link href="/admin" className="text-zinc-400 hover:text-zinc-900 transition-colors text-xs uppercase tracking-wide">Admin</Link>}
           </nav>
         </div>
         <div className="flex items-center gap-3">
