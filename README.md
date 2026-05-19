@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Groundwork
 
-## Getting Started
+**Free education for everyone. No asterisks.**
 
-First, run the development server:
+Groundwork is an open source, AI-powered education platform where anyone in the world can learn anything, get tested on it, and earn a verified certificate — completely free. No paywalls. No "free trial." No credit card. No catch.
+
+The knowledge belongs to everyone. We built the infrastructure to prove it.
+
+---
+
+## Why This Exists
+
+Higher education costs money. A lot of it. And the people who need it most are usually the ones who can't afford it. Every paywall on a course, a certificate, or a textbook is a door that stays closed for someone who could have changed their life walking through it.
+
+Groundwork tears the door off.
+
+---
+
+## How It Works
+
+1. **Create a free account** — that's it, that's all we ask
+2. **Pick a subject** — start with Business & Entrepreneurship, more coming
+3. **Learn with an AI tutor** — Socratic, adaptive, patient. Teaches you, doesn't just answer
+4. **Complete exercises** — practice inside every lesson
+5. **Pass the final assessment** — rigorous. You actually have to know it.
+6. **Get your certificate** — free, verified, Open Badges 3.0 standard, verifiable by employers
+
+No subscription. No premium tier. No certificate fee. The whole thing is free.
+
+---
+
+## For Employers
+
+If you're hiring and you want access to our pool of verified graduates, that's where money changes hands — on your side, not the student's. Visit the employer portal to search graduates by skill, location, and certification.
+
+Students never pay. Employers pay to recruit. That's the model.
+
+---
+
+## Tech Stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Next.js 14 (App Router) |
+| Database | PostgreSQL + Prisma |
+| Auth | Auth.js v5 |
+| AI | Vercel AI SDK (provider-agnostic) |
+| Styling | Tailwind CSS + shadcn/ui |
+| Certificates | Open Badges 3.0 |
+| Deployment | Docker Compose |
+| License | AGPL-3.0 |
+
+---
+
+## AI — Free Tier and BYOK
+
+Groundwork comes with a free AI tier using Google Gemini Flash (Google's free API). There are daily limits on the free tier — when you hit them, the platform guides you through setting up your own API key (BYOK) from any provider: Google, OpenAI, Anthropic, or local models via Ollama.
+
+With your own key: unlimited AI tutoring, zero cost.
+
+---
+
+## Self-Hosting
+
+Groundwork is fully self-hostable. Run it yourself, for your school, your community, your country.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/harleysmodernlife/groundwork
+cd groundwork
+cp .env.example .env
+# Fill in your .env values
+docker compose up -d
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full local development setup.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Current Status
 
-## Learn More
+Early development. The foundation is built. The first subject (Business & Entrepreneurship) is in progress. This is not production-ready yet — but it will be, and everything will be free when it is.
 
-To learn more about Next.js, take a look at the following resources:
+See [ROADMAP.md](ROADMAP.md) for what's coming.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+Groundwork is open source under the AGPL-3.0 license. This means you can use it, fork it, run it — but if you modify it and run it as a service, your changes must stay open source too. That's intentional. This platform cannot be privatized.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+We welcome contributions of all kinds:
+- Curriculum content (lesson writing, exercises, assessments)
+- Code (features, bug fixes, accessibility improvements)
+- Translations
+- Testing and feedback
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
+
+---
+
+## License
+
+AGPL-3.0. See [LICENSE](LICENSE).
+
+The short version: use it freely, but you can't fork it and paywall it. That would rather miss the point.
