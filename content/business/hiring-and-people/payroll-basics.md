@@ -93,6 +93,26 @@ Run this check monthly to ensure the system is compliant and accurate.
 
 ---
 
+## Payroll Error Recovery: What to do when things go wrong
+
+Payroll errors are inevitable, but the *way* you handle them determines whether they become a legal liability.
+
+### 1. The Underpayment Error
+If an employee is underpaid, correct it immediately. Do not wait until the next pay cycle. Issue a manual check or a separate direct deposit for the difference. Document the error and the correction in the employee's payroll file to prove the mistake was rectified.
+
+### 2. The Overpayment Error
+If you overpay an employee, you cannot simply deduct the full amount from their next check without their written consent (depending on state law). 
+- **The Process:** Notify the employee in writing of the overpayment. Create a written repayment agreement that spreads the deduction over several pay periods to avoid causing financial hardship for the employee.
+- **The Legal Risk:** Attempting to "force" a deduction can lead to a Department of Labor claim for wage theft.
+
+### 3. The Missed Tax Deposit
+If you discover that payroll taxes were not remitted to the IRS or state, do not ignore it. 
+- **Immediate Action:** Make the deposit as soon as the error is discovered. 
+- **Voluntary Disclosure:** In some cases, voluntarily disclosing the error to the IRS before they find it can reduce the penalties. 
+- **The Danger:** The IRS can assess a "Trust Fund Recovery Penalty," which allows them to collect the unpaid taxes directly from the personal assets of the business owner, bypassing the LLC or Corporation.
+
+---
+
 ## Common Failure Modes and Penalties
 
 - **Late Tax Remittance:** Failing to pay withheld taxes on time results in "Failure to Deposit" penalties. The IRS can hold business owners *personally liable* for these taxes, regardless of the corporate structure (Piercing the Corporate Veil).
