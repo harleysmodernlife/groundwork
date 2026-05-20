@@ -51,6 +51,19 @@ Depending on your business structure and whether you have employees, you have th
 
 ---
 
+## Advanced Strategy: The "Backdoor" Roth
+
+For high-earners, the IRS limits who can contribute directly to a Roth IRA based on income levels. However, there is a legal maneuver known as the "Backdoor Roth" that allows high-earners to still get money into a tax-free Roth account.
+
+**The Process:**
+1. **Contribute to a Traditional IRA:** You make a non-deductible contribution (using money you've already paid taxes on) to a Traditional IRA.
+2. **Convert to Roth:** You immediately "convert" those funds from the Traditional IRA into a Roth IRA.
+3. **The Result:** Because you didn't take a tax deduction on the original contribution, you only pay tax on any gains that occurred between the contribution and the conversion.
+
+**The Danger (The Pro-Rata Rule):** If you already have other pre-tax money in any Traditional IRAs (like a rolled-over 401k from a previous job), the IRS views all your IRAs as one giant pool. You cannot just convert the "after-tax" portion; you must convert a proportional mix of pre-tax and after-tax funds, which can trigger a massive unexpected tax bill. Always clear this with a CPA before attempting.
+
+---
+
 ## Contribution Math: A Comparative Example
 
 Assume a solo operator has a net business profit of $60,000.
@@ -98,3 +111,14 @@ These accounts are designed for retirement. Accessing the money early is costly.
 3. **Establish the Plan:** For a Solo 401k, you must sign a "Plan Document" to legally establish the trust.
 4. **Fund the Account:** Transfer funds from your business bank account. Ensure the transfer is completed by the tax filing deadline (including extensions) to count for the previous tax year.
 5. **Invest the Funds:** Opening the account is not the same as investing. Once the money is in the account, you must select investments (e.g., a Low-Cost S&P 500 Index Fund) or the money will sit in cash and lose value to inflation.
+
+---
+
+## Year-End Funding Checklist
+
+To ensure you maximize your tax shield before the deadline, follow this sequence:
+- [ ] **Calculate Net Profit:** Get a current P&L to determine your actual net earnings for the year.
+- [ ] **Determine Max Contribution:** Use the 25% (SEP) or Employee+Employer (Solo 401k) math to find your cap.
+- [ ] **Verify Cash Flow:** Ensure you have the liquid cash to fund the account without compromising business operations.
+- [ ] **Execute Transfer:** Move funds from the business account to the brokerage.
+- [ ] **Confirm Investment:** Verify the funds are moved from the "settlement fund" (cash) into your chosen index funds or assets.
