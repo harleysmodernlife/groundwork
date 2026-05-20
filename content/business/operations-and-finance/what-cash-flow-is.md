@@ -16,6 +16,15 @@ Accrual accounting records revenue when it is *earned* and expenses when they ar
 
 **The Paradox:** If you have $50,000 in Accounts Receivable (money owed to you) and $10,000 in expenses, your Accrual P&L shows a **Profit of $40,000**. However, if your bank account only has $500, you are **Cash Poor**. You are "Paper Profitable," but you cannot pay your rent. This is the "Timing Gap," and it is the primary cause of death for scaling service businesses.
 
+### Comparison: Profit vs. Cash
+
+| Event | Effect on Profit (Accrual) | Effect on Cash (Bank)
+| :--- | :--- | :--- |
+| **Send an Invoice** | + Revenue (Immediate) | $0 (No change)
+| **Buy Materials on Credit** | - Expense (Immediate) | $0 (No change)
+| **Collect Payment** | $0 (Already recorded) | + Cash (Immediate)
+| **Pay Supplier** | $0 (Already recorded) | - Cash (Immediate)
+
 ---
 
 ## 2. The Cash Conversion Cycle (CCC): Unlocking Hidden Cash
@@ -77,7 +86,30 @@ Burn rate is the speed at which you consume your cash reserves. Understanding th
 
 ---
 
-## 6. Managing "Lumpy" Income: The Stability Pool
+## 6. Common Cash Flow Killers
+
+Even a profitable business can be strangled by operational inefficiencies that trap cash.
+
+- **The Over-Stocking Trap:** Buying $5,000 in parts "just in case" ties up cash that could be used for payroll. This increases your DIO (Days Inventory Outstanding) and kills your liquidity.
+- **The Slow Billing Cycle:** Waiting until the end of the month to send invoices means you are providing an interest-free loan to your customers. Invoicing immediately upon completion reduces your DSO.
+- **The Scope Creep Leak:** Doing "extra small things" for free on a job delays the final sign-off and the final payment. Every unbilled hour is a cash leak.
+
+---
+
+## 7. Liquidity Tools: The Business Line of Credit (LOC)
+
+When your Cash Conversion Cycle creates a gap, you need a tool to bridge it. The most effective tool is a **Business Line of Credit**.
+
+**LOC vs. Term Loan:**
+- **Term Loan:** You get a lump sum, pay interest on the whole amount, and pay it back over a fixed term. This is for large assets (e.g., a new truck).
+- **Line of Credit (LOC):** A revolving pool of funds. You only draw what you need, when you need it, and only pay interest on the amount used. This is for managing the "Timing Gap."
+
+**The Strategic Use of an LOC:**
+Use the LOC to pay your employees and suppliers *today* while you wait for the customer's check to clear. This ensures your operations never stop due to a temporary lack of cash.
+
+---
+
+## 8. Managing "Lumpy" Income: The Stability Pool
 
 Service businesses often suffer from "lumpy" income—huge payments followed by dry spells. This volatility leads to "Lifestyle Inflation," where the owner spends the windfall and then struggles during the dip.
 
