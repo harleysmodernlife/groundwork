@@ -46,7 +46,7 @@ After you state your price and ask the closing question, you must **stop talking
 **The Danger of Filling the Silence:**
 If you speak before the customer does, you are signaling a lack of confidence. You are essentially negotiating against yourself. 
 - **Wrong:** "The total is $450... but I mean, if that's too high, I could probably do it for $400 if we use a different brand of parts..."
-- **Right:** "The total is $450. Do you want to go ahead with that?" $\rightarrow$ [Silence] $\rightarrow$ [Customer responds].
+- **Right:** "The total is $450. Do you want to go ahead with that?" → [Silence] → [Customer responds].
 
 Whoever speaks first after the ask usually loses the leverage in the negotiation.
 

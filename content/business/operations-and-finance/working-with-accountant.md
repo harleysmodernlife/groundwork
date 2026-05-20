@@ -13,7 +13,7 @@ These are not the same job. If you hire an accountant to do your bookkeeping, yo
 | **Bookkeeper** | The Past (Recording) | Recording every transaction, reconciling bank statements, and generating the P&L. |
 | **Accountant** | The Future (Analysis) | Analyzing the P&L to find inefficiencies, planning for taxes, and advising on growth. |
 
-**The Workflow:** The bookkeeper feeds clean data into the system $\rightarrow$ the accountant analyzes that data to make strategic decisions.
+**The Workflow:** The bookkeeper feeds clean data into the system → the accountant analyzes that data to make strategic decisions.
 
 ---
 

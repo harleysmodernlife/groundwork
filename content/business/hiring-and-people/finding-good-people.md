@@ -42,12 +42,10 @@ Stop asking hypothetical questions ("What would you do if...") because people li
 
 ## Red Flags in the Hiring Process
 
-| Signal |
-| :--- | :--- |
-| **Badmouthing Previous Bosses:** Even if the boss was a nightmare, a professional focuses on the lack of alignment, not the personality conflict. |
-| **Vague Achievements:** "I helped grow the company" vs "I increased monthly recurring revenue from $10k to $25k in six months." |
-| **Over-Negotiating the Small Stuff:** If they are fighting over a $50 monthly phone stipend before they've even started, they will be a headache for every minor detail in the future. |
-| **Lack of Questions:** A high-performer is interviewing *you* as much as you are interviewing them. If they have no questions about the business goals or the challenges, they aren't thinking strategically. |
+- **Badmouthing previous employers:** A professional focuses on the lack of alignment, not the personality conflict. If they trash their last boss in an interview, you'll be next.
+- **Vague achievements:** "I helped grow the company" vs. "I increased monthly recurring revenue from $10k to $25k in six months." No specifics means no proof.
+- **Over-negotiating small stuff:** Fighting over a $50 phone stipend before they've even started is a preview of how they'll behave on the job.
+- **No questions for you:** A high-performer interviews you as much as you interview them. Someone with no questions about your business, your goals, or your challenges isn't thinking strategically — they just want a paycheck.
 
 ---
 

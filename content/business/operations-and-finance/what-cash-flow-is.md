@@ -34,7 +34,8 @@ Burn rate is the amount of cash your business spends each month to stay alive, r
 - **Net Burn:** Your total monthly expenses minus your monthly revenue.
 
 **The Runway Calculation:**
-$$\text{Runway (Months)} = \frac{\text{Total Cash in Bank}}{\text{Monthly Net Burn}}$$
+
+Runway (months) = Total Cash in Bank ÷ Monthly Net Burn
 
 If you have $20,000 in the bank and your net burn is $2,000/month, you have a 10-month runway. When the runway hits zero, the business is dead unless you find new revenue or new financing.
 

@@ -20,7 +20,7 @@ If you don't follow up, you are telling the customer that you aren't that intere
 Following up without a plan is just guessing. A professional cadence ensures you stay top-of-mind without becoming a nuisance. 
 
 | Touchpoint | Timing | Method | Goal |
-| :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | **The Immediate** | Within 24 hours of quote | Email/Text | Confirm receipt and answer immediate questions. |
 | **The Gentle Nudge** | Day 3 | Text/Phone | Check if they've had a chance to review the details. |
 | **The Value-Add** | Day 7 | Email/Social | Send a relevant tip or a "Before/After" photo of a similar job. |
@@ -61,7 +61,7 @@ When a lead goes cold for two weeks, stop chasing them. Instead, use the **Negat
 Starting a follow-up with "Sorry to bother you" or "I know you're busy" immediately puts you in a subordinate position. You are a professional providing a valuable service. Do not apologize for doing your job.
 
 ### 2. Over-Reliance on One Channel
-If you only email, you're fighting an inbox filter. If you only call, you're fighting a spam blocker. Rotate your channels: Email $\rightarrow$ Text $\rightarrow$ Phone Call. The more channels you use, the more likely you are to hit the one the customer actually checks.
+If you only email, you're fighting an inbox filter. If you only call, you're fighting a spam blocker. Rotate your channels: Email → Text → Phone Call. The more channels you use, the more likely you are to hit the one the customer actually checks.
 
 ### 3. Forgetting the "Next Step"
 Every single follow-up must end with a clear, low-friction call to action (CTA). 

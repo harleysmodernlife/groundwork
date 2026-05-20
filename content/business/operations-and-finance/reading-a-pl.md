@@ -59,7 +59,7 @@ To analyze a P&L, don't just look at the raw numbers; look at the percentages (V
 
 ## Common Mistakes and Misconceptions
 
-### Profit $\neq$ Cash
+### Profit Does Not Equal Cash
 This is the most dangerous mistake a new owner makes. You can show a profit on your P&L but have zero dollars in the bank. This happens because of **Timing**:
 - You sent an invoice for $5,000 (Revenue is logged on the P&L).
 - You paid $2,000 in rent (Expense is logged on the P&L).
