@@ -27,7 +27,7 @@ To ensure the business owns the asset, the contract must include an explicit tra
 "Fair Use" is not a right; it is a legal defense used in court *after* you have been sued for infringement. To determine if a use of copyrighted material is "fair," courts apply a four-factor balancing test. You should use this test to assess your risk before posting content.
 
 ### The Four Factors:
-1. **The Purpose and Character of the Use:** Is it for profit or educational? Is it "transformative" (does it add new meaning or a new message), or is it just a copy? (Transformative = More likely to be Fair Use).
+1. **The Purpose and Character of the Use:** Is it for profit or educational? Is it "transformative" (does it add new meaningD or a new message), or is it just a copy? (Transformative = More likely to be Fair Use).
 2. **The Nature of the Copyrighted Work:** Is the original work factual (like a news report) or highly creative (like a novel)? (Factual = More likely to be Fair Use).
 3. **The Amount and Substantiality of the Portion Used:** Did you use a small snippet or the "heart of the work"? (Small snippet = More likely to be Fair Use).
 4. **The Effect on the Market:** Does your use of the work replace the original? If people stop buying the original because they can get it from you, it is almost never Fair Use.
@@ -85,7 +85,26 @@ Copyright allows you to sell the *use* of your work without giving away the *own
 
 ---
 
-## 6. The IP Audit Checklist
+## 6. The Copyright Clearance Process: Using Third-Party Work
+
+If you want to use a piece la piece of copyrighted material in your business (e.g., a song in a commercial or a quote in a book), you must go through "Clearance." Simply giving credit to the author does not make it legal.
+
+### The Two-Tier License Requirement (for Music):
+Music is the most complex area of copyright because every song has two separate copyrights:
+1. **The Composition:** The lyrics and the melody (owned by the songwriter/publisher).
+2. **The Master Recording:** The specific audio recording of that song (owned by the record label).
+
+To legally use a song in a video, you must obtain a **Sync License** (from the publisher) AND a **Master Use License** (from the label). If you only get one, you are still infringing.
+
+### How to Request a License:
+1. **Identify the Owner:** Use the US Copyright Office database or the ASCAP/BMI directories to find the current rights holder.
+2. **Define the Scope:** Clearly state how the work will be used (e.g., "Social media ad for 30 days in the US only").
+3. **Negotiate the Fee:** The price depends on the popularity of the work and the size of your audience.
+4. **Get it in Writing:** A license is not valid until you have a signed agreement specifying the duration, geography, and exclusivity of the use.
+
+---
+
+## 7. The IP Audit Checklist
 
 Intellectual property is a decaying asset if not managed. Every six months, run this audit to ensure your business is protected:
 
