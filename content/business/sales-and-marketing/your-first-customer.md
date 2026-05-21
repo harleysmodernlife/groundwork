@@ -82,7 +82,21 @@ Once the job is finished and the customer is happy, use the **Specific Request**
 
 ---
 
-## 7. Managing the "First-Timer" Anxiety
+## 7. The First-Customer Post-Mortem
+
+Once the transaction is complete, the real learning begins. Most owners simply take the money and move on. A professional operator performs a post-mortem to identify the "hidden" costs of the job.
+
+**The Post-Mortem Checklist:**
+1. **Actual Time vs. Estimated Time:** Did the job take 2 hours or 5? If it took longer, was it due to a lack of skill, poor tooling, or a failure in the initial scope?
+2. **Material Leakage:** Did you spend more on consumables than you budgeted? Where did the waste occur?
+3. **The Friction Point:** At what point in the process did the customer seem most anxious or confused? This is where you need to improve your communication.
+4. **The Value Gap:** Did the customer seem surprised by the result? If they were "blown away," you are likely underpricing. If they were indifferent, your value proposition is weak.
+
+**The Result:** By analyzing the first job, you turn a single transaction into a blueprint for a profitable, scalable process.
+
+---
+
+## 8. Managing the "First-Timer" Anxiety
 
 Imposter Syndrome is the primary reason new businesses never launch. The fear of making a mistake or being "found out" as a beginner can be paralyzing.
 
