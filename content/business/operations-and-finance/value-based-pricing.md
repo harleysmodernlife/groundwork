@@ -41,8 +41,8 @@ Value is not a feeling; it is a mathematical calculation of the cost of the prob
 Price is relative. If you present a single price, the customer compares it to their internal budget. If you present a range of options, they compare the options to *each other*.
 
 **The Tactical Execution:**
-- **The Anchor (The Premium Option):** Present a high-end, "perfect" solution first. This includes the best parts, a lifetime warranty, and the fastest turnaround. (e.g., "The Platinum Restoration: $2,500").
-- **The Pivot (The Recommended Option):** Present the standard professional solution. (e.g., "The Professional Standard: $1,200").
+- **The Anchor (The Premium Option):** Present a high-end, "perfect" solution first. This includes the best parts, a lifetime warranty, and the fastest turnaround. (e.g., "The Platinum Restoration: $2,500S").
+- **The Pivot (The Recommended Option):** Present the standard professional solution. (e.g., "The Professional Standard: $1,200S").
 - **The Result:** Because the customer has already seen the $2,500 anchor, the $1,200 option feels like a high-value compromise rather than an expensive expense. The anchor shifts the conversation from "Is this too expensive?" to "Which of these options is the best value?"
 
 ---
@@ -74,11 +74,21 @@ To move a customer from a cost-mindset to a value-mindset, you must stop talking
 
 Underpricing is not a marketing strategy; it is a business risk. When you price too low, you trigger a negative feedback loop known as the Underpricing Spiral.
 
-1. **Low Price $ightarrow$ Low-Budget Clients:** You attract customers who have no money and the highest expectations. These are typically the most demanding and least profitable clients.
-2. **High Stress → Low Quality:** Because you are underpaid, you are forced to take on too many jobs to survive. This leads to burnout and a decrease in work quality.
-3. **Low Quality $ightarrow$ Brand Damage:** Your reputation becomes "the cheap guy," which makes it impossible to raise your prices later because your existing client base only values you for your low cost.
+1. **Low Price $\rightarrow$ Low-Budget Clients:** You attract customers who have no money and the highest expectations. These are typically the most demanding and least profitable clients.
+2. **High Stress $\rightarrow$ Low Quality:** Because you are underpaid, you are forced to take on too many jobs to survive. This leads to burnout and a decrease in work quality.
+3. **Low Quality $\rightarrow$ Brand Damage:** Your reputation becomes "the cheap guy," which makes it impossible to raise your prices later because your existing client base only values you for your low cost.
 
 **The Rule:** It is better to have three high-value clients who respect your expertise than ten low-value clients who treat you like a commodity. Price for the client you *want*, not the client you have.
+
+---
+
+## 7. The Price-to-Value Audit
+
+To ensure your pricing is aligned with the value you provide, perform a retrospective audit every 90 days.
+
+- **The High-Margin Analysis:** Identify the jobs where you made the most profit per hour. What was the specific result for the customer? Why were they willing to pay a premium?
+- **The Friction Analysis:** Identify the jobs where you had to negotiate the price. Was the value not clear, or were you talking to a non-ICP lead?
+- **The Price Adjustment:** If your customers are consistently saying "Yes" without hesitation, you are underpricing. Increase your rates by 10-15% until you hit a point of slight resistance. This is how you find the actual ceiling of your market value.
 
 ---
 
