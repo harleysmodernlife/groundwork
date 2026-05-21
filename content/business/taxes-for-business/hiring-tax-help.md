@@ -25,7 +25,7 @@ To manage your finances efficiently, you must understand that "the tax guy" is o
 - **Primary Goal:** Submission and Accuracy. They ensure the return is filed on time and that no red flags are raised that would trigger an audit.
 - **The Output:** A filed tax return (Form 1040, 1120-S, etc.).
 
-**The Ideal Pipeline:** `Bookkeeper (Data)` $\rightarrow$ `CPA (Strategy/Audit)` $\rightarrow$ `Preparer (Filing)`.
+**The Ideal Pipeline:** `Bookkeeper (Data)` → `CPA (Strategy/Audit)` → `Preparer (Filing)`.
 
 ---
 

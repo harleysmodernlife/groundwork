@@ -85,7 +85,7 @@ To ensure your business is viable, you must map out how the different pieces fit
 - **Key Activities:** What is the one thing I must do perfectly every day to succeed? (e.g., "Diagnostic accuracy").
 - **Cost Structure:** What are my non-negotiable fixed costs vs. my variable costs per job?
 - **Customer Relationships:** How do I interact with the client? (e.g., "High-touch personal service" vs. "Low-touch automated portal").
-- **Channels:** How do customers find me and how do I deliver the value? (e.g., "Google Business Profile" $\rightarrow$ "In-shop service").
+- **Channels:** How do customers find me and how do I deliver the value? (e.g., "Google Business Profile" → "In-shop service").
 
 ---
 

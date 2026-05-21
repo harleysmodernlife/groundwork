@@ -34,7 +34,7 @@ One of the most expensive mistakes a business owner can make is hiring a high-pr
 - **Key Responsibility:** Analyzing the P&L to find inefficiencies, designing tax strategies, and forecasting growth.
 - **The Goal:** To use the data provided by the bookkeeper to increase the business's net profit.
 
-**The Ideal Workflow:** `Owner (Transaction)` $\rightarrow$ `Bookkeeper (Recording)` $\rightarrow$ `Accountant (Analysis/Strategy)` $\rightarrow$ `IRS (Compliance)`.
+**The Ideal Workflow:** `Owner (Transaction)` → `Bookkeeper (Recording)` → `Accountant (Analysis/Strategy)` → `IRS (Compliance)`.
 
 ---
 

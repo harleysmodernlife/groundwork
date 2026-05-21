@@ -36,7 +36,7 @@ Systematically triggering the referral request at the moment of **Peak Satisfact
 Individual referrals are great, but **Strategic Partnerships** are a force multiplier. A strategic partner is a business that serves the same Ideal Customer Profile (ICP) as you, but provides a different, non-competing service.
 
 **Example: The Home Improvement Loop**
-- A House Painter $\rightarrow$ A Flooring Contractor $\rightarrow$ An Interior Designer.
+- A House Painter → A Flooring Contractor → An Interior Designer.
 - All three serve the same high-end homeowner, but they don't compete. When the painter finishes a room, the customer often realizes they now hate their old floors. The painter is the perfect person to introduce the flooring contractor.
 
 **The Framework for a Reciprocal Agreement:**

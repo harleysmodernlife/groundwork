@@ -27,12 +27,12 @@ Your sales approach must change based on the intent of the channel. If you treat
 ### High-Intent Leads (The "I Need This Now" Crowd)
 These leads are in "Panic Mode." They are not shopping for the best price; they are shopping for the fastest, most reliable solution to a pressing problem.
 - **The Strategy:** Speed is the primary competitive advantage. Your goal is to reduce friction and provide a definitive "Yes, I can fix this, and I can be there at [Time]."
-- **The Conversion Path:** Search $\rightarrow$ Review Check $\rightarrow$ Call $\rightarrow$ Booked.
+- **The Conversion Path:** Search → Review Check → Call → Booked.
 
 ### Low-Intent Leads (The "I Might Need This" Crowd)
 These leads are in "Research Mode." They are not in a rush, which means they have the time to compare you against every other provider in the city.
 - **The Strategy:** Authority and Trust. Your goal is to educate them and position yourself as the expert so that when the problem *does* become urgent, you are the only person they call.
-- **The Conversion Path:** Content $\rightarrow$ Trust Building $\rightarrow$ Awareness $\rightarrow$ Future Need $\rightarrow$ Booked.
+- **The Conversion Path:** Content → Trust Building → Awareness → Future Need → Booked.
 
 ---
 

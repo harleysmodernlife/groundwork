@@ -9,7 +9,7 @@ For most business owners, a Profit and Loss (P&L) statement is a document they l
 A P&L is structured as a series of filters. Each section strips away a different type of cost until only the true profit remains. Understanding this flow is critical to identifying where a business is failing.
 
 ### The Flow:
-`Total Revenue` $\rightarrow$ `Cost of Goods Sold (COGS)` $\rightarrow$ `Gross Profit` $\rightarrow$ `Operating Expenses (OpEx)` $\rightarrow$ `Net Income`
+`Total Revenue` → `Cost of Goods Sold (COGS)` → `Gross Profit` → `Operating Expenses (OpEx)` → `Net Income`
 
 1. **Total Revenue (The Top Line):** Every dollar that entered the business from sales. This is a vanity metric; it tells you how much the market wants your service, but it tells you nothing about how much you actually keep.
 2. **Cost of Goods Sold (COGS):** The direct costs required to produce the service. If you didn't do a job, you wouldn't have these costs (e.g., parts, subcontractor labor, direct materials). 
@@ -39,8 +39,8 @@ One of the most common bookkeeping errors is misclassifying expenses. If you put
 
 ### The "Direct vs. Indirect" Test:
 Ask: "If I didn't perform a single job this month, would I still have this expense?"
-- **Yes $\rightarrow$ It is an Operating Expense (OpEx).** (e.g., Your monthly shop rent, your website hosting, your business insurance).
-- **No $\rightarrow$ It is a Cost of Goods Sold (COGS).** (e.g., The brake pads for a specific car, the hourly pay for a helper on a specific job, the fuel used to drive to a client's house).
+- **Yes → It is an Operating Expense (OpEx).** (e.g., Your monthly shop rent, your website hosting, your business insurance).
+- **No → It is a Cost of Goods Sold (COGS).** (e.g., The brake pads for a specific car, the hourly pay for a helper on a specific job, the fuel used to drive to a client's house).
 
 **The Strategic Risk:** If you treat your helper's pay as OpEx, your Gross Margin looks artificially high. You might believe your service is highly profitable, only to find that your Net Income is zero because your "overhead" is actually just the cost of doing the work.
 
