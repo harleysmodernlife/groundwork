@@ -48,8 +48,8 @@ The "Scope of Work" is the heart of the contract. Most disputes arise not from t
 A contract that only describes how to start is a liability. You must define how the relationship ends, especially for long-term or retainer-based agreements.
 
 ### Termination for Cause vs. Convenience
-- **Termination for Cause:** This allows you to end the contract immediately if the other party breaches the agreement (e.g., they stop paying you). 
-- **Termination for Convenience:** This allows either party to end the contract for any reason, provided they give a specific notice period (e.g., "Either party may terminate this agreement with 30 days' written notice").
+- **Termination for Cause:** This allows you to end the contract immediately if the other party breaches the agreement (e.g., they stop paying youL). 
+- **Termination for Convenience:** This allows either party to end the contract for any reason, provided they give a specific notice period (e.g., "Either party may terminate this agreement with 30 days' written noticeS").
 
 **The Exit Protocol:** Always include a "Final Deliverables" clause. This ensures that if a contract is terminated, you are paid for all work completed up to the date of termination before you hand over the final product.
 
@@ -75,6 +75,18 @@ Before signing any agreement, run it through this professional audit. If you can
 
 ---
 
+## 7. Handling the "Standard Contract" Pressure
+
+Many large clients will insist you sign *their* contract rather than yours. This is a power move designed to shift all risk onto the vendor.
+
+**The Professional Response:**
+Do not simply sign the document. Request a "Redline Review." This means you mark through the predatory clauses and propose professional alternatives.
+- **The Script:** "I'm happy to work with your standard agreement, but I have a few necessary adjustments to the liability and scope sections to ensure they align with my insurance coverage. I'll send over a redlined version for your review today."
+
+**The Result:** This signals that you are a professional who understands risk. A client who refuses to negotiate a liability cap is often a client who intends to shift all risk onto you—a major red flag.
+
+---
+
 ## Summary: The Professional Mindset
 
-Reading a contract is not about looking for a way to "get out" of a deal; it is about ensuring that both parties have a shared, unambiguous understanding of the la-work. A professional contract removes the emotion and the guesswork from the business relationship. By focusing on the SOW, capping your liability, and enforcing the integration clause, you move from "hoping for the best" to "engineering a secure professional agreement."
+Reading a contract is not about looking for a way to "get out" of a deal; it is about ensuring that both parties have a shared, unambiguous understanding of the work. A professional contract removes the emotion and the guesswork from the business relationship. By focusing on the SOW, capping your liability, and enforcing the integration clause, you move from "hoping for the best" to "engineering a secure professional agreement."
