@@ -44,6 +44,12 @@ An S-Corp allows the owner to split their income into two categories:
 1. **Reasonable Salary:** You pay yourself a fair market wage for the work you do. This portion is subject to SE tax.
 2. **Distributions:** The remaining profit is taken as a distribution. This portion is **not** subject to SE tax.
 
+### Calculating "Reasonable Salary"
+This is the most critical part of the S-Corp strategy. If you set your salary too low to avoid taxes, the IRS can reclassify your distributions as salary and hit you with back taxes and penalties. To determine a reasonable salary, use these three data points:
+- **The Market Rate:** What would you have to pay a stranger to do your job? (Check job boards for similar roles in your city).
+- **The Complexity of the Role:** Are you just a technician, or are you also the CEO, Marketer, and Accountant?
+- **The Revenue-to-Salary Ratio:** Ensure your salary is a logical percentage of the business's total profit.
+
 **Example:** If you make $100k in profit and set a reasonable salary of $50k, you only pay SE tax on the first $50k. You potentially save thousands of dollars in taxes legally by simply changing the *category* of your income.
 
 ---
@@ -84,6 +90,19 @@ To move from compliance to strategy, you must implement a structured annual cycl
 - **April:** File returns and set the "Safe Harbor" payment amount for the current year's quarterly estimates.
 - **June/September:** Mid-year profit review. If profits are significantly higher than expected, increase quarterly payments to avoid a massive year-end bill.
 - **November/December:** The "Year-End Push." Review your projected profit. If you are over your target, consider making necessary equipment purchases (Section 179) or increasing retirement contributions to bring your taxable income down.
+
+---
+
+## 7. The Quarterly Tax Worksheet
+
+To ensure you are neither overpaying nor risking penalties, use this worksheet every quarter:
+
+1. **Projected Net Profit:** (Estimated Revenue - Estimated Expenses).
+2. **Estimated Tax Liability:** (Projected Profit * Estimated Effective Tax Rate).
+3. **Safe Harbor Minimum:** (Last Year's Total Tax / 4).
+4. **Payment Decision:** Pay the higher of the Estimated Liability or the Safe Harbor Minimum.
+
+**The Result:** By following this worksheet, you maintain a constant flow of liquidity and eliminate the "Tax Shock" of a massive April bill.
 
 ---
 
