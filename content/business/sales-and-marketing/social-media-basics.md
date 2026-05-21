@@ -95,6 +95,21 @@ In the pursuit of growth, many businesses fall into "Guru Traps" that actually d
 
 ---
 
+## 7. Public Crisis Management: Handling Negative Feedback
+
+A professional presence is not defined by the absence of criticism, but by how you handle it. A single negative comment left unaddressed is a trust-killer. A negative comment handled professionally is a powerful trust-builder.
+
+**The Professional Response Framework:**
+1. **Acknowledge Quickly:** Respond within 24 hours. Ignoring a complaint signals that you don't care about your customers.
+2. **Stay Neutral:** Never argue, get defensive, or attack the customer. The response is not for the unhappy customer; it is for the 100 other people watching to see how you behave.
+3. **Move to Private:** Acknowledge the issue publicly, then immediately move the conversation to a private channel.
+
+**The Script:** "I'm sorry to hear you had this experience, [Name]. This is not the standard we aim for. I want to make this right immediately—please check your DMs or call me directly at [Phone Number] so we can resolve this."
+
+**The Result:** By handling the conflict with maturity and a desire to fix the problem, you prove to every prospective lead that you are a responsible professional who stands behind their work.
+
+---
+
 ## Summary: The Professional Mindset
 
 Stop trying to be a content creator and start being a practitioner who documents their work. Your social media is not a megaphone for shouting into the void; it is a mirror reflecting your professionalism. When you focus on providing proof, educating your customers, and maintaining a sustainable cadence, you turn your digital presence into a silent salesperson that works for you 24/7.
