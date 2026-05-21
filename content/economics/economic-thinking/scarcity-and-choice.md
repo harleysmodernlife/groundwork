@@ -77,6 +77,33 @@ Given that time, money, and labor are scarce, you must use a systematic approach
 
 ---
 
+## 6. Case Study: The Technician's Dilemma
+
+Consider a technician who is offered a "guaranteed" $500 job that takes 8 hours to complete. At the same time, they have the opportunity to spend those 8 hours researching and implementing a new diagnostic tool that could potentially save them 1 hour of labor on every job they do for the next year.
+
+**The Explicit Calculation:**
+- Option A: +$500 cash immediately.
+- Option B: $0 cash immediately, but 52 hours of saved labor per year.
+
+**The Economic Calculation:**
+If the technician's hourly rate is $75, the 52 hours of saved labor is worth $3,900 in recovered time. 
+- The Opportunity Cost of taking the $500 job is the $3,900 in future efficiency. 
+- By taking the "easy money," the technician is actually incurring a net loss of $3,400 in economic value.
+
+**The Lesson:** Scarcity forces you to choose between immediate liquidity and long-term leverage. The professional operator prioritizes leverage.
+
+---
+
+## 7. Self-Assessment Exercise
+
+To apply these concepts to your own business, perform the following audit:
+
+1. **Identify Your Most Scarce Resource:** Is it your time, your capital, or your specialized skill? Be honest—you cannot optimize for all three at once.
+2. **The 80/20 Opportunity Cost Audit:** List the top five tasks you spent time on last week. For each task, ask: "What was the most valuable thing I *could* have been doing instead?"
+3. **Marginal Benefit Test:** Identify one process in your shop where you are currently striving for "perfection." Calculate the cost of the last 5% of improvement. Is the marginal benefit higher than the marginal cost? If not, stop and reallocate that time to a high-ROI activity.
+
+---
+
 ## Summary: The Economic Mindset
 
 Understanding scarcity and choice transforms a business owner from a technician into a strategist. When you stop seeing the world as "how do I do this?" and start seeing it as "what is the opportunity cost of doing this?", you begin to optimize for the highest possible return on your most scarce resource: your time. Every "Yes" to a low-value task is a "No" to a high-value opportunity. The goal of economics in business is to ensure that your "Yes" is always aligned with your highest possible ROI.
