@@ -89,6 +89,29 @@ Since inelastic services allow for higher prices and higher revenue, the goal of
 
 ---
 
+## 7. Case Study: The Commodity Trap
+
+Consider two technicians: Tech A and Tech B.
+
+**Tech A (The Commodity):** Offers "General Brake Repair." He is one of twenty shops in the city. His customers are price-shoppers. If he raises his price by 10%, he loses 30% of his customers to the shop down the street. His service is **Highly Elastic**.
+
+**Tech B (The Specialist):** Offers "Performance Brake Calibration for Track-Day Vehicles." He is the only person in the region with the specific telemetry tools required for this work. If he raises his price by 10%, he loses 0% of his customers because there is no viable substitute. His service is **Highly Inelastic**.
+
+**The Result:** Tech B has total pricing power. He can increase his revenue by raising prices without any fear of losing volume. Tech A is trapped in a race to the bottom. The only way for Tech A to increase his revenue sustainably is to move his service from the Elastic category to the Inelastic category through specialization.
+
+---
+
+## 8. Practical Application: The Elasticity Audit
+
+To apply this to your business, perform the following audit on your primary services:
+
+1. **Substitute Analysis:** List every competitor who can do this exact job. If the list is long, your service is Elastic.
+2. **Urgency Check:** Does the customer need this fixed *now* to prevent a disaster, or can they wait a month? If they can wait, it is Elastic.
+3. **Budget Ratio:** Does this service cost less than 1% of the customer's monthly income? If yes, it is likely Inelastic.
+4. **The Price-Test:** Raise the price of one small, specific service by 15%. Monitor the volume for 30 days. If the volume drops by more than 15%, the service is Elastic. If the volume stays the same or drops only slightly, the service is Inelastic.
+
+---
+
 ## Summary: The Elasticity Mindset
 
 Price elasticity is the map that tells you where you have power and where you are at the mercy of the market. When you understand the drivers of elasticity—substitutes, income, and time—you stop guessing your rates. You begin to strategically engineer your business to move away from commodity services (Elastic) and toward specialized, essential services (Inelastic), allowing you to maximize revenue while reducing the stress of price-shopping customers.
