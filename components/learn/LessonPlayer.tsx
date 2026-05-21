@@ -32,6 +32,16 @@ export default function LessonPlayer({ lesson, prev, next }: LessonPlayerProps) 
   const [completed, setCompleted] = useState(lesson.isCompleted)
   const [tutorOpen, setTutorOpen] = useState(false)
   const [marking, setMarking] = useState(false)
+  const [exerciseResults, setExerciseResults] = useState<Record<string, boolean>>({})
+
+  const hasExercises = lesson.exercises.length > 0
+  const requiredToPass = hasExercises ? Math.ceil(lesson.exercises.length * 0.8) : 0
+  const passCount = Object.values(exerciseResults).filter(Boolean).length
+  const hasPassed = !hasExercises || passCount >= requiredToPass
+
+  function handleExerciseResult(id: string, correct: boolean) {
+    setExerciseResults((prev) => ({ ...prev, [id]: correct }))
+  }
 
   const basePath = `/learn/${lesson.subjectSlug}/${lesson.courseSlug}`
 
@@ -68,9 +78,16 @@ export default function LessonPlayer({ lesson, prev, next }: LessonPlayerProps) 
 
         {lesson.exercises.length > 0 && (
           <div className="mb-8 space-y-6">
-            <h2 className="text-lg font-semibold">Practice</h2>
+            <div className="flex items-center justify-between">
+              <h2 className="text-lg font-semibold">Practice</h2>
+              {!completed && (
+                <span className="text-xs text-zinc-500">
+                  {passCount}/{lesson.exercises.length} correct — need {requiredToPass} to complete
+                </span>
+              )}
+            </div>
             {lesson.exercises.map((ex, i) => (
-              <ExerciseBlock key={ex.id} exercise={ex} index={i} lessonId={lesson.id} />
+              <ExerciseBlock key={ex.id} exercise={ex} index={i} lessonId={lesson.id} onResult={handleExerciseResult} />
             ))}
           </div>
         )}
@@ -81,9 +98,14 @@ export default function LessonPlayer({ lesson, prev, next }: LessonPlayerProps) 
             {next && <LinkButton href={`${basePath}/${next.slug}`} variant="outline">Next →</LinkButton>}
           </div>
           {!completed ? (
-            <Button onClick={markComplete} disabled={marking}>
-              {marking ? 'Saving...' : 'Mark complete'}
-            </Button>
+            <div className="flex flex-col items-end gap-1">
+              {hasExercises && !hasPassed && (
+                <p className="text-xs text-zinc-400">Answer the practice questions above to unlock completion.</p>
+              )}
+              <Button onClick={markComplete} disabled={marking || !hasPassed}>
+                {marking ? 'Saving...' : 'Mark complete'}
+              </Button>
+            </div>
           ) : next ? (
             <LinkButton href={`${basePath}/${next.slug}`}>Next lesson →</LinkButton>
           ) : (

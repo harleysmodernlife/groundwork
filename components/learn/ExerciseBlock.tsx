@@ -10,9 +10,10 @@ interface ExerciseBlockProps {
   exercise: Exercise
   index: number
   lessonId: string
+  onResult?: (id: string, correct: boolean) => void
 }
 
-export default function ExerciseBlock({ exercise, index }: ExerciseBlockProps) {
+export default function ExerciseBlock({ exercise, index, onResult }: ExerciseBlockProps) {
   const [selected, setSelected] = useState<string | null>(null)
   const [openAnswer, setOpenAnswer] = useState('')
   const [feedback, setFeedback] = useState<{ correct: boolean; explanation: string } | null>(null)
@@ -25,6 +26,7 @@ export default function ExerciseBlock({ exercise, index }: ExerciseBlockProps) {
     setSelected(answer)
     const correct = answer === exercise.correctAnswer
     setFeedback({ correct, explanation: exercise.explanation })
+    onResult?.(exercise.id, correct)
   }
 
   async function checkOpenEnded() {
@@ -44,7 +46,9 @@ export default function ExerciseBlock({ exercise, index }: ExerciseBlockProps) {
 
     const data = await res.json()
     setChecking(false)
-    setFeedback({ correct: data.score >= 70, explanation: data.feedback })
+    const correct = data.score >= 70
+    setFeedback({ correct, explanation: data.feedback })
+    onResult?.(exercise.id, correct)
   }
 
   return (

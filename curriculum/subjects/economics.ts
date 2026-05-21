@@ -1,4 +1,6 @@
 import type { SubjectDef } from '../types'
+import { microExercises } from './economics-exercises-micro'
+import { behavioralExercises } from './economics-exercises-behavioral'
 
 const economics: SubjectDef = {
   slug: 'economics',
@@ -19,9 +21,9 @@ const economics: SubjectDef = {
           name: 'Foundations of Economics',
           order: 1,
           lessons: [
-            { slug: 'scarcity-and-choice', name: 'Scarcity, Choice, and Opportunity Cost', order: 1 },
-            { slug: 'economic-systems', name: 'Economic Systems: Market, Command, Mixed', order: 2 },
-            { slug: 'marginal-thinking', name: 'Thinking at the Margin', order: 3 },
+            { slug: 'scarcity-and-choice', name: 'Scarcity, Choice, and Opportunity Cost', order: 1, exercises: microExercises['scarcity-and-choice'] },
+            { slug: 'economic-systems', name: 'Economic Systems: Market, Command, Mixed', order: 2, exercises: microExercises['economic-systems'] },
+            { slug: 'marginal-thinking', name: 'Thinking at the Margin', order: 3, exercises: microExercises['marginal-thinking'] },
           ],
         },
         {
@@ -29,10 +31,10 @@ const economics: SubjectDef = {
           name: 'Markets',
           order: 2,
           lessons: [
-            { slug: 'supply-and-demand', name: 'Supply and Demand', order: 1 },
-            { slug: 'price-mechanism', name: 'The Price Mechanism and Market Equilibrium', order: 2 },
-            { slug: 'elasticity', name: 'Elasticity: How Sensitive Are Buyers and Sellers?', order: 3 },
-            { slug: 'market-failures', name: 'Market Failures: When Markets Don\'t Work', order: 4 },
+            { slug: 'supply-and-demand', name: 'Supply and Demand', order: 1, exercises: microExercises['supply-and-demand'] },
+            { slug: 'price-mechanism', name: 'The Price Mechanism and Market Equilibrium', order: 2, exercises: microExercises['price-mechanism'] },
+            { slug: 'elasticity', name: 'Elasticity: How Sensitive Are Buyers and Sellers?', order: 3, exercises: microExercises['elasticity'] },
+            { slug: 'market-failures', name: 'Market Failures: When Markets Don\'t Work', order: 4, exercises: microExercises['market-failures'] },
           ],
         },
       ],
@@ -145,9 +147,19 @@ const economics: SubjectDef = {
           order: 1,
           lessons: [
             { slug: 'rationality-and-its-limits', name: 'Why We\'re Not Rational Actors', order: 1 },
-            { slug: 'loss-aversion', name: 'Loss Aversion and Prospect Theory', order: 2 },
-            { slug: 'heuristics', name: 'Heuristics: Mental Shortcuts and Their Costs', order: 3 },
+            { slug: 'loss-aversion', name: 'Loss Aversion and Prospect Theory', order: 2, exercises: behavioralExercises['loss-aversion'] },
+            { slug: 'heuristics', name: 'Heuristics: Mental Shortcuts and Their Costs', order: 3, exercises: behavioralExercises['heuristics'] },
             { slug: 'nudges', name: 'Nudges: Designing Better Choices', order: 4 },
+          ],
+        },
+        {
+          slug: 'decision-biases',
+          name: 'Judgment and Decision Biases',
+          order: 2,
+          lessons: [
+            { slug: 'overconfidence-bias', name: 'Overconfidence Bias and Calibration', order: 1, exercises: behavioralExercises['overconfidence-bias'] },
+            { slug: 'sunk-cost-fallacy', name: 'The Sunk Cost Fallacy', order: 2, exercises: behavioralExercises['sunk-cost-fallacy'] },
+            { slug: 'anchoring-and-adjustment', name: 'Anchoring and Adjustment', order: 3, exercises: behavioralExercises['anchoring-and-adjustment'] },
           ],
         },
       ],
