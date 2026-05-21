@@ -101,7 +101,8 @@ async function main() {
   }
 
   for (const file of files) {
-    const { default: subject }: { default: SubjectDef } = await import(join(SUBJECTS_DIR, file))
+    const { default: subject } = await import(join(SUBJECTS_DIR, file))
+    if (!subject?.slug) continue  // skip helper/exercise files with no default SubjectDef export
     console.log(`\nSyncing: ${subject.name}`)
 
     const dbSubject = await db.subject.upsert({
