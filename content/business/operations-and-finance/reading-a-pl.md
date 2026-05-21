@@ -87,6 +87,19 @@ To stop the P&L from being a history book, implement a 30-minute audit on the 1s
 
 ---
 
+## 7. Case Study: The Growth Trap
+
+**Scenario:** An operator grows their revenue from $100k to $300k in one year. They are thrilled with the growth. However, their P&L shows that while revenue tripled, their Net Income only grew from $20k to $25k.
+
+**The Diagnosis:**
+- **Gross Margin Erosion:** As they scaled, they hired a less-skilled helper, increasing the COGS and lowering the Gross Margin.
+- **OpEx Bloat:** They moved into a larger shop with a much higher rent, increasing the fixed costs.
+- **Result:** The operator is doing 3x the work for only 25% more profit. They have scaled their stress, not their wealth.
+
+**The Lesson:** Growth without margin protection is just a faster way to go out of business. The P&L is the only way to see this trap before it's too late.
+
+---
+
 ## Summary: The Operator's Mindset
 
 Reading a P&L is not about accounting; it is about **pattern recognition**. By understanding the flow from revenue to net income, distinguishing between COGS and OpEx, and monitoring margins, you move from "guessing" how your business is doing to "knowing" exactly where the leaks are. Your goal is to maximize the Gross Margin through efficient delivery and minimize the OpEx to protect the Net Income.
