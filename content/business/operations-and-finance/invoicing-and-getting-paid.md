@@ -44,7 +44,22 @@ The final invoice should be sent the moment the work is completed. The customer'
 
 ---
 
-## 4. Eliminating Payment Friction
+## 4. Payment Method Analysis: Cost vs. Speed
+
+Not all payment methods are created equal. As an operator, you must balance the convenience for the customer with the cost to your business.
+
+| Method | Speed | Cost (Fees) | Risk |
+| :--- | :--- | :--- | :--- |
+| **Cash/Check** | Slow | Zero | High (Bouncing/Loss) |
+| **ACH/Bank Transfer** | Medium | Very Low | Low |
+| **Credit Card (Square/Stripe)** | Instant | High (2.9% +) | Very Low (Chargeback Risk) |
+| **Zelle/Venmo** | Instant | Low/Zero | Medium (Lack of Audit Trail) |
+
+**The Strategy:** For large jobs, prioritize ACH or Checks to avoid losing hundreds of dollars in processing fees. For small, quick jobs, prioritize Credit Cards to maximize the conversion rate and speed of payment.
+
+---
+
+## 5. Eliminating Payment Friction
 
 Payment friction is any obstacle that stands between the customer and the "Pay" button. Every extra step (e.g., finding a checkbook, driving to a bank, mailing a letter) increases the likelihood of a payment delay.
 
@@ -55,7 +70,7 @@ Payment friction is any obstacle that stands between the customer and the "Pay" 
 
 ---
 
-## 5. The Automated Collections Sequence
+## 6. The Automated Collections Sequence
 
 When a customer misses a deadline, the goal is to recover the funds while maintaining professional boundaries. Do not apologize for asking for money; you are simply enforcing the contract.
 
@@ -67,7 +82,7 @@ When a customer misses a deadline, the goal is to recover the funds while mainta
 
 ---
 
-## 6. Late Fees and Legal Enforceability
+## 7. Late Fees and Legal Enforceability
 
 Late fees are not about making extra money; they are about incentivizing the customer to prioritize your payment over others.
 
@@ -80,7 +95,19 @@ To successfully charge a late fee, it must be **disclosed and agreed upon** befo
 
 ---
 
-## 7. The "Paid-in-Full" Workflow
+## 8. Handling Payment Disputes
+
+When a customer refuses to pay because they are "unhappy" with the work, the goal is to resolve the conflict without losing the entire invoice.
+
+**The Dispute Resolution Framework:**
+1. **The Acknowledge:** "I hear that you're unhappy with [Specific Detail]. That's not the standard we aim for."
+2. **The Scope Review:** Refer back to the original itemized quote. "The quote covered [X, Y, and Z]. This issue is [within/outside] that scope."
+3. **The Solution Offer:** If the error is yours, offer a specific fix. If the error is a change in scope, offer a separate quote for the additional work.
+4. **The Partial Payment:** If the dispute is over a small part of the job, request payment for the undisputed portion immediately while you resolve the remaining issue.
+
+---
+
+## 9. The "Paid-in-Full" Workflow
 
 One of the biggest mistakes operators make is releasing the final product before the final payment clears. This removes all your leverage.
 
@@ -96,4 +123,4 @@ One of the biggest mistakes operators make is releasing the final product before
 
 ## Summary: The Professional Mindset
 
-Getting paid is a core competency of business ownership. When you implement professional invoicing, reduce payment friction, and enforce your terms, you stop being a "technician who gets paid" and start being a "business owner who manages cash flow." Your goal is to make the payment process so seamless and professional that the customer feels a sense of relief when they finally pay you.
+Getting paid is a core competency of business ownership. When you implement professional invoicing, reduce payment friction, and enforce your terms, you stop being a "technician who gets paid" and start being a "business owner who manages cash flow." Your goal is to make the payment process so seamless and professional that the customer feels a sense of relief when they finally pay.
