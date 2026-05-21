@@ -41,8 +41,8 @@ Value is not a feeling; it is a mathematical calculation of the cost of the prob
 Price is relative. If you present a single price, the customer compares it to their internal budget. If you present a range of options, they compare the options to *each other*.
 
 **The Tactical Execution:**
-- **The Anchor (The Premium Option):** Present a high-end, "perfect" solution first. This includes the best parts, a lifetime warranty, and the fastest turnaround. (e.g., "The Platinum Restoration: $2,500S").
-- **The Pivot (The Recommended Option):** Present the standard professional solution. (e.g., "The Professional Standard: $1,200S").
+- **The Anchor (The Premium Option):** Present a high-end, "perfect" solution first. This includes the best parts, a lifetime warranty, and the fastest turnaround. (e.g., "The Platinum Restoration: $2,500").
+- **The Pivot (The Recommended Option):** Present the standard professional solution. (e.g., "The Professional Standard: $1,200").
 - **The Result:** Because the customer has already seen the $2,500 anchor, the $1,200 option feels like a high-value compromise rather than an expensive expense. The anchor shifts the conversation from "Is this too expensive?" to "Which of these options is the best value?"
 
 ---
@@ -70,25 +70,41 @@ To move a customer from a cost-mindset to a value-mindset, you must stop talking
 
 ---
 
-## 6. The "Underpricing Spiral": A Technical Warning
+## 6. The "Underpricing Spiral": The Mathematical Cost of Being Cheap
 
 Underpricing is not a marketing strategy; it is a business risk. When you price too low, you trigger a negative feedback loop known as the Underpricing Spiral.
 
-1. **Low Price $\rightarrow$ Low-Budget Clients:** You attract customers who have no money and the highest expectations. These are typically the most demanding and least profitable clients.
-2. **High Stress $\rightarrow$ Low Quality:** Because you are underpaid, you are forced to take on too many jobs to survive. This leads to burnout and a decrease in work quality.
-3. **Low Quality $\rightarrow$ Brand Damage:** Your reputation becomes "the cheap guy," which makes it impossible to raise your prices later because your existing client base only values you for your low cost.
+**The Opportunity Cost Calculation:**
+Imagine you are a specialist who should be charging $150/hr, but you charge $75/hr to "get more work."
+- **The Revenue Gap:** On a 40-hour work week, you are losing $3,000 in potential income every single week.
+- **The Annual Loss:** Over a year, this is a $156,000 loss in wealth.
+- **The Efficiency Trap:** Because you are underpaid, you must work twice as many hours to reach your financial goals. This leads to burnout, which leads to a decrease in quality, which eventually destroys your ability to ever charge the professional rate.
 
 **The Rule:** It is better to have three high-value clients who respect your expertise than ten low-value clients who treat you like a commodity. Price for the client you *want*, not the client you have.
 
 ---
 
-## 7. The Price-to-Value Audit
+## 7. The Price Testing Framework: Scaling Your Rates
+
+Professional pricing is not a static number; it is a dynamic process. You must incrementally test your market's ceiling to ensure you are maximizing your value capture.
+
+**The 10% Rule:**
+Every 3-5 jobs, increase your la-rate by 10%. 
+- **The Goal:** You are looking for the "Resistance Point"—the moment where the conversion rate of your quotes begins to drop significantly.
+- **The Logic:** If you raise your price by 10% and your customers don't even blink, you are still underpricing. If you raise it and 50% of your leads suddenly vanish, you have found the ceiling.
+
+**The Strategic Pivot:**
+When you hit the resistance point, do not lower the price. Instead, increase the **perceived value**. Add a guarantee, a more detailed report, or a faster turnaround time. This shifts the EVC in your favor and allows you to push the ceiling higher.
+
+---
+
+## 8. The Price-to-Value Audit
 
 To ensure your pricing is aligned with the value you provide, perform a retrospective audit every 90 days.
 
 - **The High-Margin Analysis:** Identify the jobs where you made the most profit per hour. What was the specific result for the customer? Why were they willing to pay a premium?
 - **The Friction Analysis:** Identify the jobs where you had to negotiate the price. Was the value not clear, or were you talking to a non-ICP lead?
-- **The Price Adjustment:** If your customers are consistently saying "Yes" without hesitation, you are underpricing. Increase your rates by 10-15% until you hit a point of slight resistance. This is how you find the actual ceiling of your market value.
+- **The Price Adjustment:** If your customers are consistently saying "Yes" without hesitation, you are underpricing. Increase your rates by 10-15% until you hit a point of slight resistance.
 
 ---
 
