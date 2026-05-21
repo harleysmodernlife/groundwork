@@ -57,19 +57,20 @@ This is often a stalling tactic used to avoid making a decision. It is a mask fo
 
 **The Pivot: The Curiosity Gap.**
 Use the Isolation technique to find the real problem without sounding pushy.
-- **The Script:** "I completely understand. It's a big decision. Usually, when people need to think about it, it's because I've missed something or haven't explained a part of the process clearly. Just so I know, is it the price, the timeline, or something about the technical approach that you're unsure of?"
+- **The Script:** "I completely understand. It's a big decision. Usually, when people need to think about it, it's because I've missed something or haven't explained a part of the process clearly. Just so I know, is it the price, the timeline, or the technical approach that you're unsure of?"
 
 ### Objection 3: "I've had a bad experience with [Similar Service] before."
-This is a trust objection. They are projecting a past trauma onto you.
+This is a trust objection. The customer is projecting a past trauma onto you.
 
-**The Pivot: The Process Contrast.**
-- **The Script:** "I'm sorry that happened. That's exactly why I do [Specific Step in Process]. Most people in this industry skip that step, which is why [Common Failure] happens. I make that a mandatory part of my workflow so you don't have to deal with that again."
+**The Pivot: The Contrast Framework.**
+Do not argue about the other provider. Instead, contrast their failure with your specific process.
+- **The Script:** "I'm sorry you had to deal with that. That's actually why I do [Specific Step in Process]. Most people in this industry skip that step, which is why [Common Failure] happens. I make that a mandatory part of my workflow so you don't have to deal with that again. Would you like to see the checklist I use to ensure that doesn't happen?"
 
 ---
 
 ## 5. The "Reverse Close" Strategy
 
-When you are stuck in a loop of objections, stop trying to solve the problem for the customer. Instead, ask the customer to solve it for you. This is the **Reverse Close**.
+When you are stuck in a loop of objections and the conversation is stalling, stop trying to solve the problem for the customer. Instead, ask the customer to solve it for you. This is the **Reverse Close**.
 
 **The Question:** "I really want to help you get this fixed, but it seems like we're hitting a wall. What would need to happen, or what would I need to change about this proposal, for this to be a 'yes' for you today?"
 
@@ -77,18 +78,30 @@ When you are stuck in a loop of objections, stop trying to solve the problem for
 
 ---
 
-## 6. The "No-Go" Rubric: When to Walk Away
+## 6. The "No-Go" Rubric: Identifying and Exiting Bad Leads
 
-Your most valuable resource is your time. Not every lead is a good lead. Attempting to close a "Bad Lead" is a waste of energy and often leads to the most difficult customers.
+Your most valuable resource is your time. Attempting to close a "Bad Lead" is a waste of energy and often leads to the most difficult customers. You must know when to walk away.
 
-### Red Flags of a Bad Lead:
-- **The Price-Shopper:** They only care about the lowest number and show zero interest in the quality or the result. They will leave you for a $10 difference.
-- **The Scope-Shifter:** They constantly change the requirements of the job during the quoting process.
-- **The Respect-Gap:** They treat you like a commodity or a servant rather than a professional expert.
+**Red Flags of a Non-ICP Lead:**
+- **The Price-Shopper:** They lead with price, ask for multiple quotes, and constantly mention a "cheaper guy." They value money over results.
+- **The Scope-Shifter:** They constantly change the requirements of the job during the quoting process. They don't know what they want, which means they won't know when the job is "done."
+- **The Respect-Gap:** They treat you like a commodity or a servant rather than a professional expert. They may use phrases like "It's just a simple job, it should only take you an hour."
 
 **The Professional Exit:**
-When you identify a bad lead, do not get angry. Simply remove yourself from the equation.
-- **The Script:** "Based on what you're looking for, I don't think I'm the best fit for this project. I prioritize [Quality/Reliability/Specialization], and it sounds like you're looking for the lowest possible cost. I'd recommend looking at [Lower-Cost Alternative] instead. I appreciate your time!"
+When you identify a bad lead, do not get angry. Simply remove yourself from the equation to protect your time and brand.
+- **The Script:** "Based on what you're looking for, I don't think I'm the best fit for this project. I prioritize [Quality/Specialization], and it sounds like you're looking for the lowest possible cost. I'd recommend looking at [Lower-Cost Alternative] instead. I appreciate your time!"
+
+---
+
+## 7. The Objection-to-Close Pipeline
+
+To ensure consistency, follow this linear sequence when handling an objection. Do not skip steps.
+
+1. **Acknowledge:** "I understand that the price is a concern."
+2. **Isolate:** "Aside from the price, is there anything else holding us back?"
+3. **Validate/Pivot:** Use Feel-Felt-Found or the COI script to address the concern.
+4. **Confirm Resolution:** "Does that address your concern about the cost?"
+5. **Assumption Close:** "Great. Since we've solved that, I've got an opening Wednesday at 9 AM. Does that work for you?"
 
 ---
 
