@@ -90,6 +90,32 @@ Every single lead must be entered into a ledger with the following fields:
 
 ---
 
+## 7. The Lead Pipeline Leakage Audit
+
+Getting a lead is only the first step. Many business owners suffer from "Pipeline Leakage," where high-intent leads are captured but then lost due to operational failure. To fix this, you must audit the gaps in your conversion path.
+
+**Common Leakage Points:**
+1. **The Response Gap:** A lead reaches out, but the owner takes 6 hours to reply. In high-intent channels, the lead has already hired someone else by the time you respond.
+2. **The Friction Gap:** You ask the lead to fill out a complex 10-field form before you'll give them a quote. This friction kills the conversion rate.
+3. **The Follow-Up Gap:** You provide a quote, the customer says "I'll think about it," and you never contact them again. 50% of all jobs are won in the follow-up, yet most owners stop after the first quote.
+
+**The Fix:** Implement a "Speed-to-Lead" protocol. Aim to respond to high-intent leads in under 15 minutes. Use a simple, low-friction intake process, and set a mandatory 3-step follow-up sequence for every quote sent.
+
+---
+
+## 8. Monthly Lead Source Audit Checklist
+
+Use this checklist at the end of every month to ensure your lead generation is efficient and aligned with your ICP:
+
+- [ ] **Source Verification:** Did I log the source of every single lead this month?
+- [ ] **ROI Calculation:** Which channel produced the highest profit per lead? Which produced the lowest?
+- [ ] **ICP Alignment:** What percentage of leads from my primary channel actually fit my ICP? If it's under 50%, the channel is attracting the wrong people.
+- [ ] **Velocity Check:** What is my average time-to-deposit for each channel? Which channel is the fastest?
+- [ ] **Leakage Review:** How many leads did I lose due to slow response times? How many did I lose because I failed to follow up?
+- [ ] **Channel Pivot:** Based on the data, which channel should I stop investing in, and which one should I double down on for next month?
+
+---
+
 ## Summary: The Operator's Mindset
 
 Finding customers is not about "marketing"; it is about **systematic mapping**. By categorizing your lead sources by intent and cost, mapping your ICP to their specific watering holes, and tracking your conversion rates, you stop hoping for work and start engineering a predictable flow of high-value leads. Your goal is to dominate the high-intent channels and build a data-driven engine that tells you exactly where your next $10,000 is coming from.
