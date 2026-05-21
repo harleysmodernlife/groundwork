@@ -94,6 +94,58 @@ Once the price is accepted and the deposit is discussed, immediately pivot to th
 
 ---
 
+## 7. The Closing Decision Matrix
+
+Not every lead requires the same closing style. Use this matrix to choose your approach based on the customer's behavior during the diagnostic.
+
+| Customer Behavior | Recommended Close | Primary Goal |
+| :--- | :--- | :--- |
+| Decisive, high-urgency, clear pain | **Direct Close** | Speed and efficiency. |
+| Agreeable, leaning toward 'Yes', indecisive | **Assumption Close** | Remove decision friction. |
+| Hesitant, comparing options, price-sensitive | **Alternative Close** | Shift focus to value/choice. |
+| High-trust, long-term relationship, low-urgency | **Consultative Close** | Long-term partnership. |
+
+---
+
+## 8. Handling Common Closing Rebuttals
+
+When a customer pushes back during the ask, do not negotiate your price. Instead, handle the objection and return to the close.
+
+**Rebuttal 1: "I need to talk to my partner first."
+** - **The Response:** "I completely understand. Since they'll have questions about the technical side, would it be easier if we all jumped on a 3-minute call together? I can explain the value to them directly so you don't have to play telephone."
+
+**Rebuttal 2: "That's more than I expected to pay."
+** - **The Response:** "I hear you. Is the concern that it's above your budget, or that you're not sure if the result justifies the cost? If it's the latter, let's look at the [Specific Failure] we're avoiding, because that's where the real cost is."
+
+**Rebuttal 3: "Can you do it for [Lower Price]?"
+** - **The Response:** "I can't lower the price without lowering the quality of the parts or the scope of the work. Which part of the solution would you like to remove to hit that number?"
+
+---
+
+## 9. Case Study: The "Expert" vs. The "Salesman"
+
+**Scenario:** A customer needs a complex transmission rebuild. Two operators provide quotes.
+
+**Operator A (The Salesman):** "I can get this done for $1,200. I'll give you a 10% discount if you sign today. I'm the cheapest in town and I work fast. Do we have a deal?"
+- **Customer Reaction:** Feels pressured. Wonders why he's so cheap. Worries about the quality.
+
+**Operator B (The Expert):** "The total for the rebuild is $1,800. This includes a full teardown, OEM seals, and a 12-month warranty. I have an opening next Tuesday. Does that work for you?"
+- **Customer Reaction:** Feels the price is a reflection of the quality. The assumption of the schedule makes it feel like a standard professional process.
+
+**The Result:** Operator B wins the job 80% of the time, even at a 50% higher price, because he closed as an expert, not a salesman.
+
+---
+
+## 10. Final Closing Checklist
+
+Before you end the interaction, verify you have checked these four boxes:
+- [ ] **Value Confirmed:** The customer explicitly agrees that the problem is a priority.
+- [ ] **Decision-Maker Present:** You are talking to the person who can say "Yes."
+- [ ] **Next Step Scheduled:** There is a concrete date and time for the next interaction.
+- [ ] **Financial Commitment:** The Project Initiation Fee has been requested and the method of payment is agreed upon.
+
+---
+
 ## Summary: The Professional Mindset
 
 Closing is not about persuasion; it is about leadership. A professional operator leads the customer through the process: from identifying the pain, to agreeing on the solution, to committing to the schedule. When you stop fearing the ask and start treating it as a technical step in the service process, you stop being a "salesperson" and start being a trusted expert who helps customers solve their problems efficiently.
