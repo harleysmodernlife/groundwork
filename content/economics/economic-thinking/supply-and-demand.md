@@ -22,7 +22,7 @@ In a free market, the price of a service is not determined by the operator's des
 
 ### The Logic of Supply:
 As the market price for a specific service (e.g., EV battery repair) rises, it becomes more profitable for technicians to allocate their scarce resources (time and tools) to that service rather than others. 
-- **Higher Prices** $\rightarrow$ **Higher Incentive** $\rightarrow$ **Increased Supply**.
+- **Higher Prices** → **Higher Incentive** → **Increased Supply**.
 
 **The Business Lesson:** When you see a surge in the market price for a specific skill, it is a signal to pivot your resources toward that high-value activity. However, as more operators pivot to that service, the supply increases, which eventually pushes the price back down.
 

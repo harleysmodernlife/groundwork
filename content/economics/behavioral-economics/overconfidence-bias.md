@@ -70,6 +70,32 @@ Never rely on your own intuition when delegating. Turn your expertise into a **C
 
 ---
 
-## Summary: The Calibrated Operator
+## 6. Overconfidence at the Market Level: Bubbles and Crashes
+
+Overconfidence isn't only a personal bias—it operates at the market level. Some of the most damaging economic events in history were caused by collective overconfidence.
+
+### The "Better Than Average" Illusion
+Studies consistently show that the vast majority of drivers, investors, and professionals rate themselves as above average at their craft—a mathematical impossibility. In financial markets, this manifests as excessive trading: overconfident investors trade too frequently, believing their ability to time the market is better than it is. On average, they consistently underperform simple index strategies that require no forecasting at all.
+
+### Asset Bubbles
+During the dot-com bubble of the late 1990s and the housing bubble of the mid-2000s, investors at every level—from retail buyers to professional fund managers—were overconfident that prices would continue rising. The shared overconfidence suppressed the perceived probability of failure. When reality corrected the overestimation, the losses were catastrophic precisely because no one had planned for the downside.
+
+### The Confidence Interval Test
+A simple diagnostic for calibration: ask someone to provide a range they are 90% confident contains the true answer to a factual question (for example, the population of Brazil). Studies show that people's 90% confidence intervals contain the correct answer only about 50% of the time. People's certainty consistently outpaces their accuracy by a wide margin.
+
+### The Practical Takeaway
+When planning for the future—whether quoting a long project, purchasing equipment, or forecasting revenue—deliberately widen your uncertainty band. Add a 20% time buffer. Add a 15% cost buffer. The numbers that feel like pessimism are usually just honest calibration.
+
+---
+
+## 7. Summary: The Calibrated Operator
 
 Overconfidence is a seductive trap. It feels like power, but it is actually a lack of data. By implementing Reference Class Forecasting, conducting Pre-Mortems, and practicing Probabilistic Thinking, you replace blind confidence with technical accuracy. Your goal is not to be the most confident person in the room, but to be the most accurate. In the world of high-stakes technical work, accuracy is the only thing that scales.
+
+**Key concepts from this lesson:**
+- Overconfidence bias: the systematic gap between perceived and actual competence or accuracy
+- Dunning-Kruger effect: low ability prevents recognition of low ability
+- Planning fallacy: we plan for the ideal case, not the realistic distribution of outcomes
+- Reference class forecasting: use historical averages, not intuition, to estimate timelines and costs
+- Pre-mortem: assume failure in advance to identify blind spots before they cost you
+- Calibration: track predictions against outcomes to close the confidence-accuracy gap

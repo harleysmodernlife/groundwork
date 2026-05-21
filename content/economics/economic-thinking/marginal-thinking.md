@@ -94,7 +94,7 @@ Consider a technician tasked with fixing a simple leak in a coolant hose.
 **The Marginal Analysis:**
 While the total revenue is higher ($400 vs $120), the technician spent an extra 4 hours to make an extra $280. 
 - The marginal revenue per extra hour was $70.
-- However, if that technician could have used those 4 hours to do three other standard leak repairs, they would have made $3 \times \$90 = \$270$ in marginal profit, plus the original $90 from the first job, totaling $360.
+- However, if that technician could have used those 4 hours to do three other standard leak repairs, they would have made 3 × $90 = $270 in marginal profit, plus the original $90 from the first job, totaling $360.
 
 By over-engineering the first job, the technician actually *lost* $80 in potential profit. This is the cost of ignoring the margin in favor of "thoroughness" that the customer didn't request and doesn't value.
 

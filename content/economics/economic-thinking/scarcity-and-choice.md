@@ -60,7 +60,7 @@ Professional operators do not make decisions based on totals; they make decision
 - **Marginal Benefit (MB):** The additional revenue or value gained from producing one more unit of a service.
 - **Marginal Cost (MC):** The additional cost (time, money, effort) incurred by producing that one more unit.
 
-**The Optimal Decision Rule:** Continue an activity as long as the **Marginal Benefit is greater than or equal to the Marginal Cost (MB $\ge$ MC)**. The moment the cost of the next hour of work exceeds the value it produces, you must stop.
+**The Optimal Decision Rule:** Continue an activity as long as the **Marginal Benefit is greater than or equal to the Marginal Cost (MB ≥ MC)**. The moment the cost of the next hour of work exceeds the value it produces, you must stop.
 
 **Example:** If you are scrubbing a part and it is 95% clean, spending another hour to get it to 99% clean might cost you $50 in labor (MC) but only add $5 in perceived value to the customer (MB). In this case, the marginal cost exceeds the marginal benefit. Continuing to clean is an economic failure.
 

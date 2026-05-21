@@ -91,6 +91,19 @@ There is a razor-thin line between **Strategic Framing** and **Predatory Manipul
 
 **Strategic Framing** uses loss aversion to help the customer make a decision that is in their own best interest. It highlights a real risk and provides a real solution. It is an act of professional guidance that prevents the customer from suffering a larger loss later.
 
-**Predatory Manipulation** involves fabricating losses or exaggerating risks to force a sale. Telling a customer their brakes will fail tomorrow when they have 30% life left is a violation of the LILGUY philosophy. 
+**Predatory Manipulation** involves fabricating losses or exaggerating risks to force a sale. Telling a customer their brakes will fail tomorrow when they have 30% life left is a violation of the LILGUY philosophy.
 
 Predatory behavior creates a short-term gain (the sale) but a long-term loss (the reputation). In a distributed network of service providers, trust is the only currency that matters. We use loss aversion to protect the customer from their own procrastination, not to exploit their fear for a quick buck.
+
+---
+
+## Summary: The Asymmetric Mind
+
+Loss aversion is not a flaw to be fixed—it is a feature of the human mind built over millennia of survival. Understanding it changes how you read customer hesitation, frame pricing conversations, and design service offers. The customer who says "I need to think about it" is usually not comparing your price to a competitor's; they are weighing a certain loss (the payment) against an uncertain gain (the repair holding). Reframe the math: make staying the same feel like the loss, and make your service feel like the recovery. When done honestly, this isn't manipulation—it's the clearest possible translation of reality into terms the human mind can act on.
+
+**Key concepts from this lesson:**
+- Loss aversion: losses feel ~2× more painful than equivalent gains feel pleasurable
+- Prospect Theory: value is relative to a reference point, not absolute
+- Endowment Effect: ownership raises the perceived value of what is at stake
+- Status Quo Bias: the current state feels "safe" even when it isn't
+- Framing: loss-framed messages consistently outperform gain-framed ones in driving action

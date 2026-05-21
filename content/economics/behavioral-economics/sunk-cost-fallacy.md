@@ -79,6 +79,28 @@ Consider a technician who takes on a budget engine rebuild. After 20 hours, they
 
 ---
 
-## 6. Summary: The Discipline of Letting Go
+## 6. The Sunk Cost Fallacy at Scale: Policy and Institutional Traps
+
+The sunk cost fallacy isn't only a trap for individuals. It operates at every level of decision-making.
+
+### Government and Infrastructure
+A city commits $200 million to a highway project. Halfway through, an environmental study reveals the highway will damage a critical watershed. The rational response is to halt the project and mitigate losses. The political response is often, "We've already spent $200 million—we can't stop now." The sunk cost becomes the justification for doubling the damage. The most famous example of this is the Concorde supersonic jet: both the British and French governments continued funding the aircraft for years after it became clear it would never be commercially viable, purely because of what had already been spent. Economists now call this "Concorde Fallacy."
+
+### Corporate Strategy
+Companies acquire businesses, launch products, or enter markets, and then hold onto them long past the point of profitability because of what was paid to acquire them. The accounting value of a past investment (the "book value") becomes the psychological anchor—even when the market value has collapsed. Rational capital allocation requires treating past costs as history and evaluating assets solely on future expected value.
+
+### The Personal Finance Parallel
+A consumer buys a gym membership for $600 per year. After three months, they stop going. A rational actor cancels the membership. Instead, many people continue paying month after month because "I already paid for it and I don't want to waste the money." The money is already gone. Every additional month paid is a new sunk cost chasing the first one.
+
+---
+
+## 7. Summary: The Discipline of Letting Go
 
 Success in business is not about never making a mistake; it is about how quickly you can identify a mistake and stop paying for it. The Sunk Cost Fallacy is a psychological gravity that pulls operators down into money pits. By using the Exit Decision Matrix and framing pivots as strategic optimizations, you protect your most scarce resources—time and capital. The professional operator knows that the most profitable move is often the one where they stop doing something that doesn't work.
+
+**Key concepts from this lesson:**
+- Sunk cost: any past expenditure that cannot be recovered and should not influence future decisions
+- The rational decision rule: evaluate only future costs versus future value
+- Three psychological drivers of the fallacy: loss aversion, identity attachment, social pressure
+- The Exit Decision Matrix: future-value test, opportunity cost audit, probability of success
+- Professional framing: present strategic exits as data-driven pivots, not admissions of failure
