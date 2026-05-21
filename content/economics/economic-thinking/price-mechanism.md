@@ -62,14 +62,30 @@ Professional operators don't just react to their own invoices; they monitor the 
 
 Sometimes, the price mechanism fails to provide accurate information. These are **Market Failures**. A professional operator identifies these gaps to create a competitive advantage.
 
-### Common Signal Failures:
-1. **Asymmetric Information:** This occurs when the seller knows more than the buyer (or vice versa). A dishonest mechanic uses this to overcharge for unnecessary work. A professional operator eliminates this failure by providing **radical transparency** (photos, videos, detailed reports), which builds trust and allows them to charge a premium for their honesty.
-2. **Monopolies:** When one provider controls the entire supply, they can set prices far above equilibrium. While this is profitable for the monopolist, it creates a massive opportunity for a competitor to enter the market and disrupt the monopoly by offering a fairer price or better value.
-3. **Externalities:** When a transaction affects a third party who isn't involved. (e.g., a shop that dumps oil in the drain is externalizing their cost to the city). Professional operators internalize these costs to ensure long-term sustainability and avoid legal risk.
+### Asymmetric Information and the "Lemons Problem"
+This occurs when the seller knows more about the quality of the service than the buyer. In the mechanic world, this is the "shady shop" model—overcharging for work the customer can't verify. 
+- **The Failure:** When customers expect asymmetric information, they lower the price they are willing to pay for *all* services to protect themselves from being ripped off. This drags down the market price for everyone, including the honest operators.
+- **The Solution:** Professional operators solve this by providing **Radical Transparency**. By using photos, videos, and detailed digital reports, you eliminate the information gap. When the customer can see the problem, the price signal becomes accurate again, and you can charge a premium for your honesty.
+
+### Monopolies and Artificial Scarcity
+When one provider controls the entire supply, they can set prices far above equilibrium. While this is profitable for the monopolist, it creates a massive opportunity for a competitor to enter the market and disrupt the monopoly by offering a fairer price or better value.
+
+### Externalities
+An externality is when a transaction affects a third party who isn't involved. (e.g., a shop that dumps oil in the drain is externalizing their cost to the city). Professional operators internalize these costs (paying for proper disposal) to ensure long-term sustainability and avoid legal risk.
 
 ---
 
-## 6. Case Study: The Specialty Pivot
+## 6. Price Stickiness and Menu Costs
+
+In theory, prices adjust instantly. In reality, prices are often "sticky"—they resist changing even when the market signal says they should.
+
+**Menu Costs:** The cost of changing a price. This isn't just the cost of printing new menus; it's the psychological cost of explaining a price increase to long-term customers or the administrative cost of updating a software system.
+
+**The Strategic Opportunity:** Because most competitors have "sticky" prices, they are slow to react to rising demand. If you are an agile operator who can adjust your prices in real-time based on demand (Dynamic Pricing), you can capture a massive amount of extra profit while your competitors are still using last year's rates.
+
+---
+
+## 7. Case Study: The Specialty Pivot
 
 Consider a generalist mechanic who does all types of engine work. He makes a steady but modest living. One day, he notices a price signal: the cost of specialized tuning for a specific, rare type of vintage European engine has tripled over two years, but the number of shops capable of doing the work has remained the same.
 
@@ -79,6 +95,17 @@ Consider a generalist mechanic who does all types of engine work. He makes a ste
 - **The Result:** He shifts his business from a high-supply/low-price equilibrium to a low-supply/high-price equilibrium. He works fewer hours, handles fewer cars, but increases his total profit because he is now the primary provider of a high-value, inelastic service.
 
 **The Lesson:** The price mechanism told him exactly where the money was. He just had to be brave enough to stop doing the "safe" general work to capture the specialized value.
+
+---
+
+## 8. Practical Application: The Price Signal Audit
+
+To apply this to your business, perform a monthly **Price Signal Audit**:
+
+1. **The Competitor Scan:** Check the rates of your top three competitors for your most common service. Are they rising, falling, or stagnant?
+2. **The Lead-to-Close Ratio:** If your closing rate has suddenly spiked (e.g., from 50% to 90%), the market is signaling that you are underpricing relative to current demand. This is a signal to raise your rates.
+3. **The Waitlist Metric:** Do you have a backlog of work that extends beyond two weeks? This is a clear signal of a shortage of supply. You should increase your prices until the demand matches your capacity.
+4. **The Specialization Search:** Identify one service you provide that customers always struggle to find elsewhere. Is the price for that service higher than your general work? If so, you've found a signal for specialization.
 
 ---
 
