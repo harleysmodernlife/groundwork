@@ -1,4 +1,10 @@
 import type { SubjectDef } from '../types'
+import { businessExercises1 } from './business-exercises-1'
+import { businessExercises2 } from './business-exercises-2'
+import { businessExercises3 } from './business-exercises-3'
+import { businessExercises4 } from './business-exercises-4'
+import { businessExercises5 } from './business-exercises-5'
+import { businessExercises6 } from './business-exercises-6'
 
 const business: SubjectDef = {
   slug: 'business',
@@ -78,9 +84,9 @@ const business: SubjectDef = {
           name: 'Your First Business Plan',
           order: 2,
           lessons: [
-            { slug: 'what-a-business-plan-actually-is', name: 'What a Business Plan Actually Is', order: 1 },
-            { slug: 'defining-your-customer', name: 'Defining Your Customer', order: 2 },
-            { slug: 'revenue-models', name: 'Revenue Models', order: 3 },
+            { slug: 'what-a-business-plan-actually-is', name: 'What a Business Plan Actually Is', order: 1, exercises: businessExercises1['what-a-business-plan-actually-is'] },
+            { slug: 'defining-your-customer', name: 'Defining Your Customer', order: 2, exercises: businessExercises1['defining-your-customer'] },
+            { slug: 'revenue-models', name: 'Revenue Models', order: 3, exercises: businessExercises1['revenue-models'] },
           ],
         },
       ],
@@ -107,9 +113,9 @@ const business: SubjectDef = {
           name: 'Cash Flow',
           order: 1,
           lessons: [
-            { slug: 'what-cash-flow-is', name: 'What Cash Flow Is (and Why It Kills Businesses)', order: 1 },
-            { slug: 'reading-a-pl', name: 'Reading a Basic P&L', order: 2 },
-            { slug: 'invoicing-and-getting-paid', name: 'Invoicing and Getting Paid', order: 3 },
+            { slug: 'what-cash-flow-is', name: 'What Cash Flow Is (and Why It Kills Businesses)', order: 1, exercises: businessExercises1['what-cash-flow-is'] },
+            { slug: 'reading-a-pl', name: 'Reading a Basic P&L', order: 2, exercises: businessExercises1['reading-a-pl'] },
+            { slug: 'invoicing-and-getting-paid', name: 'Invoicing and Getting Paid', order: 3, exercises: businessExercises1['invoicing-and-getting-paid'] },
           ],
         },
         {
@@ -117,9 +123,9 @@ const business: SubjectDef = {
           name: 'Pricing for Profit',
           order: 2,
           lessons: [
-            { slug: 'cost-based-pricing', name: 'Cost-Based Pricing', order: 1 },
-            { slug: 'value-based-pricing', name: 'Value-Based Pricing', order: 2 },
-            { slug: 'pricing-mistakes', name: 'Common Pricing Mistakes', order: 3 },
+            { slug: 'cost-based-pricing', name: 'Cost-Based Pricing', order: 1, exercises: businessExercises2['cost-based-pricing'] },
+            { slug: 'value-based-pricing', name: 'Value-Based Pricing', order: 2, exercises: businessExercises2['value-based-pricing'] },
+            { slug: 'pricing-mistakes', name: 'Common Pricing Mistakes', order: 3, exercises: businessExercises2['pricing-mistakes'] },
           ],
         },
         {
@@ -127,9 +133,9 @@ const business: SubjectDef = {
           name: 'Bookkeeping Basics',
           order: 3,
           lessons: [
-            { slug: 'what-to-track', name: 'What to Track and Why', order: 1 },
-            { slug: 'bookkeeping-tools', name: 'Tools and Software', order: 2 },
-            { slug: 'working-with-accountant', name: 'Working with an Accountant', order: 3 },
+            { slug: 'what-to-track', name: 'What to Track and Why', order: 1, exercises: businessExercises2['what-to-track'] },
+            { slug: 'bookkeeping-tools', name: 'Tools and Software', order: 2, exercises: businessExercises2['bookkeeping-tools'] },
+            { slug: 'working-with-accountant', name: 'Working with an Accountant', order: 3, exercises: businessExercises2['working-with-accountant'] },
           ],
         },
       ],
@@ -146,9 +152,9 @@ const business: SubjectDef = {
           name: 'Finding Customers',
           order: 1,
           lessons: [
-            { slug: 'your-first-customer', name: 'Getting Your First Customer', order: 1 },
-            { slug: 'ideal-customer-profile', name: 'Defining Your Ideal Customer', order: 2 },
-            { slug: 'where-customers-are', name: 'Where Your Customers Actually Are', order: 3 },
+            { slug: 'your-first-customer', name: 'Getting Your First Customer', order: 1, exercises: businessExercises3['your-first-customer'] },
+            { slug: 'ideal-customer-profile', name: 'Defining Your Ideal Customer', order: 2, exercises: businessExercises3['ideal-customer-profile'] },
+            { slug: 'where-customers-are', name: 'Where Your Customers Actually Are', order: 3, exercises: businessExercises3['where-customers-are'] },
           ],
         },
         {
@@ -156,9 +162,9 @@ const business: SubjectDef = {
           name: 'Sales Fundamentals',
           order: 2,
           lessons: [
-            { slug: 'making-the-ask', name: 'Making the Ask', order: 1 },
-            { slug: 'handling-objections', name: 'Handling Objections', order: 2 },
-            { slug: 'follow-up', name: 'Follow-Up That Works', order: 3 },
+            { slug: 'making-the-ask', name: 'Making the Ask', order: 1, exercises: businessExercises3['making-the-ask'] },
+            { slug: 'handling-objections', name: 'Handling Objections', order: 2, exercises: businessExercises3['handling-objections'] },
+            { slug: 'follow-up', name: 'Follow-Up That Works', order: 3, exercises: businessExercises3['follow-up'] },
           ],
         },
         {
@@ -166,9 +172,9 @@ const business: SubjectDef = {
           name: 'Basic Marketing',
           order: 3,
           lessons: [
-            { slug: 'word-of-mouth', name: 'Word of Mouth and Referrals', order: 1 },
-            { slug: 'online-presence', name: 'Building a Basic Online Presence', order: 2 },
-            { slug: 'social-media-basics', name: 'Social Media Without Wasting Your Life', order: 3 },
+            { slug: 'word-of-mouth', name: 'Word of Mouth and Referrals', order: 1, exercises: businessExercises4['word-of-mouth'] },
+            { slug: 'online-presence', name: 'Building a Basic Online Presence', order: 2, exercises: businessExercises4['online-presence'] },
+            { slug: 'social-media-basics', name: 'Social Media Without Wasting Your Life', order: 3, exercises: businessExercises4['social-media-basics'] },
           ],
         },
       ],
@@ -185,9 +191,9 @@ const business: SubjectDef = {
           name: 'Contracts',
           order: 1,
           lessons: [
-            { slug: 'what-makes-a-contract', name: 'What Makes a Contract Enforceable', order: 1 },
-            { slug: 'reading-contracts', name: 'Reading a Contract Without a Law Degree', order: 2 },
-            { slug: 'common-contract-mistakes', name: 'Common Contract Mistakes', order: 3 },
+            { slug: 'what-makes-a-contract', name: 'What Makes a Contract Enforceable', order: 1, exercises: businessExercises4['what-makes-a-contract'] },
+            { slug: 'reading-contracts', name: 'Reading a Contract Without a Law Degree', order: 2, exercises: businessExercises4['reading-contracts'] },
+            { slug: 'common-contract-mistakes', name: 'Common Contract Mistakes', order: 3, exercises: businessExercises4['common-contract-mistakes'] },
           ],
         },
         {
@@ -195,9 +201,9 @@ const business: SubjectDef = {
           name: 'Intellectual Property',
           order: 2,
           lessons: [
-            { slug: 'trademarks', name: 'Trademarks: Protecting Your Name', order: 1 },
-            { slug: 'copyright-basics', name: 'Copyright Basics', order: 2 },
-            { slug: 'when-to-get-a-lawyer', name: 'When You Actually Need a Lawyer', order: 3 },
+            { slug: 'trademarks', name: 'Trademarks: Protecting Your Name', order: 1, exercises: businessExercises6['trademarks'] },
+            { slug: 'copyright-basics', name: 'Copyright Basics', order: 2, exercises: businessExercises5['copyright-basics'] },
+            { slug: 'when-to-get-a-lawyer', name: 'When You Actually Need a Lawyer', order: 3, exercises: businessExercises5['when-to-get-a-lawyer'] },
           ],
         },
       ],
@@ -214,9 +220,9 @@ const business: SubjectDef = {
           name: 'Tax Basics',
           order: 1,
           lessons: [
-            { slug: 'self-employment-tax', name: 'Self-Employment Tax Explained', order: 1 },
-            { slug: 'quarterly-estimates', name: 'Quarterly Estimated Taxes', order: 2 },
-            { slug: 'business-deductions', name: 'Business Deductions You Can Actually Take', order: 3 },
+            { slug: 'self-employment-tax', name: 'Self-Employment Tax Explained', order: 1, exercises: businessExercises5['self-employment-tax'] },
+            { slug: 'quarterly-estimates', name: 'Quarterly Estimated Taxes', order: 2, exercises: businessExercises5['quarterly-estimates'] },
+            { slug: 'business-deductions', name: 'Business Deductions You Can Actually Take', order: 3, exercises: businessExercises5['business-deductions'] },
           ],
         },
         {
@@ -224,9 +230,9 @@ const business: SubjectDef = {
           name: 'Tax Planning',
           order: 2,
           lessons: [
-            { slug: 'tax-planning-basics', name: 'Basic Tax Planning', order: 1 },
-            { slug: 'retirement-accounts', name: 'Retirement Accounts for Business Owners', order: 2 },
-            { slug: 'hiring-tax-help', name: 'When and How to Hire Tax Help', order: 3 },
+            { slug: 'tax-planning-basics', name: 'Basic Tax Planning', order: 1, exercises: businessExercises6['tax-planning-basics'] },
+            { slug: 'retirement-accounts', name: 'Retirement Accounts for Business Owners', order: 2, exercises: businessExercises6['retirement-accounts'] },
+            { slug: 'hiring-tax-help', name: 'When and How to Hire Tax Help', order: 3, exercises: businessExercises6['hiring-tax-help'] },
           ],
         },
       ],
@@ -243,9 +249,9 @@ const business: SubjectDef = {
           name: 'Your First Hire',
           order: 1,
           lessons: [
-            { slug: 'when-to-hire', name: 'When to Hire (and When Not To)', order: 1 },
-            { slug: 'contractor-vs-employee', name: 'Contractor vs Employee: The Real Difference', order: 2 },
-            { slug: 'finding-good-people', name: 'Finding Good People', order: 3 },
+            { slug: 'when-to-hire', name: 'When to Hire (and When Not To)', order: 1, exercises: businessExercises6['when-to-hire'] },
+            { slug: 'contractor-vs-employee', name: 'Contractor vs Employee: The Real Difference', order: 2, exercises: businessExercises6['contractor-vs-employee'] },
+            { slug: 'finding-good-people', name: 'Finding Good People', order: 3, exercises: businessExercises6['finding-good-people'] },
           ],
         },
         {
@@ -253,9 +259,9 @@ const business: SubjectDef = {
           name: 'Managing People',
           order: 2,
           lessons: [
-            { slug: 'onboarding', name: 'Onboarding That Works', order: 1 },
-            { slug: 'payroll-basics', name: 'Payroll Basics', order: 2 },
-            { slug: 'letting-someone-go', name: 'Letting Someone Go the Right Way', order: 3 },
+            { slug: 'onboarding', name: 'Onboarding That Works', order: 1, exercises: businessExercises6['onboarding'] },
+            { slug: 'payroll-basics', name: 'Payroll Basics', order: 2, exercises: businessExercises6['payroll-basics'] },
+            { slug: 'letting-someone-go', name: 'Letting Someone Go the Right Way', order: 3, exercises: businessExercises6['letting-someone-go'] },
           ],
         },
       ],

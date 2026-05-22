@@ -1,0 +1,37 @@
+import type { ExerciseDef } from '../types'
+
+function mc(
+  question: string,
+  options: string[],
+  correctAnswer: string,
+  explanation: string,
+  order: number,
+): ExerciseDef {
+  return { question, type: 'MULTIPLE_CHOICE', options, correctAnswer, explanation, order }
+}
+
+export const healthExercises1: Record<string, ExerciseDef[]> = {
+  'cell-basics': [
+    mc('Which organelle is called the "powerhouse of the cell" because it produces ATP?', ['Ribosome', 'Nucleus', 'Mitochondria', 'Golgi apparatus'], 'Mitochondria', 'Mitochondria convert nutrients into ATP, the energy currency the cell uses for everything. Cells with high energy demands — heart muscle, brain — have more mitochondria.', 1),
+    mc('What is the primary function of the cell membrane?', ['Produces proteins for the cell', 'Controls what enters and exits the cell', 'Stores the cell\'s genetic instructions', 'Converts glucose into usable energy'], 'Controls what enters and exits the cell', 'The cell membrane is a selectively permeable boundary made of lipids. It controls which substances can cross — some freely, some with help, and some are blocked entirely.', 2),
+    mc('Which type of cell division produces sperm and egg cells with half the normal chromosome count?', ['Mitosis', 'Meiosis', 'Apoptosis', 'Phagocytosis'], 'Meiosis', 'Meiosis is reproductive cell division that produces gametes with half the normal chromosome count so that when they combine at fertilization, the resulting cell has the correct total.', 3),
+    mc('When cell division regulation breaks down and cells divide uncontrollably, the result is:', ['Inflammation', 'Infection', 'Cancer', 'Necrosis'], 'Cancer', 'Cell division is tightly regulated. When that regulation fails and cells divide without control, the result is cancer — which is why so much cancer research focuses on cell cycle regulation.', 4),
+    mc('Ribosomes are responsible for:', ['Packaging and shipping proteins', 'Assembling proteins from genetic instructions', 'Storing calcium for muscle contraction', 'Filtering waste from the cell'], 'Assembling proteins from genetic instructions', 'Ribosomes read genetic instructions from DNA and assemble amino acids into proteins. Proteins do almost everything in the body — enzymes, structural materials, hormones, antibodies, and transport molecules.', 5),
+  ],
+
+  'tissues-and-organs': [
+    mc('Which of the four tissue types covers surfaces and lines cavities like the skin and gut?', ['Connective tissue', 'Muscle tissue', 'Nervous tissue', 'Epithelial tissue'], 'Epithelial tissue', 'Epithelial tissue covers body surfaces and lines internal cavities. It acts as a barrier, protects underlying structures, controls what moves between compartments, and forms glands that secrete hormones and enzymes.', 1),
+    mc('Blood, bone, cartilage, and fat all belong to which tissue category?', ['Muscle tissue', 'Connective tissue', 'Epithelial tissue', 'Nervous tissue'], 'Connective tissue', 'Connective tissue is the most diverse tissue type. Its defining feature is cells embedded in an extracellular matrix. Despite very different appearances, bone, blood, cartilage, fat, tendons, and ligaments are all connective tissues.', 2),
+    mc('An organ is best defined as:', ['Any structure found inside the body cavity', 'A single specialized cell type', 'A structure made of two or more tissue types working together', 'A group of similar cells performing one function'], 'A structure made of two or more tissue types working together', 'An organ is composed of multiple tissue types cooperating to perform specific functions. The heart, for example, contains cardiac muscle, connective, epithelial, and nervous tissue — all working together to pump blood.', 3),
+    mc('Which organ system includes the kidneys, bladder, and ureters?', ['Digestive system', 'Endocrine system', 'Urinary system', 'Lymphatic system'], 'Urinary system', 'The urinary system — kidneys, bladder, ureters, and urethra — filters waste products from the blood and excretes them as urine. The kidneys also regulate fluid balance and blood pressure.', 4),
+    mc('Why does a heart attack affect the entire body, not just the heart?', ['The heart produces hormones every organ depends on', 'Damaged cardiac muscle releases toxins into the bloodstream', 'The cardiovascular system delivers oxygen to all tissues, so impaired pumping reduces oxygen everywhere', 'The nervous system signals all organs to slow down'], 'The cardiovascular system delivers oxygen to all tissues, so impaired pumping reduces oxygen everywhere', 'A heart attack damages cardiac muscle, impairing the cardiovascular system. Because that system delivers oxygen and nutrients to every organ, reduced pumping ability threatens all tissues — illustrating how organ systems are interdependent.', 5),
+  ],
+
+  'homeostasis': [
+    mc('Homeostasis refers to:', ['The body\'s maximum physical performance capacity', 'The active maintenance of a stable internal environment despite changing conditions', 'The process by which cells divide and replicate', 'The body\'s immune response to pathogens'], 'The active maintenance of a stable internal environment despite changing conditions', 'Homeostasis is constant, active regulation. The body continuously monitors and adjusts temperature, blood glucose, pH, blood pressure, and other variables to keep them within narrow functional ranges.', 1),
+    mc('In a negative feedback loop, the response to a change:', ['Amplifies the change further in the same direction', 'Has no effect on the original stimulus', 'Opposes the change and pushes conditions back toward normal', 'Triggers positive feedback to complete a process'], 'Opposes the change and pushes conditions back toward normal', 'Negative feedback is the most common homeostatic mechanism. The response counters the original change — rising blood glucose triggers insulin release, which lowers glucose back to the normal range.', 2),
+    mc('Which of the following is an example of positive feedback?', ['Sweating when body temperature rises', 'Insulin release when blood glucose rises', 'Uterine contractions intensifying during childbirth', 'Kidneys retaining water when blood pressure drops'], 'Uterine contractions intensifying during childbirth', 'Positive feedback amplifies a change to drive a process to completion. During childbirth, contractions stimulate more contractions, escalating until the baby is delivered. Blood clotting works the same way.', 3),
+    mc('In type 2 diabetes, blood glucose homeostasis fails because:', ['The pancreas is surgically removed', 'Cells become resistant to insulin\'s signals, so glucose stays elevated', 'The liver stops storing glycogen entirely', 'The kidneys excrete too much glucose in urine'], 'Cells become resistant to insulin\'s signals, so glucose stays elevated', 'In type 2 diabetes, cells lose sensitivity to insulin. Even though the pancreas produces insulin, the signal fails to move glucose into cells effectively. Blood glucose remains chronically elevated, causing widespread damage.', 4),
+    mc('The normal range for blood pH is:', ['6.8–7.2', '7.0–7.6', '7.35–7.45', '7.5–8.0'], '7.35–7.45', 'Blood pH is maintained within 7.35–7.45 — an extremely narrow range. The lungs regulate pH by adjusting CO2 levels, and the kidneys regulate bicarbonate. Even small deviations cause serious physiological problems.', 5),
+  ],
+}
