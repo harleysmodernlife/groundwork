@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import { readdirSync, existsSync, mkdirSync, writeFileSync } from 'fs'
 import { join, dirname } from 'path'
 import { Pool } from 'pg'
