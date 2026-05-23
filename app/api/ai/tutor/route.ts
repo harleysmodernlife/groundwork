@@ -38,9 +38,12 @@ export async function POST(req: Request) {
   }
 
   const contentFile = path.join(process.cwd(), 'content', lesson.contentPath)
-  const lessonContent = fs.existsSync(contentFile)
+  const raw = fs.existsSync(contentFile)
     ? fs.readFileSync(contentFile, 'utf8')
     : lesson.name
+  // Limit to ~600 words so the prompt fits within a small model's context window
+  const words = raw.split(/\s+/)
+  const lessonContent = words.length > 600 ? words.slice(0, 600).join(' ') + '...' : raw
 
   const result = streamText({
     model: resolved.model!,
