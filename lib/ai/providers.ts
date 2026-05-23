@@ -80,11 +80,11 @@ export async function resolveModel(userId: string) {
     return { model: google('gemini-2.0-flash'), isFree: true, tokensUsed: user.dailyTokensUsed, atLimit: false }
   }
 
-  // Local llama.cpp fallback (LOCAL_GRADER_URL)
+  // Local llama.cpp fallback (LOCAL_GRADER_URL) — must use .chat() to force Chat Completions API
   const localUrl = process.env.LOCAL_GRADER_URL
   if (localUrl) {
     const local = createOpenAI({ baseURL: `${localUrl}/v1`, apiKey: 'local' })
-    return { model: local('qwen2.5-1.5b-instruct'), isFree: true, tokensUsed: user.dailyTokensUsed, atLimit: false }
+    return { model: local.chat('qwen2.5-1.5b-instruct'), isFree: true, tokensUsed: user.dailyTokensUsed, atLimit: false }
   }
 
   return { model: null, isFree: true, tokensUsed: user.dailyTokensUsed, noFreeModel: true }

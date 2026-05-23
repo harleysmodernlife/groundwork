@@ -16,7 +16,7 @@ function getGraderModel() {
   const localUrl = process.env.LOCAL_GRADER_URL
   if (localUrl) {
     const local = createOpenAI({ baseURL: `${localUrl}/v1`, apiKey: 'local' })
-    return local('qwen2.5-1.5b-instruct')
+    return local.chat('qwen2.5-1.5b-instruct')
   }
 
   const platformKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY
