@@ -43,7 +43,7 @@ export default function TutorPanel({ lessonId, lessonName, onClose }: TutorPanel
 
     const userMsg: Message = { role: 'user', content: text }
     const updated = [...messages, userMsg]
-    setMessages(updated)
+    setMessages([...updated, { role: 'assistant', content: '' }])
     setInput('')
     setLoading(true)
 
@@ -56,21 +56,21 @@ export default function TutorPanel({ lessonId, lessonName, onClose }: TutorPanel
     if (res.status === 503 || res.status === 429) {
       const data = await res.json().catch(() => ({}))
       const isNoKey = data.error === 'no_free_model'
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: 'assistant',
-          content: isNoKey
-            ? '__no_key__'
-            : '__at_limit__',
-        },
-      ])
+      setMessages((prev) => {
+        const copy = [...prev]
+        copy[copy.length - 1] = { role: 'assistant', content: isNoKey ? '__no_key__' : '__at_limit__' }
+        return copy
+      })
       setLoading(false)
       return
     }
 
     if (!res.ok || !res.body) {
-      setMessages((prev) => [...prev, { role: 'assistant', content: '__error__' }])
+      setMessages((prev) => {
+        const copy = [...prev]
+        copy[copy.length - 1] = { role: 'assistant', content: '__error__' }
+        return copy
+      })
       setLoading(false)
       return
     }
@@ -78,8 +78,6 @@ export default function TutorPanel({ lessonId, lessonName, onClose }: TutorPanel
     const reader = res.body.getReader()
     const decoder = new TextDecoder()
     let reply = ''
-
-    setMessages((prev) => [...prev, { role: 'assistant', content: '' }])
 
     while (true) {
       const { done, value } = await reader.read()
