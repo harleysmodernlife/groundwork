@@ -1,7 +1,6 @@
 import { generateText } from 'ai'
 import { auth } from '@/lib/auth'
 import { resolveModel } from '@/lib/ai/providers'
-import { gradeOpenEnded } from '@/lib/ai/grader'
 
 export async function POST(req: Request) {
   const session = await auth()
@@ -12,10 +11,8 @@ export async function POST(req: Request) {
 
   const resolved = await resolveModel(userId)
 
-  // If no user BYOK model and no platform key, fall back to local grader
   if (resolved.noFreeModel) {
-    const score = await gradeOpenEnded(question, correctAnswer ?? '', studentAnswer)
-    return Response.json({ score, feedback: explanation })
+    return Response.json({ score: 0, feedback: 'AI grading is unavailable — no AI model is configured.', noModel: true })
   }
 
   if (resolved.atLimit) {
