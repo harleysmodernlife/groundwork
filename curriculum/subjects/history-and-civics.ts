@@ -1,4 +1,11 @@
 import type { SubjectDef } from '../types'
+import { historyExercises1 } from './history-exercises-1'
+import { historyExercises2 } from './history-exercises-2'
+import { historyExercises3 } from './history-exercises-3'
+import { historyExercises4 } from './history-exercises-4'
+import { historyExercises5 } from './history-exercises-5'
+import { historyExercises6 } from './history-exercises-6'
+import { historyExercises7 } from './history-exercises-7'
 
 const historyAndCivics: SubjectDef = {
   slug: 'history-and-civics',
@@ -19,10 +26,10 @@ const historyAndCivics: SubjectDef = {
           name: 'The Structure of US Government',
           order: 1,
           lessons: [
-            { slug: 'three-branches', name: 'The Three Branches of Government', order: 1 },
-            { slug: 'the-constitution', name: 'The Constitution: What It Is and Why It Matters', order: 2 },
-            { slug: 'federalism', name: 'Federalism: Federal vs State vs Local', order: 3 },
-            { slug: 'checks-and-balances', name: 'Checks and Balances', order: 4 },
+            { slug: 'three-branches', name: 'The Three Branches of Government', order: 1, exercises: historyExercises1['three-branches'] },
+            { slug: 'the-constitution', name: 'The Constitution: What It Is and Why It Matters', order: 2, exercises: historyExercises1['the-constitution'] },
+            { slug: 'federalism', name: 'Federalism: Federal vs State vs Local', order: 3, exercises: historyExercises1['federalism'] },
+            { slug: 'checks-and-balances', name: 'Checks and Balances', order: 4, exercises: historyExercises1['checks-and-balances'] },
           ],
         },
         {
@@ -30,9 +37,9 @@ const historyAndCivics: SubjectDef = {
           name: 'How Laws Are Made',
           order: 2,
           lessons: [
-            { slug: 'congress-and-legislation', name: 'Congress and How a Bill Becomes a Law', order: 1 },
-            { slug: 'the-courts', name: 'The Court System and Judicial Review', order: 2 },
-            { slug: 'voting-and-elections', name: 'Voting, Elections, and Electoral Systems', order: 3 },
+            { slug: 'congress-and-legislation', name: 'Congress and How a Bill Becomes a Law', order: 1, exercises: historyExercises1['congress-and-legislation'] },
+            { slug: 'the-courts', name: 'The Court System and Judicial Review', order: 2, exercises: historyExercises1['the-courts'] },
+            { slug: 'voting-and-elections', name: 'Voting, Elections, and Electoral Systems', order: 3, exercises: historyExercises1['voting-and-elections'] },
           ],
         },
       ],
@@ -49,10 +56,10 @@ const historyAndCivics: SubjectDef = {
           name: 'Colonial Era and Revolution',
           order: 1,
           lessons: [
-            { slug: 'colonization', name: 'European Colonization of North America', order: 1 },
-            { slug: 'causes-of-revolution', name: 'Causes of the American Revolution', order: 2 },
-            { slug: 'revolution-and-founding', name: 'The Revolution and the Founding Documents', order: 3 },
-            { slug: 'early-republic', name: 'The Early Republic: Challenges and Growth', order: 4 },
+            { slug: 'colonization', name: 'European Colonization of North America', order: 1, exercises: historyExercises2['colonization'] },
+            { slug: 'causes-of-revolution', name: 'Causes of the American Revolution', order: 2, exercises: historyExercises2['causes-of-revolution'] },
+            { slug: 'revolution-and-founding', name: 'The Revolution and the Founding Documents', order: 3, exercises: historyExercises2['revolution-and-founding'] },
+            { slug: 'early-republic', name: 'The Early Republic: Challenges and Growth', order: 4, exercises: historyExercises2['early-republic'] },
           ],
         },
         {
@@ -60,10 +67,10 @@ const historyAndCivics: SubjectDef = {
           name: 'Expansion and Civil War',
           order: 2,
           lessons: [
-            { slug: 'westward-expansion', name: 'Westward Expansion and Manifest Destiny', order: 1 },
-            { slug: 'slavery-and-sectional-crisis', name: 'Slavery and the Sectional Crisis', order: 2 },
-            { slug: 'civil-war', name: 'The Civil War', order: 3 },
-            { slug: 'reconstruction', name: 'Reconstruction: Promise and Failure', order: 4 },
+            { slug: 'westward-expansion', name: 'Westward Expansion and Manifest Destiny', order: 1, exercises: historyExercises2['westward-expansion'] },
+            { slug: 'slavery-and-sectional-crisis', name: 'Slavery and the Sectional Crisis', order: 2, exercises: historyExercises2['slavery-and-sectional-crisis'] },
+            { slug: 'civil-war', name: 'The Civil War', order: 3, exercises: historyExercises3['civil-war'] },
+            { slug: 'reconstruction', name: 'Reconstruction: Promise and Failure', order: 4, exercises: historyExercises3['reconstruction'] },
           ],
         },
       ],
@@ -80,10 +87,10 @@ const historyAndCivics: SubjectDef = {
           name: 'Industrialization Through World War II',
           order: 1,
           lessons: [
-            { slug: 'gilded-age-and-progressive-era', name: 'The Gilded Age and Progressive Era', order: 1 },
-            { slug: 'world-war-one', name: 'World War I and the Interwar Period', order: 2 },
-            { slug: 'great-depression', name: 'The Great Depression and the New Deal', order: 3 },
-            { slug: 'world-war-two', name: 'World War II', order: 4 },
+            { slug: 'gilded-age-and-progressive-era', name: 'The Gilded Age and Progressive Era', order: 1, exercises: historyExercises3['gilded-age-and-progressive-era'] },
+            { slug: 'world-war-one', name: 'World War I and the Interwar Period', order: 2, exercises: historyExercises3['world-war-one'] },
+            { slug: 'great-depression', name: 'The Great Depression and the New Deal', order: 3, exercises: historyExercises3['great-depression'] },
+            { slug: 'world-war-two', name: 'World War II', order: 4, exercises: historyExercises3['world-war-two'] },
           ],
         },
         {
@@ -91,10 +98,10 @@ const historyAndCivics: SubjectDef = {
           name: 'Postwar America to the Present',
           order: 2,
           lessons: [
-            { slug: 'cold-war', name: 'The Cold War', order: 1 },
-            { slug: 'civil-rights-movement', name: 'The Civil Rights Movement', order: 2 },
-            { slug: 'social-change-in-the-sixties', name: 'Social Change in the 1960s and 70s', order: 3 },
-            { slug: 'america-in-the-21st-century', name: 'America Since 2000', order: 4 },
+            { slug: 'cold-war', name: 'The Cold War', order: 1, exercises: historyExercises3['cold-war'] },
+            { slug: 'civil-rights-movement', name: 'The Civil Rights Movement', order: 2, exercises: historyExercises3['civil-rights-movement'] },
+            { slug: 'social-change-in-the-sixties', name: 'Social Change in the 1960s and 70s', order: 3, exercises: historyExercises4['social-change-in-the-sixties'] },
+            { slug: 'america-in-the-21st-century', name: 'America Since 2000', order: 4, exercises: historyExercises4['america-in-the-21st-century'] },
           ],
         },
       ],
@@ -111,10 +118,10 @@ const historyAndCivics: SubjectDef = {
           name: 'Ancient Civilizations',
           order: 1,
           lessons: [
-            { slug: 'first-civilizations', name: 'The First Civilizations: Mesopotamia and Egypt', order: 1 },
-            { slug: 'ancient-greece', name: 'Ancient Greece: Democracy and Philosophy', order: 2 },
-            { slug: 'ancient-rome', name: 'Ancient Rome: Republic and Empire', order: 3 },
-            { slug: 'ancient-asia', name: 'Ancient China and India', order: 4 },
+            { slug: 'first-civilizations', name: 'The First Civilizations: Mesopotamia and Egypt', order: 1, exercises: historyExercises4['first-civilizations'] },
+            { slug: 'ancient-greece', name: 'Ancient Greece: Democracy and Philosophy', order: 2, exercises: historyExercises4['ancient-greece'] },
+            { slug: 'ancient-rome', name: 'Ancient Rome: Republic and Empire', order: 3, exercises: historyExercises4['ancient-rome'] },
+            { slug: 'ancient-asia', name: 'Ancient China and India', order: 4, exercises: historyExercises4['ancient-asia'] },
           ],
         },
         {
@@ -122,10 +129,10 @@ const historyAndCivics: SubjectDef = {
           name: 'The Medieval World',
           order: 2,
           lessons: [
-            { slug: 'fall-of-rome-and-middle-ages', name: 'The Fall of Rome and the Middle Ages', order: 1 },
-            { slug: 'islam-and-the-caliphates', name: 'The Rise of Islam and the Caliphates', order: 2 },
-            { slug: 'feudalism-and-crusades', name: 'Feudalism and the Crusades', order: 3 },
-            { slug: 'mongol-empire', name: 'The Mongol Empire and Global Trade', order: 4 },
+            { slug: 'fall-of-rome-and-middle-ages', name: 'The Fall of Rome and the Middle Ages', order: 1, exercises: historyExercises4['fall-of-rome-and-middle-ages'] },
+            { slug: 'islam-and-the-caliphates', name: 'The Rise of Islam and the Caliphates', order: 2, exercises: historyExercises5['islam-and-the-caliphates'] },
+            { slug: 'feudalism-and-crusades', name: 'Feudalism and the Crusades', order: 3, exercises: historyExercises5['feudalism-and-crusades'] },
+            { slug: 'mongol-empire', name: 'The Mongol Empire and Global Trade', order: 4, exercises: historyExercises5['mongol-empire'] },
           ],
         },
       ],
@@ -142,10 +149,10 @@ const historyAndCivics: SubjectDef = {
           name: 'Early Modern World',
           order: 1,
           lessons: [
-            { slug: 'renaissance-and-reformation', name: 'The Renaissance and Reformation', order: 1 },
-            { slug: 'age-of-exploration', name: 'The Age of Exploration and Colonialism', order: 2 },
-            { slug: 'scientific-revolution', name: 'The Scientific Revolution and Enlightenment', order: 3 },
-            { slug: 'atlantic-revolutions', name: 'The Atlantic Revolutions', order: 4 },
+            { slug: 'renaissance-and-reformation', name: 'The Renaissance and Reformation', order: 1, exercises: historyExercises5['renaissance-and-reformation'] },
+            { slug: 'age-of-exploration', name: 'The Age of Exploration and Colonialism', order: 2, exercises: historyExercises5['age-of-exploration'] },
+            { slug: 'scientific-revolution', name: 'The Scientific Revolution and Enlightenment', order: 3, exercises: historyExercises5['scientific-revolution'] },
+            { slug: 'atlantic-revolutions', name: 'The Atlantic Revolutions', order: 4, exercises: historyExercises5['atlantic-revolutions'] },
           ],
         },
         {
@@ -153,10 +160,10 @@ const historyAndCivics: SubjectDef = {
           name: 'The Modern World',
           order: 2,
           lessons: [
-            { slug: 'industrialization-and-imperialism', name: 'Industrialization and Imperialism', order: 1 },
-            { slug: 'world-wars', name: 'World War I and II: Global Conflict', order: 2 },
-            { slug: 'decolonization', name: 'Decolonization and the Cold War', order: 3 },
-            { slug: 'globalization', name: 'Globalization and the 21st Century World', order: 4 },
+            { slug: 'industrialization-and-imperialism', name: 'Industrialization and Imperialism', order: 1, exercises: historyExercises6['industrialization-and-imperialism'] },
+            { slug: 'world-wars', name: 'World War I and II: Global Conflict', order: 2, exercises: historyExercises6['world-wars'] },
+            { slug: 'decolonization', name: 'Decolonization and the Cold War', order: 3, exercises: historyExercises6['decolonization'] },
+            { slug: 'globalization', name: 'Globalization and the 21st Century World', order: 4, exercises: historyExercises6['globalization'] },
           ],
         },
       ],
@@ -173,9 +180,9 @@ const historyAndCivics: SubjectDef = {
           name: 'Evaluating Information',
           order: 1,
           lessons: [
-            { slug: 'how-media-works', name: 'How News Media Works and Makes Money', order: 1 },
-            { slug: 'identifying-bias', name: 'Identifying Bias in Sources', order: 2 },
-            { slug: 'spotting-misinformation', name: 'Misinformation, Disinformation, and How to Spot Them', order: 3 },
+            { slug: 'how-media-works', name: 'How News Media Works and Makes Money', order: 1, exercises: historyExercises6['how-media-works'] },
+            { slug: 'identifying-bias', name: 'Identifying Bias in Sources', order: 2, exercises: historyExercises6['identifying-bias'] },
+            { slug: 'spotting-misinformation', name: 'Misinformation, Disinformation, and How to Spot Them', order: 3, exercises: historyExercises6['spotting-misinformation'] },
           ],
         },
         {
@@ -183,9 +190,9 @@ const historyAndCivics: SubjectDef = {
           name: 'Critical Thinking',
           order: 2,
           lessons: [
-            { slug: 'logical-fallacies', name: 'Common Logical Fallacies', order: 1 },
-            { slug: 'evaluating-sources', name: 'How to Evaluate a Source', order: 2 },
-            { slug: 'forming-your-own-views', name: 'Forming Your Own Views from Evidence', order: 3 },
+            { slug: 'logical-fallacies', name: 'Common Logical Fallacies', order: 1, exercises: historyExercises7['logical-fallacies'] },
+            { slug: 'evaluating-sources', name: 'How to Evaluate a Source', order: 2, exercises: historyExercises7['evaluating-sources'] },
+            { slug: 'forming-your-own-views', name: 'Forming Your Own Views from Evidence', order: 3, exercises: historyExercises7['forming-your-own-views'] },
           ],
         },
       ],
