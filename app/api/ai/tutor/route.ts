@@ -1,7 +1,7 @@
 import { streamText } from 'ai'
 import { auth } from '@/lib/auth'
 import { resolveModel, incrementTokens } from '@/lib/ai/providers'
-import { buildTutorSystemPrompt } from '@/lib/ai/tutor'
+import { buildTutorSystemPrompt, extractLessonSummary } from '@/lib/ai/tutor'
 import { db } from '@/lib/db'
 import fs from 'fs'
 import path from 'path'
@@ -41,9 +41,7 @@ export async function POST(req: Request) {
   const raw = fs.existsSync(contentFile)
     ? fs.readFileSync(contentFile, 'utf8')
     : lesson.name
-  // Limit to ~600 words so the prompt fits within a small model's context window
-  const words = raw.split(/\s+/)
-  const lessonContent = words.length > 600 ? words.slice(0, 600).join(' ') + '...' : raw
+  const lessonContent = extractLessonSummary(raw)
 
   const result = streamText({
     model: resolved.model!,
