@@ -26,10 +26,18 @@ interface AssessmentRunnerProps {
 type Result = { score: number; passed: boolean; verificationCode?: string }
 
 export default function AssessmentRunner({ assessment, alreadyPassed }: AssessmentRunnerProps) {
+  const GRADING_WORDS = ['Grading your answers...', 'Scoring...', 'Analyzing...', 'Working...']
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const [submitting, setSubmitting] = useState(false)
+  const [gradeIdx, setGradeIdx] = useState(0)
   const [result, setResult] = useState<Result | null>(null)
   const [timeLeft, setTimeLeft] = useState(assessment.timeLimitMin ? assessment.timeLimitMin * 60 : null)
+
+  useEffect(() => {
+    if (!submitting) return
+    const t = setInterval(() => setGradeIdx((i) => (i + 1) % GRADING_WORDS.length), 1200)
+    return () => clearInterval(t)
+  }, [submitting])
 
   const submit = useCallback(async () => {
     setSubmitting(true)
@@ -147,7 +155,7 @@ export default function AssessmentRunner({ assessment, alreadyPassed }: Assessme
       </div>
 
       <Button onClick={submit} disabled={submitting} size="lg" className="w-full">
-        {submitting ? 'Submitting...' : 'Submit assessment'}
+        {submitting ? GRADING_WORDS[gradeIdx] : 'Submit assessment'}
       </Button>
     </div>
   )

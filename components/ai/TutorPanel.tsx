@@ -13,6 +13,8 @@ interface TutorPanelProps {
   onClose: () => void
 }
 
+const THINKING_WORDS = ['Thinking...', 'Working...', 'Reading...']
+
 export default function TutorPanel({ lessonId, lessonName, onClose }: TutorPanelProps) {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -22,7 +24,14 @@ export default function TutorPanel({ lessonId, lessonName, onClose }: TutorPanel
   ])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
+  const [thinkIdx, setThinkIdx] = useState(0)
   const bottomRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!loading) return
+    const t = setInterval(() => setThinkIdx((i) => (i + 1) % THINKING_WORDS.length), 900)
+    return () => clearInterval(t)
+  }, [loading])
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -137,7 +146,7 @@ export default function TutorPanel({ lessonId, lessonName, onClose }: TutorPanel
                   ? 'bg-zinc-900 text-white'
                   : 'bg-zinc-100 text-zinc-800'
               }`}>
-                {msg.content || <span className="text-zinc-400 animate-pulse">...</span>}
+                {msg.content || <span className="text-zinc-400">{THINKING_WORDS[thinkIdx]}</span>}
               </div>
             </div>
           )
