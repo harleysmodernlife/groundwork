@@ -80,7 +80,7 @@ const tradesAndSkilledWork: SubjectDef = {
           name: 'Common Repairs',
           order: 2,
           lessons: [
-            { slug: 'fixing-a-leak', name: 'Finding and Fixing Leaks', order: 1, exercises: tradesExercises2['fixing-a-leak'] },
+            { slug: 'fixing-a-leak', name: 'Finding and Fixing Leaks', order: 1, exercises: tradesExercises3['fixing-a-leak'] },
             { slug: 'toilets-and-faucets', name: 'Toilets and Faucets: Most Common Repairs', order: 2, exercises: tradesExercises3['toilets-and-faucets'] },
             { slug: 'water-heaters', name: 'Water Heaters: Maintenance and Basics', order: 3, exercises: tradesExercises3['water-heaters'] },
             { slug: 'drain-clogs', name: 'Clearing Clogs Without Wrecking the Pipes', order: 4, exercises: tradesExercises3['drain-clogs'] },
@@ -104,7 +104,7 @@ const tradesAndSkilledWork: SubjectDef = {
             { slug: 'heating-systems', name: 'Heating Systems: Furnaces, Boilers, and Heat Pumps', order: 1, exercises: tradesExercises3['heating-systems'] },
             { slug: 'cooling-systems', name: 'Cooling Systems: How Air Conditioners Work', order: 2, exercises: tradesExercises3['cooling-systems'] },
             { slug: 'ventilation-and-air-quality', name: 'Ventilation and Indoor Air Quality', order: 3, exercises: tradesExercises3['ventilation-and-air-quality'] },
-            { slug: 'thermostats-and-controls', name: 'Thermostats and System Controls', order: 4, exercises: tradesExercises3['thermostats-and-controls'] },
+            { slug: 'thermostats-and-controls', name: 'Thermostats and System Controls', order: 4, exercises: tradesExercises4['thermostats-and-controls'] },
           ],
         },
         {
@@ -134,8 +134,8 @@ const tradesAndSkilledWork: SubjectDef = {
           order: 1,
           lessons: [
             { slug: 'types-of-wood', name: 'Lumber, Plywood, and Engineered Wood Products', order: 1, exercises: tradesExercises4['types-of-wood'] },
-            { slug: 'reading-a-tape-measure', name: 'Measuring and Layout', order: 2, exercises: tradesExercises4['reading-a-tape-measure'] },
-            { slug: 'hand-tools', name: 'Hand Tools Every Carpenter Uses', order: 3, exercises: tradesExercises4['hand-tools'] },
+            { slug: 'reading-a-tape-measure', name: 'Measuring and Layout', order: 2, exercises: tradesExercises5['reading-a-tape-measure'] },
+            { slug: 'hand-tools', name: 'Hand Tools Every Carpenter Uses', order: 3, exercises: tradesExercises5['hand-tools'] },
             { slug: 'power-tools', name: 'Power Tools: Safe Use and Applications', order: 4, exercises: tradesExercises5['power-tools'] },
           ],
         },
@@ -147,7 +147,7 @@ const tradesAndSkilledWork: SubjectDef = {
             { slug: 'cutting-techniques', name: 'Cutting Techniques and Saw Selection', order: 1, exercises: tradesExercises5['cutting-techniques'] },
             { slug: 'joinery-basics', name: 'Joinery: How Wood Comes Together', order: 2, exercises: tradesExercises5['joinery-basics'] },
             { slug: 'framing-basics', name: 'Rough Framing Basics', order: 3, exercises: tradesExercises5['framing-basics'] },
-            { slug: 'finish-carpentry', name: 'Finish Carpentry: Trim, Doors, and Cabinets', order: 4, exercises: tradesExercises5['finish-carpentry'] },
+            { slug: 'finish-carpentry', name: 'Finish Carpentry: Trim, Doors, and Cabinets', order: 4, exercises: tradesExercises6['finish-carpentry'] },
           ],
         },
       ],
@@ -165,8 +165,8 @@ const tradesAndSkilledWork: SubjectDef = {
           name: 'How Cars Work',
           order: 1,
           lessons: [
-            { slug: 'the-engine', name: 'The Internal Combustion Engine', order: 1, exercises: tradesExercises5['the-engine'] },
-            { slug: 'drivetrain', name: 'Drivetrain: Transmission, Axles, and Wheels', order: 2, exercises: tradesExercises5['drivetrain'] },
+            { slug: 'the-engine', name: 'The Internal Combustion Engine', order: 1, exercises: tradesExercises6['the-engine'] },
+            { slug: 'drivetrain', name: 'Drivetrain: Transmission, Axles, and Wheels', order: 2, exercises: tradesExercises6['drivetrain'] },
             { slug: 'electrical-systems', name: 'Automotive Electrical Systems', order: 3, exercises: tradesExercises6['electrical-systems'] },
             { slug: 'brakes-and-suspension', name: 'Brakes and Suspension', order: 4, exercises: tradesExercises6['brakes-and-suspension'] },
           ],
@@ -176,7 +176,7 @@ const tradesAndSkilledWork: SubjectDef = {
           name: 'Maintenance and Diagnosis',
           order: 2,
           lessons: [
-            { slug: 'routine-maintenance', name: 'Routine Maintenance: What, When, and Why', order: 1, exercises: tradesExercises6['routine-maintenance'] },
+            { slug: 'routine-maintenance', name: 'Routine Maintenance: What, When, and Why', order: 1, exercises: tradesExercises7['routine-maintenance'] },
             { slug: 'reading-error-codes', name: 'Reading OBD-II Error Codes', order: 2, exercises: tradesExercises7['reading-error-codes'] },
             { slug: 'common-repairs', name: 'Common Repairs You Can Do Yourself', order: 3, exercises: tradesExercises7['common-repairs'] },
             { slug: 'when-to-take-it-in', name: 'When to Go to a Shop — and How Not to Get Ripped Off', order: 4, exercises: tradesExercises7['when-to-take-it-in'] },
