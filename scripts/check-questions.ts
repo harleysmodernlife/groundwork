@@ -7,7 +7,7 @@ async function main() {
   const { rows } = await pool.query(`
     SELECT l.slug, COUNT(eq.id)::int as q_count
     FROM "Lesson" l
-    LEFT JOIN "ExerciseQuestion" eq ON eq.lesson_id = l.id
+    LEFT JOIN "Exercise" eq ON eq."lessonId" = l.id
     GROUP BY l.id, l.slug
     ORDER BY q_count, l.slug
   `)
