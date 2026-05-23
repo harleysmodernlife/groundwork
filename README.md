@@ -78,9 +78,19 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full local development setup.
 
 ## Current Status
 
-Early development. The foundation is built. The first subject (Business & Entrepreneurship) is in progress. This is not production-ready yet — but it will be, and everything will be free when it is.
+The platform is built and the full curriculum is loaded. What exists right now:
 
-See [ROADMAP.md](ROADMAP.md) for what's coming.
+- **13 subjects** — Business, Economics, Personal Finance, Law, Technology, Trades, Health, Mathematics, Sciences, History & Civics, Psychology, Language & Writing, Arts & Creative Skills
+- **85 courses** — each with a timed, scored final assessment
+- **642 lessons** — every lesson has practice exercises
+- **Full learning stack** — lesson player, AI tutor panel, exercise system, assessment runner, certificate generation, student dashboard
+- **Auth** — signup, login, session management
+- **Employer portal** — search graduates, post jobs, verify certificates
+- **Self-hostable** — Docker Compose, full setup in one command
+
+What's not done yet: public launch, employer partnerships, mobile apps, internationalization. The platform works. It hasn't been opened to the world yet.
+
+See [ROADMAP.md](ROADMAP.md) for what's next.
 
 ---
 

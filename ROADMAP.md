@@ -6,7 +6,7 @@ The mission does not change: free education for everyone, no asterisks, forever.
 
 ---
 
-## Phase 1 — Foundation (Current)
+## Phase 1 — Foundation ✓
 
 Get a single subject working end-to-end. Prove the model. Ship something real.
 
@@ -15,53 +15,72 @@ Get a single subject working end-to-end. Prove the model. Ship something real.
 - [x] AI provider routing (free tier + BYOK)
 - [x] Certificate generation (Open Badges 3.0)
 - [x] API routes (auth, progress, assessment, AI tutor, platform help)
-- [ ] Auth UI (signup, login)
-- [ ] Lesson player (MDX rendering, progress tracking)
-- [ ] AI tutor panel (Socratic, in-lesson)
-- [ ] Exercise system (multiple choice + AI-graded open-ended)
-- [ ] Assessment system (timed, scored, pass/fail)
-- [ ] Certificate verification page (public, employer-readable)
-- [ ] Groundwork Assistant (platform help widget, BYOK walkthrough)
-- [ ] Business & Entrepreneurship curriculum — first 2 courses
-- [ ] Docker Compose deployment
-- [ ] Public beta
+- [x] Auth UI (signup, login)
+- [x] Lesson player (MDX rendering, progress tracking)
+- [x] AI tutor panel (Socratic, in-lesson)
+- [x] Exercise system (multiple choice + AI-graded open-ended)
+- [x] Assessment system (timed, scored, pass/fail)
+- [x] Certificate verification page (public, employer-readable)
+- [x] Groundwork Assistant (platform help widget, BYOK walkthrough)
+- [x] Docker Compose deployment
+
+**Done.**
+
+---
+
+## Phase 2 — Full Curriculum ✓
+
+642 lessons across 13 subjects. Every course has exercises and a final assessment.
+
+- [x] Business & Entrepreneurship — 6 courses
+- [x] Economics — 5 courses
+- [x] Personal Finance & Money — 8 courses
+- [x] Law & Legal Rights — 6 courses
+- [x] Technology & Computing — 7 courses
+- [x] Trades & Skilled Work — 7 courses
+- [x] Health & Wellness — 6 courses
+- [x] Mathematics — 8 courses
+- [x] Sciences — 6 courses
+- [x] History & Civics — 6 courses
+- [x] Psychology — 6 courses
+- [x] Language & Writing — 6 courses
+- [x] Arts & Creative Skills — 6 courses
+- [x] Contributor curriculum guide
+- [x] Student dashboard (progress across all subjects)
+- [x] Employer portal (search graduates, post jobs, verify certificates)
+
+**Done.**
+
+---
+
+## Phase 3 — Public Launch (Current)
+
+Open the doors. Get real learners. Prove the certificate means something.
+
+- [ ] End-to-end testing and bug fixes
+- [ ] Mobile-responsive polish
+- [ ] Accessibility audit (WCAG 2.1 AA)
+- [ ] Production deployment
+- [ ] Public beta — first real learners
 
 **Target:** First learner earns a real certificate
 
 ---
 
-## Phase 2 — Grow the Library
-
-More subjects. More learners. More contributors.
-
-- [ ] Business & Entrepreneurship — all 6 courses complete
-- [ ] Trades & Vocational (HVAC, Electrical, Plumbing, Automotive basics)
-- [ ] Financial Literacy (personal finance, investing, debt management)
-- [ ] Law Basics (contracts, tenant rights, small business law)
-- [ ] Contributor curriculum guide (so anyone can write a course)
-- [ ] Subject certificate (awarded when all courses in a subject are passed)
-- [ ] Student dashboard (progress across all subjects)
-- [ ] Mobile-responsive polish
-- [ ] Accessibility audit (WCAG 2.1 AA)
-
----
-
-## Phase 3 — Employer Marketplace
+## Phase 4 — Employer Marketplace
 
 Make the certificate worth something in the real world.
 
-- [ ] Employer portal (separate auth, paid subscription)
-- [ ] Graduate search (by skill, location, certification)
-- [ ] Job board (employers post, graduates apply — free for students)
-- [ ] Verification API (employers verify a certificate programmatically)
-- [ ] Employer analytics (hiring outcomes, top certifications)
+- [ ] Paid employer subscriptions
 - [ ] First employer partnership
+- [ ] Employer analytics (hiring outcomes, top certifications)
+- [ ] Verification API (employers verify a certificate programmatically)
 
 **This is the revenue engine. Students never pay. Employers pay to recruit.**
 
 ---
 
-## Phase 4 — Scale
+## Phase 5 — Scale
 
 Make it work for the world, not just early adopters.
 
@@ -75,7 +94,7 @@ Make it work for the world, not just early adopters.
 
 ---
 
-## Phase 5 — The Long Game
+## Phase 6 — The Long Game
 
 Where it goes if we do everything right.
 
