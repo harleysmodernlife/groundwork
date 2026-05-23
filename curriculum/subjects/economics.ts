@@ -4,6 +4,7 @@ import { businessEconExercises } from './economics-exercises-business'
 import { macroExercises } from './economics-exercises-macro'
 import { globalEconExercises } from './economics-exercises-global'
 import { behavioralExercises } from './economics-exercises-behavioral'
+import { economicsAssessments } from './economics-assessments'
 
 const economics: SubjectDef = {
   slug: 'economics',
@@ -18,6 +19,7 @@ const economics: SubjectDef = {
       description: 'How economists think about choices, trade-offs, and the behavior of individuals and firms.',
       order: 1,
       estimatedHours: 4,
+      assessment: economicsAssessments['economic-thinking'],
       modules: [
         {
           slug: 'foundations-of-economics',
@@ -49,6 +51,7 @@ const economics: SubjectDef = {
       order: 2,
       estimatedHours: 4,
       prerequisites: ['economic-thinking'],
+      assessment: economicsAssessments['business-economics'],
       modules: [
         {
           slug: 'costs-and-production',
@@ -80,6 +83,7 @@ const economics: SubjectDef = {
       order: 3,
       estimatedHours: 5,
       prerequisites: ['economic-thinking'],
+      assessment: economicsAssessments['macroeconomics'],
       modules: [
         {
           slug: 'measuring-the-economy',
@@ -112,6 +116,7 @@ const economics: SubjectDef = {
       order: 4,
       estimatedHours: 4,
       prerequisites: ['macroeconomics'],
+      assessment: economicsAssessments['global-economics'],
       modules: [
         {
           slug: 'international-trade',
@@ -143,6 +148,7 @@ const economics: SubjectDef = {
       order: 5,
       estimatedHours: 3,
       prerequisites: ['economic-thinking'],
+      assessment: economicsAssessments['behavioral-economics'],
       modules: [
         {
           slug: 'cognitive-biases',

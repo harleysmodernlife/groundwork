@@ -5,6 +5,7 @@ import { psychologyExercises3 } from './psychology-exercises-3'
 import { psychologyExercises4 } from './psychology-exercises-4'
 import { psychologyExercises5 } from './psychology-exercises-5'
 import { psychologyExercises6 } from './psychology-exercises-6'
+import { psychologyAssessments } from './psychology-assessments'
 
 const psychology: SubjectDef = {
   slug: 'psychology',
@@ -19,6 +20,7 @@ const psychology: SubjectDef = {
       description: 'The foundations of psychological science — its history, methods, and the major perspectives.',
       order: 1,
       estimatedHours: 4,
+      assessment: psychologyAssessments['intro-to-psychology'],
       modules: [
         {
           slug: 'psychology-foundations',
@@ -50,6 +52,7 @@ const psychology: SubjectDef = {
       order: 2,
       estimatedHours: 4,
       prerequisites: ['intro-to-psychology'],
+      assessment: psychologyAssessments['perception-and-cognition'],
       modules: [
         {
           slug: 'sensation-and-perception',
@@ -81,6 +84,7 @@ const psychology: SubjectDef = {
       order: 3,
       estimatedHours: 4,
       prerequisites: ['intro-to-psychology'],
+      assessment: psychologyAssessments['emotion-and-motivation'],
       modules: [
         {
           slug: 'emotion-and-motivation',
@@ -111,6 +115,7 @@ const psychology: SubjectDef = {
       order: 4,
       estimatedHours: 4,
       prerequisites: ['intro-to-psychology'],
+      assessment: psychologyAssessments['developmental-psychology'],
       modules: [
         {
           slug: 'early-development',
@@ -141,6 +146,7 @@ const psychology: SubjectDef = {
       order: 5,
       estimatedHours: 4,
       prerequisites: ['intro-to-psychology'],
+      assessment: psychologyAssessments['social-psychology'],
       modules: [
         {
           slug: 'social-influence',
@@ -172,6 +178,7 @@ const psychology: SubjectDef = {
       order: 6,
       estimatedHours: 4,
       prerequisites: ['intro-to-psychology'],
+      assessment: psychologyAssessments['abnormal-psychology'],
       modules: [
         {
           slug: 'understanding-disorders',

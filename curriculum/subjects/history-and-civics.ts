@@ -6,6 +6,7 @@ import { historyExercises4 } from './history-exercises-4'
 import { historyExercises5 } from './history-exercises-5'
 import { historyExercises6 } from './history-exercises-6'
 import { historyExercises7 } from './history-exercises-7'
+import { historyAssessments } from './history-assessments'
 
 const historyAndCivics: SubjectDef = {
   slug: 'history-and-civics',
@@ -20,6 +21,7 @@ const historyAndCivics: SubjectDef = {
       description: 'The structure of government, how laws are made, and how citizens participate in a democracy.',
       order: 1,
       estimatedHours: 3,
+      assessment: historyAssessments['how-government-works'],
       modules: [
         {
           slug: 'us-government-structure',
@@ -50,6 +52,7 @@ const historyAndCivics: SubjectDef = {
       description: 'From colonization through the Civil War — the events and ideas that shaped the United States.',
       order: 2,
       estimatedHours: 5,
+      assessment: historyAssessments['us-history-foundations'],
       modules: [
         {
           slug: 'colonial-and-revolutionary',
@@ -81,6 +84,7 @@ const historyAndCivics: SubjectDef = {
       description: 'From the Gilded Age to the present — industrialization, the World Wars, Civil Rights, and America today.',
       order: 3,
       estimatedHours: 5,
+      assessment: historyAssessments['us-history-modern'],
       modules: [
         {
           slug: 'industrial-age-to-wwii',
@@ -112,6 +116,7 @@ const historyAndCivics: SubjectDef = {
       description: 'The origins of civilization through the medieval period — Mesopotamia, Greece, Rome, China, Islam, and Europe.',
       order: 4,
       estimatedHours: 5,
+      assessment: historyAssessments['world-history-ancient'],
       modules: [
         {
           slug: 'ancient-civilizations',
@@ -143,6 +148,7 @@ const historyAndCivics: SubjectDef = {
       description: 'The Renaissance to today — revolutions, colonialism, industrialization, and the 20th century.',
       order: 5,
       estimatedHours: 5,
+      assessment: historyAssessments['world-history-modern'],
       modules: [
         {
           slug: 'early-modern',
@@ -174,6 +180,7 @@ const historyAndCivics: SubjectDef = {
       description: 'How to evaluate information, identify bias, spot misinformation, and think clearly in a noisy information environment.',
       order: 6,
       estimatedHours: 3,
+      assessment: historyAssessments['media-literacy'],
       modules: [
         {
           slug: 'evaluating-information',

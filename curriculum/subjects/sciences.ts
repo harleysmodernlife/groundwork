@@ -6,6 +6,7 @@ import { sciencesExercises4 } from './sciences-exercises-4'
 import { sciencesExercises5 } from './sciences-exercises-5'
 import { sciencesExercises6 } from './sciences-exercises-6'
 import { sciencesExercises7 } from './sciences-exercises-7'
+import { sciencesAssessments } from './sciences-assessments'
 
 const sciences: SubjectDef = {
   slug: 'sciences',
@@ -20,6 +21,7 @@ const sciences: SubjectDef = {
       description: 'How science works, how to evaluate evidence, and how to think like a scientist.',
       order: 1,
       estimatedHours: 2,
+      assessment: sciencesAssessments['scientific-method'],
       modules: [
         {
           slug: 'scientific-method',
@@ -41,6 +43,7 @@ const sciences: SubjectDef = {
       order: 2,
       estimatedHours: 6,
       prerequisites: ['scientific-method'],
+      assessment: sciencesAssessments['biology'],
       modules: [
         {
           slug: 'cell-biology',
@@ -84,6 +87,7 @@ const sciences: SubjectDef = {
       order: 3,
       estimatedHours: 6,
       prerequisites: ['scientific-method'],
+      assessment: sciencesAssessments['chemistry'],
       modules: [
         {
           slug: 'atomic-structure',
@@ -126,6 +130,7 @@ const sciences: SubjectDef = {
       order: 4,
       estimatedHours: 6,
       prerequisites: ['scientific-method'],
+      assessment: sciencesAssessments['physics'],
       modules: [
         {
           slug: 'mechanics',
@@ -157,6 +162,7 @@ const sciences: SubjectDef = {
       description: 'Earth\'s structure, atmosphere, climate, and the human impact on our planet.',
       order: 5,
       estimatedHours: 4,
+      assessment: sciencesAssessments['earth-science'],
       modules: [
         {
           slug: 'earth-structure',
@@ -188,6 +194,7 @@ const sciences: SubjectDef = {
       description: 'The universe beyond our planet — from the solar system to galaxies and the Big Bang.',
       order: 6,
       estimatedHours: 4,
+      assessment: sciencesAssessments['astronomy'],
       modules: [
         {
           slug: 'solar-system',

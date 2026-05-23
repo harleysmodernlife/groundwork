@@ -5,6 +5,7 @@ import { languageExercises3 } from './language-exercises-3'
 import { languageExercises4 } from './language-exercises-4'
 import { languageExercises5 } from './language-exercises-5'
 import { languageExercises6 } from './language-exercises-6'
+import { languageAssessments } from './language-assessments'
 
 const languageAndWriting: SubjectDef = {
   slug: 'language-and-writing',
@@ -19,6 +20,7 @@ const languageAndWriting: SubjectDef = {
       description: 'How to read actively, extract meaning, and engage critically with any text.',
       order: 1,
       estimatedHours: 3,
+      assessment: languageAssessments['reading-comprehension'],
       modules: [
         {
           slug: 'active-reading',
@@ -49,6 +51,7 @@ const languageAndWriting: SubjectDef = {
       description: 'The rules of written English — not to be pedantic, but to write clearly and be taken seriously.',
       order: 2,
       estimatedHours: 4,
+      assessment: languageAssessments['grammar-and-mechanics'],
       modules: [
         {
           slug: 'sentences',
@@ -81,6 +84,7 @@ const languageAndWriting: SubjectDef = {
       order: 3,
       estimatedHours: 4,
       prerequisites: ['grammar-and-mechanics'],
+      assessment: languageAssessments['writing-fundamentals'],
       modules: [
         {
           slug: 'the-writing-process',
@@ -112,6 +116,7 @@ const languageAndWriting: SubjectDef = {
       order: 4,
       estimatedHours: 4,
       prerequisites: ['writing-fundamentals'],
+      assessment: languageAssessments['essay-writing'],
       modules: [
         {
           slug: 'types-of-essays',
@@ -143,6 +148,7 @@ const languageAndWriting: SubjectDef = {
       order: 5,
       estimatedHours: 3,
       prerequisites: ['writing-fundamentals'],
+      assessment: languageAssessments['practical-writing'],
       modules: [
         {
           slug: 'workplace-writing',
@@ -173,6 +179,7 @@ const languageAndWriting: SubjectDef = {
       order: 6,
       estimatedHours: 4,
       prerequisites: ['writing-fundamentals'],
+      assessment: languageAssessments['creative-writing'],
       modules: [
         {
           slug: 'storytelling-craft',

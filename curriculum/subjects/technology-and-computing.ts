@@ -7,6 +7,7 @@ import { techExercises5 } from './tech-exercises-5'
 import { techExercises6 } from './tech-exercises-6'
 import { techExercises7 } from './tech-exercises-7'
 import { techExercises8 } from './tech-exercises-8'
+import { technologyAssessments } from './technology-assessments'
 
 const technologyAndComputing: SubjectDef = {
   slug: 'technology-and-computing',
@@ -21,6 +22,7 @@ const technologyAndComputing: SubjectDef = {
       description: 'What\'s actually happening inside a computer — hardware, operating systems, and the fundamentals every tech-literate person should know.',
       order: 1,
       estimatedHours: 3,
+      assessment: technologyAssessments['how-computers-work'],
       modules: [
         {
           slug: 'hardware-fundamentals',
@@ -51,6 +53,7 @@ const technologyAndComputing: SubjectDef = {
       description: 'How the internet actually works — from your device to the server and back — and why it matters for security and privacy.',
       order: 2,
       estimatedHours: 3,
+      assessment: technologyAssessments['internet-and-networking'],
       modules: [
         {
           slug: 'how-the-internet-works',
@@ -80,6 +83,7 @@ const technologyAndComputing: SubjectDef = {
       description: 'The fundamentals of writing code — logic, data, functions, and problem-solving — using Python.',
       order: 3,
       estimatedHours: 6,
+      assessment: technologyAssessments['introduction-to-programming'],
       modules: [
         {
           slug: 'programming-fundamentals',
@@ -122,6 +126,7 @@ const technologyAndComputing: SubjectDef = {
       order: 4,
       estimatedHours: 6,
       prerequisites: ['introduction-to-programming'],
+      assessment: technologyAssessments['web-development-basics'],
       modules: [
         {
           slug: 'html',
@@ -163,6 +168,7 @@ const technologyAndComputing: SubjectDef = {
       description: 'How to work with data — organizing, analyzing, and visualizing it using spreadsheets and basic data tools.',
       order: 5,
       estimatedHours: 4,
+      assessment: technologyAssessments['data-and-spreadsheets'],
       modules: [
         {
           slug: 'spreadsheet-fundamentals',
@@ -193,6 +199,7 @@ const technologyAndComputing: SubjectDef = {
       description: 'How attacks work, how to defend yourself and your organization, and the fundamentals of digital security.',
       order: 6,
       estimatedHours: 4,
+      assessment: technologyAssessments['cybersecurity-basics'],
       modules: [
         {
           slug: 'threat-landscape',
@@ -223,6 +230,7 @@ const technologyAndComputing: SubjectDef = {
       description: 'What AI actually is, how it\'s changing work and society, and how to use it without being replaced by it.',
       order: 7,
       estimatedHours: 3,
+      assessment: technologyAssessments['ai-and-automation-literacy'],
       modules: [
         {
           slug: 'understanding-ai',

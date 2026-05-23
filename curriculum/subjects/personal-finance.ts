@@ -9,6 +9,7 @@ import { financeExercises7 } from './finance-exercises-7'
 import { financeExercises8 } from './finance-exercises-8'
 import { financeExercises9 } from './finance-exercises-9'
 import { financeExercises10 } from './finance-exercises-10'
+import { personalFinanceAssessments } from './personal-finance-assessments'
 
 const personalFinance: SubjectDef = {
   slug: 'personal-finance',
@@ -23,6 +24,7 @@ const personalFinance: SubjectDef = {
       description: 'Know where your money goes, make it go where you want, and stop running out before the month ends.',
       order: 1,
       estimatedHours: 4,
+      assessment: personalFinanceAssessments['budgeting-and-managing-money'],
       modules: [
         {
           slug: 'income-and-expenses',
@@ -63,6 +65,7 @@ const personalFinance: SubjectDef = {
       description: 'How credit scores work, how debt traps are built, and how to get free of them.',
       order: 2,
       estimatedHours: 4,
+      assessment: personalFinanceAssessments['debt-and-credit'],
       modules: [
         {
           slug: 'understanding-credit',
@@ -104,6 +107,7 @@ const personalFinance: SubjectDef = {
       description: 'How banks actually work, what accounts you need, and how to stop paying fees you don\'t have to pay.',
       order: 3,
       estimatedHours: 3,
+      assessment: personalFinanceAssessments['banking-and-accounts'],
       modules: [
         {
           slug: 'bank-accounts',
@@ -133,6 +137,7 @@ const personalFinance: SubjectDef = {
       description: 'How investing works, why compound interest is the most powerful force in personal finance, and how to start with almost nothing.',
       order: 4,
       estimatedHours: 5,
+      assessment: personalFinanceAssessments['investing-basics'],
       modules: [
         {
           slug: 'why-invest',
@@ -174,6 +179,7 @@ const personalFinance: SubjectDef = {
       description: 'What insurance is, how it works, and how to not get caught without it when you need it most.',
       order: 5,
       estimatedHours: 3,
+      assessment: personalFinanceAssessments['insurance-fundamentals'],
       modules: [
         {
           slug: 'how-insurance-works',
@@ -204,6 +210,7 @@ const personalFinance: SubjectDef = {
       description: 'How income tax works, how to file, and how to legally keep more of what you earn.',
       order: 6,
       estimatedHours: 4,
+      assessment: personalFinanceAssessments['taxes-for-individuals'],
       modules: [
         {
           slug: 'how-income-tax-works',
@@ -243,6 +250,7 @@ const personalFinance: SubjectDef = {
       description: 'The biggest purchase most people ever make. How mortgages work, what to watch out for, and when renting is actually smarter.',
       order: 7,
       estimatedHours: 4,
+      assessment: personalFinanceAssessments['buying-a-home'],
       modules: [
         {
           slug: 'rent-vs-buy',
@@ -283,6 +291,7 @@ const personalFinance: SubjectDef = {
       description: 'Why starting early matters more than anything else, and how to build a plan that doesn\'t depend on Social Security alone.',
       order: 8,
       estimatedHours: 4,
+      assessment: personalFinanceAssessments['retirement-planning'],
       modules: [
         {
           slug: 'why-plan-for-retirement',

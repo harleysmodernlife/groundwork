@@ -9,6 +9,7 @@ import { lawExercises7 } from './law-and-legal-rights-exercises-7'
 import { lawExercises8 } from './law-and-legal-rights-exercises-8'
 import { lawExercises9 } from './law-and-legal-rights-exercises-9'
 import { lawExercises10 } from './law-and-legal-rights-exercises-10'
+import { lawAssessments } from './law-assessments'
 
 const lawAndLegalRights: SubjectDef = {
   slug: 'law-and-legal-rights',
@@ -23,6 +24,7 @@ const lawAndLegalRights: SubjectDef = {
       description: 'The rights every person in this country has, and how to actually use them.',
       order: 1,
       estimatedHours: 3,
+      assessment: lawAssessments['know-your-rights'],
       modules: [
         {
           slug: 'constitutional-rights',
@@ -63,6 +65,7 @@ const lawAndLegalRights: SubjectDef = {
       description: 'How contracts work, how to read them, and how to protect yourself before you sign anything.',
       order: 2,
       estimatedHours: 3,
+      assessment: lawAssessments['contracts-and-agreements'],
       modules: [
         {
           slug: 'contract-basics',
@@ -102,6 +105,7 @@ const lawAndLegalRights: SubjectDef = {
       description: 'What landlords can and can\'t do, your rights as a renter, and how to handle disputes.',
       order: 3,
       estimatedHours: 3,
+      assessment: lawAssessments['tenant-and-housing-rights'],
       modules: [
         {
           slug: 'landlord-tenant-basics',
@@ -132,6 +136,7 @@ const lawAndLegalRights: SubjectDef = {
       description: 'What your employer can and can\'t do, wage protections, and what to do if your rights are violated.',
       order: 4,
       estimatedHours: 4,
+      assessment: lawAssessments['employment-law'],
       modules: [
         {
           slug: 'worker-rights-basics',
@@ -172,6 +177,7 @@ const lawAndLegalRights: SubjectDef = {
       description: 'How the criminal justice system works from arrest to sentencing, and what rights you have at every step.',
       order: 5,
       estimatedHours: 4,
+      assessment: lawAssessments['criminal-law-basics'],
       modules: [
         {
           slug: 'how-criminal-system-works',
@@ -201,6 +207,7 @@ const lawAndLegalRights: SubjectDef = {
       description: 'Marriage, divorce, child custody, and what happens to your stuff when you die.',
       order: 6,
       estimatedHours: 3,
+      assessment: lawAssessments['family-law-basics'],
       modules: [
         {
           slug: 'marriage-and-divorce',

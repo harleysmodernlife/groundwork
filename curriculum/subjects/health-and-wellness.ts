@@ -14,6 +14,7 @@ import { healthExercises12 } from './health-and-wellness-exercises-12'
 import { healthExercises13 } from './health-and-wellness-exercises-13'
 import { healthExercises14 } from './health-and-wellness-exercises-14'
 import { healthExercises15 } from './health-and-wellness-exercises-15'
+import { healthAssessments } from './health-assessments'
 
 const healthAndWellness: SubjectDef = {
   slug: 'health-and-wellness',
@@ -28,6 +29,7 @@ const healthAndWellness: SubjectDef = {
       description: 'How your body\'s major systems work — from cells to organs to the whole system.',
       order: 1,
       estimatedHours: 5,
+      assessment: healthAssessments['human-body'],
       modules: [
         {
           slug: 'cells-and-tissues',
@@ -60,6 +62,7 @@ const healthAndWellness: SubjectDef = {
       description: 'What food actually does in your body, what a healthy diet looks like, and how to eat well without spending a fortune.',
       order: 2,
       estimatedHours: 4,
+      assessment: healthAssessments['nutrition-and-diet'],
       modules: [
         {
           slug: 'nutrition-fundamentals',
@@ -91,6 +94,7 @@ const healthAndWellness: SubjectDef = {
       description: 'What mental health is, how common conditions work, how to take care of yourself, and how to get help.',
       order: 3,
       estimatedHours: 4,
+      assessment: healthAssessments['mental-health-fundamentals'],
       modules: [
         {
           slug: 'understanding-mental-health',
@@ -122,6 +126,7 @@ const healthAndWellness: SubjectDef = {
       description: 'What to do in a medical emergency — the skills that can keep someone alive until help arrives.',
       order: 4,
       estimatedHours: 3,
+      assessment: healthAssessments['first-aid-and-emergency-response'],
       modules: [
         {
           slug: 'emergency-basics',
@@ -153,6 +158,7 @@ const healthAndWellness: SubjectDef = {
       description: 'How exercise affects the body, how to build a sustainable fitness habit, and what the evidence actually says.',
       order: 5,
       estimatedHours: 3,
+      assessment: healthAssessments['fitness-and-exercise'],
       modules: [
         {
           slug: 'exercise-fundamentals',
@@ -182,6 +188,7 @@ const healthAndWellness: SubjectDef = {
       description: 'How to actually use the healthcare system — insurance, doctors, prescriptions, and advocating for yourself.',
       order: 6,
       estimatedHours: 3,
+      assessment: healthAssessments['navigating-healthcare'],
       modules: [
         {
           slug: 'healthcare-basics',

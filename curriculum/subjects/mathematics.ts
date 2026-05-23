@@ -9,6 +9,7 @@ import { mathExercises7 } from './math-exercises-7'
 import { mathExercises8 } from './math-exercises-8'
 import { mathExercises9 } from './math-exercises-9'
 import { mathExercises10 } from './math-exercises-10'
+import { mathematicsAssessments } from './mathematics-assessments'
 
 const mathematics: SubjectDef = {
   slug: 'mathematics',
@@ -23,6 +24,7 @@ const mathematics: SubjectDef = {
       description: 'The foundation of all mathematics. Numbers, operations, fractions, decimals, and percentages.',
       order: 1,
       estimatedHours: 5,
+      assessment: mathematicsAssessments['arithmetic'],
       modules: [
         {
           slug: 'numbers-and-operations',
@@ -65,6 +67,7 @@ const mathematics: SubjectDef = {
       order: 2,
       estimatedHours: 5,
       prerequisites: ['arithmetic'],
+      assessment: mathematicsAssessments['pre-algebra'],
       modules: [
         {
           slug: 'variables-and-expressions',
@@ -105,6 +108,7 @@ const mathematics: SubjectDef = {
       order: 3,
       estimatedHours: 6,
       prerequisites: ['pre-algebra'],
+      assessment: mathematicsAssessments['algebra-i'],
       modules: [
         {
           slug: 'linear-equations',
@@ -147,6 +151,7 @@ const mathematics: SubjectDef = {
       order: 4,
       estimatedHours: 5,
       prerequisites: ['pre-algebra'],
+      assessment: mathematicsAssessments['geometry'],
       modules: [
         {
           slug: 'geometric-foundations',
@@ -187,6 +192,7 @@ const mathematics: SubjectDef = {
       order: 5,
       estimatedHours: 6,
       prerequisites: ['algebra-i', 'geometry'],
+      assessment: mathematicsAssessments['algebra-ii'],
       modules: [
         {
           slug: 'advanced-functions',
@@ -219,6 +225,7 @@ const mathematics: SubjectDef = {
       order: 6,
       estimatedHours: 5,
       prerequisites: ['algebra-ii'],
+      assessment: mathematicsAssessments['pre-calculus'],
       modules: [
         {
           slug: 'sequences-and-series',
@@ -249,6 +256,7 @@ const mathematics: SubjectDef = {
       order: 7,
       estimatedHours: 7,
       prerequisites: ['pre-calculus'],
+      assessment: mathematicsAssessments['calculus'],
       modules: [
         {
           slug: 'derivatives',
@@ -281,6 +289,7 @@ const mathematics: SubjectDef = {
       order: 8,
       estimatedHours: 5,
       prerequisites: ['algebra-i'],
+      assessment: mathematicsAssessments['statistics'],
       modules: [
         {
           slug: 'descriptive-statistics',

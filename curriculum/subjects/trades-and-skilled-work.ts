@@ -7,6 +7,7 @@ import { tradesExercises5 } from './trades-exercises-5'
 import { tradesExercises6 } from './trades-exercises-6'
 import { tradesExercises7 } from './trades-exercises-7'
 import { tradesExercises8 } from './trades-exercises-8'
+import { tradesAssessments } from './trades-assessments'
 
 const tradesAndSkilledWork: SubjectDef = {
   slug: 'trades-and-skilled-work',
@@ -21,6 +22,7 @@ const tradesAndSkilledWork: SubjectDef = {
       description: 'How electricity works, how residential electrical systems are wired, and the safety basics every electrician and homeowner needs.',
       order: 1,
       estimatedHours: 5,
+      assessment: tradesAssessments['electrical-fundamentals'],
       modules: [
         {
           slug: 'electricity-basics',
@@ -61,6 +63,7 @@ const tradesAndSkilledWork: SubjectDef = {
       description: 'How water systems work in a building, common repairs, and the fundamentals of residential plumbing.',
       order: 2,
       estimatedHours: 4,
+      assessment: tradesAssessments['plumbing-basics'],
       modules: [
         {
           slug: 'plumbing-systems',
@@ -91,6 +94,7 @@ const tradesAndSkilledWork: SubjectDef = {
       description: 'How heating, ventilation, and air conditioning systems work — one of the most in-demand trades in the country.',
       order: 3,
       estimatedHours: 5,
+      assessment: tradesAssessments['hvac-fundamentals'],
       modules: [
         {
           slug: 'hvac-systems',
@@ -122,6 +126,7 @@ const tradesAndSkilledWork: SubjectDef = {
       description: 'Wood, tools, joinery, and construction — from rough framing to finish carpentry.',
       order: 4,
       estimatedHours: 5,
+      assessment: tradesAssessments['carpentry-and-woodworking'],
       modules: [
         {
           slug: 'wood-and-materials',
@@ -153,6 +158,7 @@ const tradesAndSkilledWork: SubjectDef = {
       description: 'How a car works, how to maintain it, and how to diagnose what\'s wrong before you pay someone else to tell you.',
       order: 5,
       estimatedHours: 4,
+      assessment: tradesAssessments['automotive-basics'],
       modules: [
         {
           slug: 'how-cars-work',
@@ -184,6 +190,7 @@ const tradesAndSkilledWork: SubjectDef = {
       description: 'The basics of welding — processes, safety, equipment, and the skills that make a competent entry-level welder.',
       order: 6,
       estimatedHours: 4,
+      assessment: tradesAssessments['welding-fundamentals'],
       modules: [
         {
           slug: 'welding-processes',
@@ -214,6 +221,7 @@ const tradesAndSkilledWork: SubjectDef = {
       description: 'Concrete, block, brick, and stone — the fundamentals of masonry work used in construction and repair.',
       order: 7,
       estimatedHours: 3,
+      assessment: tradesAssessments['masonry-and-concrete'],
       modules: [
         {
           slug: 'concrete-basics',

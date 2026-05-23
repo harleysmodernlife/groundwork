@@ -4,6 +4,7 @@ import { artsExercises2 } from './arts-and-creative-skills-exercises-2'
 import { artsExercises3 } from './arts-and-creative-skills-exercises-3'
 import { artsExercises4 } from './arts-and-creative-skills-exercises-4'
 import { artsExercises5 } from './arts-and-creative-skills-exercises-5'
+import { artsAssessments } from './arts-assessments'
 
 const artsAndCreativeSkills: SubjectDef = {
   slug: 'arts-and-creative-skills',
@@ -18,6 +19,7 @@ const artsAndCreativeSkills: SubjectDef = {
       description: 'The core principles of visual art — the elements and rules that underlie all visual expression.',
       order: 1,
       estimatedHours: 3,
+      assessment: artsAssessments['visual-art-fundamentals'],
       modules: [
         {
           slug: 'elements-of-art',
@@ -49,6 +51,7 @@ const artsAndCreativeSkills: SubjectDef = {
       order: 2,
       estimatedHours: 5,
       prerequisites: ['visual-art-fundamentals'],
+      assessment: artsAssessments['drawing'],
       modules: [
         {
           slug: 'drawing-basics',
@@ -80,6 +83,7 @@ const artsAndCreativeSkills: SubjectDef = {
       order: 3,
       estimatedHours: 4,
       prerequisites: ['visual-art-fundamentals'],
+      assessment: artsAssessments['graphic-design'],
       modules: [
         {
           slug: 'design-fundamentals',
@@ -110,6 +114,7 @@ const artsAndCreativeSkills: SubjectDef = {
       description: 'Making great images — from understanding your camera to composing compelling shots.',
       order: 4,
       estimatedHours: 3,
+      assessment: artsAssessments['photography'],
       modules: [
         {
           slug: 'camera-basics',
@@ -140,6 +145,7 @@ const artsAndCreativeSkills: SubjectDef = {
       description: 'How music works — reading, rhythm, melody, harmony, and the language of sound.',
       order: 5,
       estimatedHours: 4,
+      assessment: artsAssessments['music-fundamentals'],
       modules: [
         {
           slug: 'music-theory-basics',
@@ -170,6 +176,7 @@ const artsAndCreativeSkills: SubjectDef = {
       description: 'How creativity actually works — developing ideas, overcoming blocks, building a practice, and thinking like a maker.',
       order: 6,
       estimatedHours: 2,
+      assessment: artsAssessments['creative-process'],
       modules: [
         {
           slug: 'how-creativity-works',

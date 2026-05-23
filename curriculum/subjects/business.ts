@@ -5,6 +5,7 @@ import { businessExercises3 } from './business-exercises-3'
 import { businessExercises4 } from './business-exercises-4'
 import { businessExercises5 } from './business-exercises-5'
 import { businessExercises6 } from './business-exercises-6'
+import { businessAssessments } from './business-assessments'
 
 const business: SubjectDef = {
   slug: 'business',
@@ -19,6 +20,7 @@ const business: SubjectDef = {
       description: 'What a business actually is, how to structure it legally, and how to get started without making the mistakes that kill most new businesses.',
       order: 1,
       estimatedHours: 3,
+      assessment: businessAssessments['business-foundations'],
       modules: [
         {
           slug: 'what-is-a-business',
@@ -90,16 +92,6 @@ const business: SubjectDef = {
           ],
         },
       ],
-      assessment: {
-        title: 'Business Foundations Assessment',
-        passingScore: 75,
-        timeLimitMin: 30,
-        questions: [
-          { question: 'A sole proprietorship offers personal liability protection for the owner.', type: 'MULTIPLE_CHOICE', options: ['True', 'False'], correctAnswer: 'False', explanation: 'Sole proprietorships offer no liability protection — the owner is personally responsible for all business debts and legal issues.', points: 1, order: 1 },
-          { question: 'Which business structure is typically best for a first-time solo business owner who wants liability protection without a lot of complexity?', type: 'MULTIPLE_CHOICE', options: ['Corporation', 'LLC', 'Sole Proprietorship', 'Partnership'], correctAnswer: 'LLC', explanation: 'An LLC offers liability protection with less complexity and cost than a corporation, making it the most common choice for solo entrepreneurs.', points: 1, order: 2 },
-          { question: 'Explain in your own words why keeping business and personal finances separate matters.', type: 'OPEN_ENDED', correctAnswer: 'Mixing personal and business finances makes bookkeeping difficult, can invalidate your LLC liability protection, complicates taxes, and makes it hard to understand if your business is actually profitable.', explanation: 'Separation protects your legal status, simplifies taxes, and gives you a clear picture of business health.', points: 2, order: 3 },
-        ],
-      },
     },
     {
       slug: 'operations-and-finance',
@@ -107,6 +99,7 @@ const business: SubjectDef = {
       description: 'Cash flow, pricing, bookkeeping, and the numbers that determine whether your business lives or dies.',
       order: 2,
       estimatedHours: 4,
+      assessment: businessAssessments['operations-and-finance'],
       modules: [
         {
           slug: 'cash-flow',
@@ -146,6 +139,7 @@ const business: SubjectDef = {
       description: 'Finding customers, making the ask, and building a pipeline — without feeling like a used car salesman.',
       order: 3,
       estimatedHours: 4,
+      assessment: businessAssessments['sales-and-marketing'],
       modules: [
         {
           slug: 'finding-customers',
@@ -185,6 +179,7 @@ const business: SubjectDef = {
       description: 'Contracts, intellectual property, liability, and when you actually need a lawyer.',
       order: 4,
       estimatedHours: 3,
+      assessment: businessAssessments['legal-basics'],
       modules: [
         {
           slug: 'contracts',
@@ -214,6 +209,7 @@ const business: SubjectDef = {
       description: 'Self-employment tax, quarterly estimates, deductions, and how to not get blindsided every April.',
       order: 5,
       estimatedHours: 3,
+      assessment: businessAssessments['taxes-for-business'],
       modules: [
         {
           slug: 'tax-basics',
@@ -243,6 +239,7 @@ const business: SubjectDef = {
       description: 'Your first hire, contractor vs employee, payroll, and how to let someone go without it becoming a nightmare.',
       order: 6,
       estimatedHours: 3,
+      assessment: businessAssessments['hiring-and-people'],
       modules: [
         {
           slug: 'first-hire',
