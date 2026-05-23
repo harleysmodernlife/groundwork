@@ -226,6 +226,8 @@ enum Provider {
   OPENAI
   ANTHROPIC
   GOOGLE
+  OPENROUTER
+  GROQ
   OLLAMA
 }
 

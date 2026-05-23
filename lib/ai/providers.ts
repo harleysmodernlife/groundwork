@@ -35,20 +35,33 @@ export async function resolveModel(userId: string) {
 
   // Use BYOK if available
   if (user.encryptedApiKey && user.apiProvider) {
-    const apiKey = decrypt(user.encryptedApiKey)
+    const value = decrypt(user.encryptedApiKey)
 
     switch (user.apiProvider) {
       case 'OPENAI': {
-        const openai = createOpenAI({ apiKey })
+        const openai = createOpenAI({ apiKey: value })
         return { model: openai('gpt-4o-mini'), isFree: false, tokensUsed: user.dailyTokensUsed }
       }
       case 'ANTHROPIC': {
-        const anthropic = createAnthropic({ apiKey })
+        const anthropic = createAnthropic({ apiKey: value })
         return { model: anthropic('claude-haiku-4-5-20251001'), isFree: false, tokensUsed: user.dailyTokensUsed }
       }
       case 'GOOGLE': {
-        const google = createGoogleGenerativeAI({ apiKey })
+        const google = createGoogleGenerativeAI({ apiKey: value })
         return { model: google('gemini-2.0-flash'), isFree: false, tokensUsed: user.dailyTokensUsed }
+      }
+      case 'OPENROUTER': {
+        const openrouter = createOpenAI({ baseURL: 'https://openrouter.ai/api/v1', apiKey: value })
+        return { model: openrouter('meta-llama/llama-4-scout:free'), isFree: false, tokensUsed: user.dailyTokensUsed }
+      }
+      case 'GROQ': {
+        const groq = createOpenAI({ baseURL: 'https://api.groq.com/openai/v1', apiKey: value })
+        return { model: groq('llama-3.1-8b-instant'), isFree: false, tokensUsed: user.dailyTokensUsed }
+      }
+      case 'OLLAMA': {
+        // value is the Ollama base URL (e.g. http://192.168.1.10:11434)
+        const ollama = createOpenAI({ baseURL: `${value}/v1`, apiKey: 'ollama' })
+        return { model: ollama('llama3.2'), isFree: false, tokensUsed: user.dailyTokensUsed }
       }
       default:
         break
