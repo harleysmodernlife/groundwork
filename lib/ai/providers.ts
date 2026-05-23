@@ -75,19 +75,12 @@ export async function resolveModel(userId: string) {
 
   // Platform free tier — requires a configured Gemini API key
   const platformKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY
-  if (platformKey) {
-    const google = createGoogleGenerativeAI({ apiKey: platformKey })
-    return { model: google('gemini-2.0-flash'), isFree: true, tokensUsed: user.dailyTokensUsed, atLimit: false }
+  if (!platformKey) {
+    return { model: null, isFree: true, tokensUsed: user.dailyTokensUsed, noFreeModel: true }
   }
 
-  // Local llama.cpp fallback (LOCAL_GRADER_URL)
-  const localUrl = process.env.LOCAL_GRADER_URL
-  if (localUrl) {
-    const local = createOpenAI({ baseURL: `${localUrl}/v1`, apiKey: 'local' })
-    return { model: local('qwen2.5-1.5b-instruct'), isFree: true, tokensUsed: user.dailyTokensUsed, atLimit: false }
-  }
-
-  return { model: null, isFree: true, tokensUsed: user.dailyTokensUsed, noFreeModel: true }
+  const google = createGoogleGenerativeAI({ apiKey: platformKey })
+  return { model: google('gemini-2.0-flash'), isFree: true, tokensUsed: user.dailyTokensUsed, atLimit: false }
 }
 
 export async function incrementTokens(userId: string, tokens: number) {
