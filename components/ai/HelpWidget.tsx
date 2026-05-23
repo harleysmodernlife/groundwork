@@ -7,18 +7,32 @@ import { Textarea } from '@/components/ui/textarea'
 
 interface Message { role: 'user' | 'assistant'; content: string }
 
+const GREETING: Message = { role: 'assistant', content: "Hi! I'm the Groundwork Assistant. I can help you navigate the platform, find courses, set up your API key, or answer any questions about how things work. What do you need?" }
+const THINKING_WORDS = ['Thinking...', 'Working...', 'Looking...']
+
 export default function HelpWidget() {
   const [open, setOpen] = useState(false)
-  const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: "Hi! I'm the Groundwork Assistant. I can help you navigate the platform, find courses, set up your API key, or answer any questions about how things work. What do you need?" },
-  ])
+  const [messages, setMessages] = useState<Message[]>([GREETING])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
+  const [thinkIdx, setThinkIdx] = useState(0)
   const bottomRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!loading) return
+    const t = setInterval(() => setThinkIdx((i) => (i + 1) % THINKING_WORDS.length), 900)
+    return () => clearInterval(t)
+  }, [loading])
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages, open])
+
+  function openWidget() {
+    setMessages([GREETING])
+    setInput('')
+    setOpen(true)
+  }
 
   async function send() {
     const text = input.trim()
@@ -26,7 +40,7 @@ export default function HelpWidget() {
 
     const userMsg: Message = { role: 'user', content: text }
     const updated = [...messages, userMsg]
-    setMessages(updated)
+    setMessages([...updated, { role: 'assistant', content: '' }])
     setInput('')
     setLoading(true)
 
@@ -39,16 +53,21 @@ export default function HelpWidget() {
     if (res.status === 503 || res.status === 429) {
       const data = await res.json().catch(() => ({}))
       const isNoKey = data.error === 'no_free_model'
-      setMessages((prev) => [
-        ...prev,
-        { role: 'assistant', content: isNoKey ? '__no_key__' : '__at_limit__' },
-      ])
+      setMessages((prev) => {
+        const copy = [...prev]
+        copy[copy.length - 1] = { role: 'assistant', content: isNoKey ? '__no_key__' : '__at_limit__' }
+        return copy
+      })
       setLoading(false)
       return
     }
 
     if (!res.ok || !res.body) {
-      setMessages((prev) => [...prev, { role: 'assistant', content: '__error__' }])
+      setMessages((prev) => {
+        const copy = [...prev]
+        copy[copy.length - 1] = { role: 'assistant', content: '__error__' }
+        return copy
+      })
       setLoading(false)
       return
     }
@@ -56,7 +75,6 @@ export default function HelpWidget() {
     const reader = res.body.getReader()
     const decoder = new TextDecoder()
     let reply = ''
-    setMessages((prev) => [...prev, { role: 'assistant', content: '' }])
 
     while (true) {
       const { done, value } = await reader.read()
@@ -116,7 +134,7 @@ export default function HelpWidget() {
                   <div className={`max-w-[85%] rounded-xl px-3 py-2 text-xs leading-relaxed ${
                     msg.role === 'user' ? 'bg-zinc-900 text-white' : 'bg-zinc-100 text-zinc-800'
                   }`}>
-                    {msg.content || <span className="text-zinc-400 animate-pulse">...</span>}
+                    {msg.content || <span className="text-zinc-400">{THINKING_WORDS[thinkIdx]}</span>}
                   </div>
                 </div>
               )
@@ -140,7 +158,7 @@ export default function HelpWidget() {
         </div>
       )}
       <button
-        onClick={() => setOpen(!open)}
+        onClick={() => open ? setOpen(false) : openWidget()}
         className="bg-zinc-900 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-lg hover:bg-zinc-700 transition-colors"
       >
         {open ? '×' : '?'}
