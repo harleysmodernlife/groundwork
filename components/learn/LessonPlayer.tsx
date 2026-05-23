@@ -70,7 +70,7 @@ export default function LessonPlayer({ lesson, prev, next }: LessonPlayerProps) 
           </div>
         </div>
 
-        <article className="prose prose-zinc max-w-none mb-8">
+        <article className="lesson-content mb-8">
           <ReactMarkdown>{lesson.rawContent}</ReactMarkdown>
         </article>
 
