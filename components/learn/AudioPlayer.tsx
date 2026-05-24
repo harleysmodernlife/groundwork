@@ -18,15 +18,12 @@ function stripMarkdown(raw: string): string {
     .trim()
 }
 
-// Split into small chunks — Chrome silently stops after ~15s of long text
 function toChunks(text: string): { text: string; start: number }[] {
-  // Split at sentence endings, then group into ~220-char chunks
   const sentences = text.match(/[^.!?]*[.!?]+/g) ?? [text]
   const chunks: { text: string; start: number }[] = []
   let pos = 0
   let buf = ''
   let bufStart = 0
-
   for (const s of sentences) {
     if (buf.length + s.length > 220 && buf) {
       chunks.push({ text: buf.trim(), start: bufStart })
@@ -61,11 +58,10 @@ export default function AudioPlayer({ text }: { text: string }) {
   const [status, setStatus] = useState<'idle' | 'playing' | 'paused'>('idle')
   const [supported, setSupported] = useState(true)
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([])
-  const [voiceName, setVoiceName] = useState<string>('')
+  const [voiceName, setVoiceName] = useState<string>('__auto__')
 
-  const chunkIdxRef = useRef(0)
   const charPosRef = useRef(0)
-  const activeRef = useRef(false) // guard against stale onend callbacks
+  const activeRef = useRef(false)
 
   useEffect(() => {
     if (typeof window === 'undefined' || !window.speechSynthesis) {
@@ -78,7 +74,10 @@ export default function AudioPlayer({ text }: { text: string }) {
       const en = all.filter((v) => v.lang.startsWith('en'))
       const list = en.length > 0 ? en : all
       setVoices(list)
-      setVoiceName((prev) => prev || (pickBestVoice(list)?.name ?? ''))
+      setVoiceName((prev) => {
+        if (prev !== '__auto__') return prev
+        return pickBestVoice(list)?.name ?? '__auto__'
+      })
     }
     loadVoices()
     window.speechSynthesis.addEventListener('voiceschanged', loadVoices)
@@ -89,57 +88,57 @@ export default function AudioPlayer({ text }: { text: string }) {
     }
   }, [])
 
-  function getVoice() {
-    return window.speechSynthesis.getVoices().find((v) => v.name === voiceName)
-  }
-
-  function speakChunk(idx: number) {
-    if (!activeRef.current || idx >= chunks.length) {
-      if (idx >= chunks.length) {
-        setStatus('idle')
-        charPosRef.current = 0
-        chunkIdxRef.current = 0
-      }
-      return
-    }
-
-    const chunk = chunks[idx]
-    const utt = new SpeechSynthesisUtterance(chunk.text)
-    utt.rate = 1.0
-    const voice = getVoice()
-    if (voice) utt.voice = voice
-
-    utt.onboundary = (e) => {
-      charPosRef.current = chunk.start + e.charIndex
-    }
-    utt.onend = () => {
-      if (!activeRef.current) return
-      chunkIdxRef.current = idx + 1
-      speakChunk(idx + 1)
-    }
-    utt.onerror = (e) => {
-      if (e.error === 'interrupted') return // expected on cancel/skip
-      setStatus('idle')
-    }
-
-    window.speechSynthesis.speak(utt)
+  function getVoice(): SpeechSynthesisVoice | null {
+    if (voiceName === '__auto__') return null
+    return window.speechSynthesis.getVoices().find((v) => v.name === voiceName) ?? null
   }
 
   function startFrom(charPos: number) {
     window.speechSynthesis.cancel()
-    // Find which chunk contains this position
-    let idx = chunks.findIndex((c, i) => {
+    activeRef.current = true
+    setStatus('playing')
+
+    let startIdx = chunks.findIndex((_, i) => {
       const next = chunks[i + 1]
       return !next || charPos < next.start
     })
-    if (idx < 0) idx = 0
-    chunkIdxRef.current = idx
-    charPosRef.current = charPos
-    activeRef.current = true
+    if (startIdx < 0) startIdx = 0
 
-    // Chrome needs a brief pause before speak() actually fires
-    setTimeout(() => speakChunk(idx), 50)
-    setStatus('playing')
+    const voice = getVoice() // capture once before async
+
+    // Chrome: needs a pause after cancel before speak() fires audio,
+    // and needs resume() in case it's internally paused/stuck
+    setTimeout(() => {
+      if (!activeRef.current) return
+      window.speechSynthesis.resume()
+
+      // Queue all remaining chunks upfront — more reliable than chaining via onend
+      for (let i = startIdx; i < chunks.length; i++) {
+        const chunk = chunks[i]
+        const utt = new SpeechSynthesisUtterance(chunk.text)
+        utt.volume = 1.0
+        utt.rate = 1.0
+        utt.pitch = 1.0
+        if (voice) utt.voice = voice
+
+        const capturedI = i
+        utt.onboundary = (e) => {
+          charPosRef.current = chunk.start + e.charIndex
+        }
+        utt.onerror = (e) => {
+          if (e.error === 'interrupted') return
+          setStatus('idle')
+        }
+        if (capturedI === chunks.length - 1) {
+          utt.onend = () => {
+            if (!activeRef.current) return
+            setStatus('idle')
+            charPosRef.current = 0
+          }
+        }
+        window.speechSynthesis.speak(utt)
+      }
+    }, 150)
   }
 
   function handlePlay() {
@@ -161,23 +160,15 @@ export default function AudioPlayer({ text }: { text: string }) {
     window.speechSynthesis.cancel()
     setStatus('idle')
     charPosRef.current = 0
-    chunkIdxRef.current = 0
   }
 
   function skip(seconds: number) {
-    const CHARS_PER_SEC = 13
-    const offset = Math.round(seconds * CHARS_PER_SEC)
-    const newPos = Math.max(0, Math.min(plain.length - 10, charPosRef.current + offset))
-    if (status !== 'idle') {
-      startFrom(newPos)
-    } else {
-      charPosRef.current = newPos
-    }
+    const newPos = Math.max(0, Math.min(plain.length - 10, charPosRef.current + Math.round(seconds * 13)))
+    if (status !== 'idle') startFrom(newPos)
+    else charPosRef.current = newPos
   }
 
   if (!supported) return null
-
-  const noVoices = voices.length === 0
 
   const iconBtn = [
     'flex items-center justify-center w-8 h-8 rounded-lg transition-colors',
@@ -186,12 +177,14 @@ export default function AudioPlayer({ text }: { text: string }) {
     'disabled:opacity-30 disabled:cursor-not-allowed',
   ].join(' ')
 
+  const noVoices = voices.length === 0
+
   return (
     <div className="flex flex-wrap items-center gap-2 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-3 py-2">
       <Volume2 size={14} className="text-zinc-400 dark:text-zinc-500" />
       <span className="text-xs text-zinc-400 dark:text-zinc-500 font-medium">Listen</span>
 
-      <button className={iconBtn} onClick={() => skip(-10)} title="Back 10 seconds" disabled={noVoices}>
+      <button className={iconBtn} onClick={() => skip(-10)} title="Back 10 seconds" disabled={noVoices || status === 'idle'}>
         <SkipBack size={15} />
       </button>
 
@@ -214,7 +207,7 @@ export default function AudioPlayer({ text }: { text: string }) {
         <Square size={13} />
       </button>
 
-      <button className={iconBtn} onClick={() => skip(10)} title="Forward 10 seconds" disabled={noVoices}>
+      <button className={iconBtn} onClick={() => skip(10)} title="Forward 10 seconds" disabled={noVoices || status === 'idle'}>
         <SkipForward size={15} />
       </button>
 
@@ -227,6 +220,7 @@ export default function AudioPlayer({ text }: { text: string }) {
           }}
           className="ml-1 text-xs rounded-md border border-zinc-200 dark:border-zinc-600 bg-white dark:bg-zinc-700 text-zinc-700 dark:text-zinc-200 px-2 py-1 max-w-[180px] truncate"
         >
+          <option value="__auto__">Auto</option>
           {voices.map((v) => (
             <option key={v.name} value={v.name}>{v.name}</option>
           ))}
@@ -235,7 +229,7 @@ export default function AudioPlayer({ text }: { text: string }) {
 
       {noVoices && <span className="text-xs text-zinc-400 dark:text-zinc-500">Loading voices…</span>}
 
-      {status !== 'idle' && voices.length > 0 && (
+      {status !== 'idle' && (
         <span className="text-xs text-zinc-400 dark:text-zinc-500">
           {status === 'paused' ? 'Paused' : 'Playing...'}
         </span>
