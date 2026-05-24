@@ -1,11 +1,10 @@
 import { auth } from '@/lib/auth'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
-import { LinkButton } from '@/components/ui/link-button'
-import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Separator } from '@/components/ui/separator'
 import HelpWidget from '@/components/ai/HelpWidget'
 import ThemeToggle from '@/components/ThemeToggle'
+import UserMenu from '@/components/UserMenu'
 
 export default async function PlatformLayout({ children }: { children: React.ReactNode }) {
   const session = await auth()
@@ -33,10 +32,7 @@ export default async function PlatformLayout({ children }: { children: React.Rea
         </div>
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <LinkButton href="/settings/api-key" variant="ghost" size="sm">API Key</LinkButton>
-          <Avatar className="h-8 w-8">
-            <AvatarFallback className="text-xs bg-zinc-900 dark:bg-zinc-600 text-white">{initials}</AvatarFallback>
-          </Avatar>
+          <UserMenu initials={initials} />
         </div>
       </header>
       <main className="flex-1 px-6 py-8 max-w-6xl mx-auto w-full">{children}</main>

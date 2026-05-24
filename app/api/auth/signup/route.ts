@@ -3,7 +3,8 @@ import bcrypt from 'bcryptjs'
 import { db } from '@/lib/db'
 
 export async function POST(req: Request) {
-  const { name, email, password } = await req.json()
+  const { name, email: rawEmail, password } = await req.json()
+  const email = (rawEmail as string)?.toLowerCase().trim()
 
   if (!email || !password || !name) {
     return NextResponse.json({ error: 'All fields required' }, { status: 400 })
