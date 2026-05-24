@@ -97,8 +97,8 @@ export default function HelpWidget() {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
       {open && (
-        <div className="w-80 bg-white border border-zinc-200 rounded-2xl shadow-xl flex flex-col overflow-hidden" style={{ height: '420px' }}>
-          <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-200 bg-zinc-900 text-white">
+        <div className="w-80 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-2xl shadow-xl flex flex-col overflow-hidden" style={{ height: '420px' }}>
+          <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-200 dark:border-zinc-700 bg-zinc-900 dark:bg-zinc-800 text-white">
             <p className="font-semibold text-sm">Groundwork Assistant</p>
             <button onClick={() => setOpen(false)} className="text-zinc-300 hover:text-white text-lg leading-none">×</button>
           </div>
@@ -109,7 +109,7 @@ export default function HelpWidget() {
                 const isLimit = msg.content === '__at_limit__'
                 return (
                   <div key={i} className="flex justify-start">
-                    <div className="max-w-[85%] rounded-xl px-3 py-2 text-xs leading-relaxed bg-amber-50 border border-amber-200 text-amber-900 space-y-1">
+                    <div className="max-w-[85%] rounded-xl px-3 py-2 text-xs leading-relaxed bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-300 space-y-1">
                       <p className="font-medium">
                         {isNoKey ? 'No AI model available' : isLimit ? 'Daily limit reached' : 'Assistant unavailable'}
                       </p>
@@ -121,7 +121,7 @@ export default function HelpWidget() {
                           : 'Something went wrong. Try again in a moment.'}
                       </p>
                       {(isNoKey || isLimit) && (
-                        <Link href="/settings/api-key" className="block font-medium underline text-amber-800">
+                        <Link href="/settings/api-key" className="block font-medium underline text-amber-800 dark:text-amber-400">
                           Add your API key →
                         </Link>
                       )}
@@ -132,16 +132,18 @@ export default function HelpWidget() {
               return (
                 <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                   <div className={`max-w-[85%] rounded-xl px-3 py-2 text-xs leading-relaxed ${
-                    msg.role === 'user' ? 'bg-zinc-900 text-white' : 'bg-zinc-100 text-zinc-800'
+                    msg.role === 'user'
+                      ? 'bg-zinc-900 dark:bg-zinc-700 text-white'
+                      : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200'
                   }`}>
-                    {msg.content || <span className="text-zinc-400">{THINKING_WORDS[thinkIdx]}</span>}
+                    {msg.content || <span className="text-zinc-400 dark:text-zinc-500">{THINKING_WORDS[thinkIdx]}</span>}
                   </div>
                 </div>
               )
             })}
             <div ref={bottomRef} />
           </div>
-          <div className="px-3 py-2 border-t border-zinc-200 flex gap-2">
+          <div className="px-3 py-2 border-t border-zinc-200 dark:border-zinc-700 flex gap-2">
             <Textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
@@ -159,7 +161,7 @@ export default function HelpWidget() {
       )}
       <button
         onClick={() => open ? setOpen(false) : openWidget()}
-        className="bg-zinc-900 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-lg hover:bg-zinc-700 transition-colors"
+        className="bg-zinc-900 dark:bg-zinc-700 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-lg hover:bg-zinc-700 dark:hover:bg-zinc-600 transition-colors"
       >
         {open ? '×' : '?'}
       </button>

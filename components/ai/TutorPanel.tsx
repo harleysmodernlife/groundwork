@@ -101,13 +101,13 @@ export default function TutorPanel({ lessonId, lessonName, onClose }: TutorPanel
   }
 
   return (
-    <div className="fixed right-0 top-0 h-full w-96 bg-white border-l border-zinc-200 shadow-xl z-40 flex flex-col">
-      <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-200">
+    <div className="fixed right-0 top-0 h-full w-96 bg-white dark:bg-zinc-900 border-l border-zinc-200 dark:border-zinc-700 shadow-xl z-40 flex flex-col">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-200 dark:border-zinc-700">
         <div>
-          <p className="font-semibold text-sm">AI Tutor</p>
-          <p className="text-xs text-zinc-400">{lessonName}</p>
+          <p className="font-semibold text-sm text-zinc-900 dark:text-zinc-100">AI Tutor</p>
+          <p className="text-xs text-zinc-400 dark:text-zinc-500">{lessonName}</p>
         </div>
-        <button onClick={onClose} className="text-zinc-400 hover:text-zinc-700 text-lg leading-none">×</button>
+        <button onClick={onClose} className="text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 text-lg leading-none">×</button>
       </div>
 
       <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
@@ -117,7 +117,7 @@ export default function TutorPanel({ lessonId, lessonName, onClose }: TutorPanel
             const isLimit = msg.content === '__at_limit__'
             return (
               <div key={i} className="flex justify-start">
-                <div className="max-w-[85%] rounded-xl px-3 py-3 text-sm leading-relaxed bg-amber-50 border border-amber-200 text-amber-900 space-y-2">
+                <div className="max-w-[85%] rounded-xl px-3 py-3 text-sm leading-relaxed bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-300 space-y-2">
                   <p className="font-medium">
                     {isNoKey ? 'No AI model configured' : isLimit ? 'Daily limit reached' : 'Tutor unavailable'}
                   </p>
@@ -129,7 +129,7 @@ export default function TutorPanel({ lessonId, lessonName, onClose }: TutorPanel
                       : 'Something went wrong. Try again in a moment.'}
                   </p>
                   {(isNoKey || isLimit) && (
-                    <Link href="/settings/api-key" className="block text-xs font-medium underline text-amber-800">
+                    <Link href="/settings/api-key" className="block text-xs font-medium underline text-amber-800 dark:text-amber-400">
                       Add your API key →
                     </Link>
                   )}
@@ -141,10 +141,10 @@ export default function TutorPanel({ lessonId, lessonName, onClose }: TutorPanel
             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
               <div className={`max-w-[85%] rounded-xl px-3 py-2 text-sm leading-relaxed ${
                 msg.role === 'user'
-                  ? 'bg-zinc-900 text-white'
-                  : 'bg-zinc-100 text-zinc-800'
+                  ? 'bg-zinc-900 dark:bg-zinc-700 text-white'
+                  : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200'
               }`}>
-                {msg.content || <span className="text-zinc-400">{THINKING_WORDS[thinkIdx]}</span>}
+                {msg.content || <span className="text-zinc-400 dark:text-zinc-500">{THINKING_WORDS[thinkIdx]}</span>}
               </div>
             </div>
           )
@@ -152,7 +152,7 @@ export default function TutorPanel({ lessonId, lessonName, onClose }: TutorPanel
         <div ref={bottomRef} />
       </div>
 
-      <div className="px-4 py-3 border-t border-zinc-200 flex gap-2">
+      <div className="px-4 py-3 border-t border-zinc-200 dark:border-zinc-700 flex gap-2">
         <Textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}

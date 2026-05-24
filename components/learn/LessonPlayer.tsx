@@ -8,6 +8,7 @@ import { LinkButton } from '@/components/ui/link-button'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import TutorPanel from '@/components/ai/TutorPanel'
+import AudioPlayer from '@/components/learn/AudioPlayer'
 import ExerciseBlock from '@/components/learn/ExerciseBlock'
 import { toast } from 'sonner'
 import type { Exercise } from '@prisma/client'
@@ -61,13 +62,17 @@ export default function LessonPlayer({ lesson, prev, next }: LessonPlayerProps) 
     <div className="flex gap-8 relative">
       <div className="flex-1 min-w-0">
         <div className="mb-6">
-          <Link href={basePath} className="text-xs text-zinc-400 hover:text-zinc-600 uppercase tracking-wide">
+          <Link href={basePath} className="text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 uppercase tracking-wide">
             ← {lesson.courseName}
           </Link>
           <div className="flex items-center gap-3 mt-2">
             <h1 className="text-2xl font-bold">{lesson.name}</h1>
             {completed && <Badge>Complete</Badge>}
           </div>
+        </div>
+
+        <div className="mb-4">
+          <AudioPlayer text={lesson.rawContent} />
         </div>
 
         <article className="lesson-content mb-8">
@@ -82,7 +87,7 @@ export default function LessonPlayer({ lesson, prev, next }: LessonPlayerProps) 
               <h2 className="text-lg font-semibold">Practice</h2>
               {!completed && (
                 <span className="text-xs text-zinc-500">
-                  {passCount}/{lesson.exercises.length} correct — need {requiredToPass} to complete
+                  <span className="text-zinc-500 dark:text-zinc-400">{passCount}/{lesson.exercises.length} correct — need {requiredToPass} to complete</span>
                 </span>
               )}
             </div>
