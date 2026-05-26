@@ -60,7 +60,7 @@ export default function LandingPage() {
             { n: '13', label: 'Subjects' },
             { n: '83', label: 'Courses' },
             { n: '642', label: 'Lessons' },
-            { n: '∞', label: 'Cost to you' },
+            { n: 'Free ∞', label: 'Cost to you' },
           ].map(({ n, label }) => (
             <div key={label}>
               <p className="text-3xl font-bold text-zinc-900">{n}</p>
