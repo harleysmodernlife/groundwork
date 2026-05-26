@@ -24,10 +24,11 @@ export default function LandingPage() {
         </p>
         <div className="flex gap-4">
           <LinkButton href="/signup" size="lg">Start learning free</LinkButton>
-          <LinkButton href="https://github.com/harleysmodernlife/groundwork" size="lg" variant="outline" target="_blank" rel="noopener noreferrer">
-            View on GitHub
+          <LinkButton href="/learn" size="lg" variant="outline">
+            Browse courses →
           </LinkButton>
         </div>
+        <p className="text-sm text-zinc-400 mt-4">No account required to browse.</p>
       </section>
 
       <section className="bg-zinc-50 border-t border-zinc-200 px-6 py-24">
