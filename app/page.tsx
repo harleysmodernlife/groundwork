@@ -69,6 +69,8 @@ export default function LandingPage() {
           <a href="/login" className="underline hover:text-zinc-600">Log in</a>
           {' · '}
           <a href="/signup" className="underline hover:text-zinc-600">Sign up</a>
+          {' · '}
+          <a href="/employer/login" className="underline hover:text-zinc-600">Employers</a>
         </p>
       </footer>
     </main>

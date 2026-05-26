@@ -58,7 +58,11 @@ function LoginForm() {
         </Button>
       </form>
 
-      <p className="text-sm text-zinc-500 text-center mt-6">
+      <p className="text-sm text-zinc-500 text-center mt-4">
+        <Link href="/forgot-password" className="text-zinc-400 underline hover:text-zinc-700">Forgot your password?</Link>
+      </p>
+
+      <p className="text-sm text-zinc-500 text-center mt-4">
         Don&apos;t have an account?{' '}
         <Link href="/signup" className="font-medium text-zinc-900 underline">Sign up free</Link>
       </p>

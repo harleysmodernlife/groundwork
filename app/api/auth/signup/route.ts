@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import bcrypt from 'bcryptjs'
 import { db } from '@/lib/db'
+import { sendWelcomeEmail } from '@/lib/email'
 
 export async function POST(req: Request) {
   const { name, email: rawEmail, password } = await req.json()
@@ -24,6 +25,12 @@ export async function POST(req: Request) {
   await db.user.create({
     data: { name, email, password: hashed },
   })
+
+  try {
+    await sendWelcomeEmail(email, name)
+  } catch (err) {
+    console.error('Failed to send welcome email:', err)
+  }
 
   return NextResponse.json({ success: true }, { status: 201 })
 }

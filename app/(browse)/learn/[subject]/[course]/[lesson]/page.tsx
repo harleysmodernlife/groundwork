@@ -1,6 +1,6 @@
 import { db } from '@/lib/db'
 import { auth } from '@/lib/auth'
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import { readFileSync, existsSync } from 'fs'
 import { join } from 'path'
 import LessonPlayer from '@/components/learn/LessonPlayer'
@@ -12,7 +12,12 @@ export default async function LessonPage({
 }) {
   const { subject: subjectSlug, course: courseSlug, lesson: lessonSlug } = await params
   const session = await auth()
-  const userId = session!.user!.id!
+
+  if (!session?.user?.id) {
+    redirect(`/login?next=/learn/${subjectSlug}/${courseSlug}/${lessonSlug}`)
+  }
+
+  const userId = session.user.id
 
   const lesson = await db.lesson.findFirst({
     where: {
@@ -48,7 +53,6 @@ export default async function LessonPage({
     where: { userId_lessonId: { userId, lessonId: lesson.id } },
   }))
 
-  // Build flat lesson list for prev/next navigation
   const allLessons = lesson.module.course.modules.flatMap((m) =>
     m.lessons.map((l) => ({ ...l, moduleSlug: m.slug }))
   )

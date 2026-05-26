@@ -4,11 +4,12 @@ import { notFound } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { LinkButton } from '@/components/ui/link-button'
+import Link from 'next/link'
 
 export default async function SubjectPage({ params }: { params: Promise<{ subject: string }> }) {
   const { subject: subjectSlug } = await params
   const session = await auth()
-  const userId = session!.user!.id!
+  const userId = session?.user?.id ?? null
 
   const subject = await db.subject.findUnique({
     where: { slug: subjectSlug, publishedAt: { not: null } },
@@ -22,19 +23,24 @@ export default async function SubjectPage({ params }: { params: Promise<{ subjec
 
   if (!subject) notFound()
 
-  const enrollments = await db.enrollment.findMany({
-    where: { userId, courseId: { in: subject.courses.map((c) => c.id) } },
-    select: { courseId: true, completedAt: true },
-  })
-  const enrolledMap = new Map(enrollments.map((e) => [e.courseId, e]))
+  let enrolledMap = new Map<string, { completedAt: Date | null }>()
+  if (userId) {
+    const enrollments = await db.enrollment.findMany({
+      where: { userId, courseId: { in: subject.courses.map((c) => c.id) } },
+      select: { courseId: true, completedAt: true },
+    })
+    enrolledMap = new Map(enrollments.map((e) => [e.courseId, e]))
+  }
 
   return (
     <div className="space-y-8">
       <div className="flex items-center gap-3">
         <span className="text-4xl">{subject.icon}</span>
         <div>
-          <p className="text-xs text-zinc-400 uppercase tracking-wide">Subject</p>
-          <h1 className="text-2xl font-bold">{subject.name}</h1>
+          <Link href="/learn" className="text-xs text-zinc-400 hover:text-zinc-600 uppercase tracking-wide">
+            ← All subjects
+          </Link>
+          <h1 className="text-2xl font-bold mt-1">{subject.name}</h1>
           <p className="text-zinc-500 mt-0.5">{subject.description}</p>
         </div>
       </div>

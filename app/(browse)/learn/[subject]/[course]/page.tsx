@@ -14,7 +14,7 @@ export default async function CoursePage({
 }) {
   const { subject: subjectSlug, course: courseSlug } = await params
   const session = await auth()
-  const userId = session!.user!.id!
+  const userId = session?.user?.id ?? null
 
   const course = await db.course.findUnique({
     where: { slug: courseSlug, publishedAt: { not: null } },
@@ -30,20 +30,27 @@ export default async function CoursePage({
 
   if (!course) notFound()
 
-  await db.enrollment.upsert({
-    where: { userId_courseId: { userId, courseId: course.id } },
-    create: { userId, courseId: course.id },
-    update: {},
-  })
+  // Auto-enroll only if logged in
+  if (userId) {
+    await db.enrollment.upsert({
+      where: { userId_courseId: { userId, courseId: course.id } },
+      create: { userId, courseId: course.id },
+      update: {},
+    })
+  }
 
   const allLessonIds = course.modules.flatMap((m) => m.lessons.map((l) => l.id))
-  const completed = await db.lessonProgress.findMany({
-    where: { userId, lessonId: { in: allLessonIds } },
-    select: { lessonId: true },
-  })
-  const completedSet = new Set(completed.map((p) => p.lessonId))
-  const pct = allLessonIds.length ? Math.round((completedSet.size / allLessonIds.length) * 100) : 0
 
+  let completedSet = new Set<string>()
+  if (userId) {
+    const completed = await db.lessonProgress.findMany({
+      where: { userId, lessonId: { in: allLessonIds } },
+      select: { lessonId: true },
+    })
+    completedSet = new Set(completed.map((p) => p.lessonId))
+  }
+
+  const pct = allLessonIds.length ? Math.round((completedSet.size / allLessonIds.length) * 100) : 0
   const allLessons = course.modules.flatMap((m) => m.lessons)
   const nextLesson = allLessons.find((l) => !completedSet.has(l.id))
 
@@ -57,19 +64,32 @@ export default async function CoursePage({
         <p className="text-zinc-500 mt-1">{course.description}</p>
       </div>
 
-      <div className="space-y-1.5">
-        <div className="flex items-center justify-between text-sm">
-          <span className="text-zinc-500">{completedSet.size}/{allLessonIds.length} lessons complete</span>
-          <span className="font-medium">{pct}%</span>
+      {userId && (
+        <div className="space-y-1.5">
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-zinc-500">{completedSet.size}/{allLessonIds.length} lessons complete</span>
+            <span className="font-medium">{pct}%</span>
+          </div>
+          <Progress value={pct} className="h-2" />
         </div>
-        <Progress value={pct} className="h-2" />
-      </div>
+      )}
 
-      {nextLesson && (
+      {userId && nextLesson ? (
         <LinkButton href={`/learn/${subjectSlug}/${courseSlug}/${nextLesson.slug}`} size="lg">
           {completedSet.size === 0 ? 'Start first lesson' : 'Continue where you left off'}
         </LinkButton>
-      )}
+      ) : !userId ? (
+        <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-6">
+          <p className="font-medium mb-1">Ready to learn?</p>
+          <p className="text-zinc-500 text-sm mb-4">
+            Create a free account to start this course, track your progress, and earn a certificate.
+          </p>
+          <div className="flex gap-3">
+            <LinkButton href="/signup">Sign up free</LinkButton>
+            <LinkButton href="/login" variant="outline">Log in</LinkButton>
+          </div>
+        </div>
+      ) : null}
 
       <Separator />
 
@@ -79,21 +99,28 @@ export default async function CoursePage({
             <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wide mb-3">{module.name}</h3>
             <div className="space-y-1">
               {module.lessons.map((lesson) => (
-                <Link
-                  key={lesson.id}
-                  href={`/learn/${subjectSlug}/${courseSlug}/${lesson.slug}`}
-                  className="flex items-center justify-between px-4 py-3 rounded-lg hover:bg-zinc-100 transition-colors"
-                >
-                  <span className="text-sm">{lesson.name}</span>
-                  {completedSet.has(lesson.id) && <Badge variant="secondary" className="text-xs">Done</Badge>}
-                </Link>
+                userId ? (
+                  <Link
+                    key={lesson.id}
+                    href={`/learn/${subjectSlug}/${courseSlug}/${lesson.slug}`}
+                    className="flex items-center justify-between px-4 py-3 rounded-lg hover:bg-zinc-100 transition-colors"
+                  >
+                    <span className="text-sm">{lesson.name}</span>
+                    {completedSet.has(lesson.id) && <Badge variant="secondary" className="text-xs">Done</Badge>}
+                  </Link>
+                ) : (
+                  <div key={lesson.id} className="flex items-center justify-between px-4 py-3 rounded-lg text-zinc-500">
+                    <span className="text-sm">{lesson.name}</span>
+                    <span className="text-xs text-zinc-400">Free with account</span>
+                  </div>
+                )
               ))}
             </div>
           </div>
         ))}
       </div>
 
-      {course.assessment && pct === 100 && (
+      {userId && course.assessment && pct === 100 && (
         <div className="bg-zinc-900 text-white rounded-xl p-6">
           <h3 className="font-semibold mb-1">Ready for the final assessment?</h3>
           <p className="text-zinc-400 text-sm mb-4">
