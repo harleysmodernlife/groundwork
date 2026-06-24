@@ -2,9 +2,9 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
   return (
     <div className="min-h-screen grid md:grid-cols-2">
       {/* Left — form */}
-      <div className="flex flex-col justify-center px-8 py-12 bg-white">
+      <div className="flex flex-col justify-center px-8 py-12 bg-white dark:bg-zinc-950">
         <div className="max-w-sm w-full mx-auto">
-          <a href="/" className="text-xl font-bold tracking-tight block mb-10">
+          <a href="/" className="text-xl font-bold tracking-tight block mb-10 text-zinc-900 dark:text-zinc-100">
             Groundwork
           </a>
           {children}

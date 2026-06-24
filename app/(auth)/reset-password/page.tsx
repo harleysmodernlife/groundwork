@@ -57,8 +57,8 @@ function ResetForm() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-2">Set a new password</h1>
-      <p className="text-zinc-500 mb-8 text-sm">Choose something strong.</p>
+      <h1 className="text-2xl font-bold mb-2 text-zinc-900 dark:text-zinc-100">Set a new password</h1>
+      <p className="text-zinc-600 dark:text-zinc-400 mb-8 text-sm">Choose something strong.</p>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <div className="flex flex-col gap-1.5">

@@ -43,8 +43,8 @@ export default function SignupPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-2">Create your account</h1>
-      <p className="text-zinc-500 mb-8 text-sm">
+      <h1 className="text-2xl font-bold mb-2 text-zinc-900 dark:text-zinc-100">Create your account</h1>
+      <p className="text-zinc-600 dark:text-zinc-400 mb-8 text-sm">
         Free forever. No credit card required.
       </p>
 
@@ -68,7 +68,7 @@ export default function SignupPage() {
 
       <p className="text-sm text-zinc-500 text-center mt-6">
         Already have an account?{' '}
-        <Link href="/login" className="font-medium text-zinc-900 underline">Log in</Link>
+        <Link href="/login" className="font-medium text-zinc-900 dark:text-zinc-100 underline">Log in</Link>
       </p>
     </div>
   )

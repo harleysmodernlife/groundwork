@@ -39,8 +39,8 @@ function LoginForm() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-2">Welcome back</h1>
-      <p className="text-zinc-500 mb-8 text-sm">
+      <h1 className="text-2xl font-bold mb-2 text-zinc-900 dark:text-zinc-100">Welcome back</h1>
+      <p className="text-zinc-600 dark:text-zinc-400 mb-8 text-sm">
         {params.get('signup') ? 'Account created. Log in to get started.' : 'Log in to continue learning.'}
       </p>
 
@@ -58,13 +58,13 @@ function LoginForm() {
         </Button>
       </form>
 
-      <p className="text-sm text-zinc-500 text-center mt-4">
-        <Link href="/forgot-password" className="text-zinc-400 underline hover:text-zinc-700">Forgot your password?</Link>
+      <p className="text-sm text-zinc-500 dark:text-zinc-400 text-center mt-4">
+        <Link href="/forgot-password" className="underline hover:text-zinc-900 dark:hover:text-zinc-100">Forgot your password?</Link>
       </p>
 
-      <p className="text-sm text-zinc-500 text-center mt-4">
+      <p className="text-sm text-zinc-500 dark:text-zinc-400 text-center mt-4">
         Don&apos;t have an account?{' '}
-        <Link href="/signup" className="font-medium text-zinc-900 underline">Sign up free</Link>
+        <Link href="/signup" className="font-medium text-zinc-900 dark:text-zinc-100 underline">Sign up free</Link>
       </p>
     </div>
   )
