@@ -56,7 +56,7 @@ export default async function AdminPage() {
           { label: 'Certificates Issued', value: totalCerts },
           { label: 'Lessons with Content', value: `${withContent}/${allLessons.length}` },
         ].map((stat) => (
-          <div key={stat.label} className="bg-white border border-zinc-200 rounded-xl p-5">
+          <div key={stat.label} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-xl p-5">
             <p className="text-2xl font-bold">{stat.value}</p>
             <p className="text-sm text-zinc-500 mt-1">{stat.label}</p>
           </div>
@@ -73,8 +73,8 @@ export default async function AdminPage() {
           const pct = lessons.length ? Math.round((counts['has-content'] / lessons.length) * 100) : 0
 
           return (
-            <div key={subject.id} className="bg-white border border-zinc-200 rounded-xl overflow-hidden">
-              <div className="px-6 py-4 border-b border-zinc-100 flex items-center justify-between">
+            <div key={subject.id} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-xl overflow-hidden">
+              <div className="px-6 py-4 border-b border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">{subject.icon}</span>
                   <div>
@@ -88,11 +88,11 @@ export default async function AdminPage() {
                 </div>
               </div>
 
-              <div className="w-full h-1.5 bg-zinc-100">
+              <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-800">
                 <div className="h-full bg-zinc-900 transition-all" style={{ width: `${pct}%` }} />
               </div>
 
-              <div className="divide-y divide-zinc-100">
+              <div className="divide-y divide-zinc-100 dark:divide-zinc-800">
                 {subject.courses.map((course) => {
                   const courseLessons = course.modules.flatMap((m) => m.lessons)
                   const courseContent = courseLessons.filter((l) => contentStatus(l.contentPath) === 'has-content').length
@@ -109,10 +109,10 @@ export default async function AdminPage() {
                         <span className="text-xs text-zinc-500">{courseContent}/{courseLessons.length} lessons</span>
                         <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
                           courseContent === courseLessons.length && courseLessons.length > 0
-                            ? 'bg-green-100 text-green-700'
+                            ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400'
                             : courseContent > 0
-                            ? 'bg-amber-100 text-amber-700'
-                            : 'bg-zinc-100 text-zinc-500'
+                            ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400'
+                            : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400'
                         }`}>
                           {courseContent === courseLessons.length && courseLessons.length > 0
                             ? 'complete'

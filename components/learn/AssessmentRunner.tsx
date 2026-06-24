@@ -64,7 +64,7 @@ export default function AssessmentRunner({ assessment, alreadyPassed }: Assessme
       <div className="max-w-lg mx-auto text-center space-y-4 py-16">
         <p className="text-4xl">🎓</p>
         <h1 className="text-2xl font-bold">You already passed this assessment!</h1>
-        <p className="text-zinc-500">Your certificate has been issued.</p>
+        <p className="text-zinc-500 dark:text-zinc-400">Your certificate has been issued.</p>
         <LinkButton href="/dashboard">Go to dashboard</LinkButton>
       </div>
     )
@@ -75,18 +75,18 @@ export default function AssessmentRunner({ assessment, alreadyPassed }: Assessme
       <div className="max-w-lg mx-auto text-center space-y-6 py-16">
         <p className="text-5xl">{result.passed ? '🎓' : '📚'}</p>
         <h1 className="text-2xl font-bold">{result.passed ? 'You passed!' : 'Not quite yet'}</h1>
-        <p className="text-zinc-500">
+        <p className="text-zinc-500 dark:text-zinc-400">
           You scored <strong>{result.score}%</strong>. Passing is {assessment.passingScore}%.
         </p>
         {result.passed && result.verificationCode && (
           <div className="space-y-3">
-            <p className="text-zinc-600">Your free certificate has been issued.</p>
+            <p className="text-zinc-600 dark:text-zinc-400">Your free certificate has been issued.</p>
             <LinkButton href={`/certificates/verify/${result.verificationCode}`}>View certificate</LinkButton>
           </div>
         )}
         {!result.passed && (
           <div className="space-y-3">
-            <p className="text-zinc-500">Review the course material and try again whenever you&apos;re ready.</p>
+            <p className="text-zinc-500 dark:text-zinc-400">Review the course material and try again whenever you&apos;re ready.</p>
             <LinkButton href={`/learn/${assessment.subjectSlug}/${assessment.courseSlug}`} variant="outline">
               Back to course
             </LinkButton>
@@ -104,7 +104,7 @@ export default function AssessmentRunner({ assessment, alreadyPassed }: Assessme
       <div className="flex items-start justify-between">
         <div>
           <h1 className="text-2xl font-bold">{assessment.title}</h1>
-          <p className="text-zinc-500 text-sm mt-1">Pass with {assessment.passingScore}% to earn your free certificate</p>
+          <p className="text-zinc-500 dark:text-zinc-400 text-sm mt-1">Pass with {assessment.passingScore}% to earn your free certificate</p>
         </div>
         {timeLeft !== null && (
           <Badge variant={timeLeft < 120 ? 'destructive' : 'secondary'}>
@@ -114,7 +114,7 @@ export default function AssessmentRunner({ assessment, alreadyPassed }: Assessme
       </div>
 
       <Progress value={(answered / total) * 100} className="h-1.5" />
-      <p className="text-xs text-zinc-400">{answered}/{total} answered</p>
+      <p className="text-xs text-zinc-400 dark:text-zinc-500">{answered}/{total} answered</p>
 
       <div className="space-y-8">
         {assessment.questions.map((q, i) => {
@@ -132,7 +132,7 @@ export default function AssessmentRunner({ assessment, alreadyPassed }: Assessme
                       key={opt}
                       onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: opt }))}
                       className={`w-full text-left px-4 py-2.5 rounded-lg border text-sm transition-colors ${
-                        answers[q.id] === opt ? 'border-zinc-900 bg-zinc-900 text-white' : 'border-zinc-200 hover:border-zinc-400'
+                        answers[q.id] === opt ? 'border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900' : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-400 dark:hover:border-zinc-500'
                       }`}
                     >
                       {opt}

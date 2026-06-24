@@ -19,8 +19,8 @@ export default async function VerifyPage({ params }: { params: Promise<{ code: s
   const badge = cert.badgeJson as Record<string, unknown>
 
   return (
-    <div className="min-h-screen bg-zinc-50 flex items-center justify-center p-6">
-      <div className="max-w-lg w-full bg-white rounded-2xl border border-zinc-200 shadow-sm overflow-hidden">
+    <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center p-6">
+      <div className="max-w-lg w-full bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-700 shadow-sm overflow-hidden">
         <div className="bg-zinc-900 text-white px-8 py-10 text-center">
           <p className="text-4xl mb-4">🎓</p>
           <p className="text-xs uppercase tracking-widest text-zinc-400 mb-2">Certificate of Completion</p>
@@ -43,13 +43,13 @@ export default async function VerifyPage({ params }: { params: Promise<{ code: s
           </div>
           <div className="flex justify-between text-sm">
             <span className="text-zinc-500">Verification code</span>
-            <code className="text-xs bg-zinc-100 px-2 py-0.5 rounded">{code}</code>
+            <code className="text-xs bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded">{code}</code>
           </div>
 
           <Separator />
 
           <div className="flex items-center justify-between">
-            <Badge className="bg-green-100 text-green-800 border-green-200">Verified authentic</Badge>
+            <Badge className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 border-green-200 dark:border-green-800">Verified authentic</Badge>
             <p className="text-xs text-zinc-400">Groundwork · Free education for everyone</p>
           </div>
         </div>

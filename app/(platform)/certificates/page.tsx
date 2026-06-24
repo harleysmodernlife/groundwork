@@ -21,16 +21,16 @@ export default async function CertificatesPage() {
       </div>
 
       {certs.length === 0 ? (
-        <div className="text-center py-16 border border-zinc-200 rounded-xl bg-white">
+        <div className="text-center py-16 border border-zinc-200 dark:border-zinc-700 rounded-xl bg-white dark:bg-zinc-900">
           <p className="text-3xl mb-4">🎓</p>
-          <p className="font-medium text-zinc-700">No certificates yet</p>
+          <p className="font-medium text-zinc-700 dark:text-zinc-300">No certificates yet</p>
           <p className="text-sm text-zinc-500 mt-1 mb-6">Complete a course assessment to earn your first one.</p>
           <LinkButton href="/learn">Browse courses</LinkButton>
         </div>
       ) : (
         <div className="space-y-4">
           {certs.map((cert) => (
-            <div key={cert.id} className="bg-white border border-zinc-200 rounded-xl px-6 py-5 flex items-center justify-between">
+            <div key={cert.id} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-xl px-6 py-5 flex items-center justify-between">
               <div>
                 <p className="font-semibold">{cert.course.name}</p>
                 <p className="text-sm text-zinc-500">{cert.course.subject.name}</p>

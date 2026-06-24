@@ -52,7 +52,7 @@ export default function ExerciseBlock({ exercise, index, onResult }: ExerciseBlo
   }
 
   return (
-    <div className="border border-zinc-200 rounded-xl p-5 space-y-4">
+    <div className="border border-zinc-200 dark:border-zinc-700 rounded-xl p-5 space-y-4">
       <div className="flex items-start gap-3">
         <Badge variant="outline" className="shrink-0 mt-0.5">Q{index + 1}</Badge>
         <p className="text-sm font-medium leading-relaxed">{exercise.question}</p>
@@ -72,10 +72,10 @@ export default function ExerciseBlock({ exercise, index, onResult }: ExerciseBlo
                 disabled={!!feedback}
                 className={`w-full text-left px-4 py-2.5 rounded-lg border text-sm transition-colors ${
                   feedback && isCorrect
-                    ? 'border-green-500 bg-green-50 text-green-800'
+                    ? 'border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300'
                     : feedback && isSelected && !feedback.correct
-                    ? 'border-red-300 bg-red-50 text-red-800'
-                    : 'border-zinc-200 hover:border-zinc-400 hover:bg-zinc-50'
+                    ? 'border-red-300 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300'
+                    : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-400 dark:hover:border-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800'
                 }`}
               >
                 {opt}
@@ -105,7 +105,7 @@ export default function ExerciseBlock({ exercise, index, onResult }: ExerciseBlo
 
       {feedback && (
         <div className={`pl-8 p-3 rounded-lg text-sm ${
-          feedback.correct ? 'bg-green-50 text-green-800' : 'bg-amber-50 text-amber-800'
+          feedback.correct ? 'bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300' : 'bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300'
         }`}>
           <span className="font-medium">{feedback.correct ? 'Correct.' : 'Not quite.'}</span>{' '}
           {feedback.explanation}

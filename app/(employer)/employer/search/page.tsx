@@ -66,7 +66,7 @@ export default async function GraduateSearchPage({
         <select
           name="course"
           defaultValue={course ?? ''}
-          className="border border-zinc-200 rounded-lg px-3 py-1.5 text-sm bg-white"
+          className="border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-1.5 text-sm bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100"
         >
           <option value="">All certifications</option>
           {courses.map((c) => (
@@ -77,7 +77,7 @@ export default async function GraduateSearchPage({
           Search
         </button>
         {(q || course) && (
-          <a href="/employer/search" className="px-4 py-1.5 border border-zinc-200 rounded-lg text-sm hover:bg-zinc-50 transition-colors">
+          <a href="/employer/search" className="px-4 py-1.5 border border-zinc-200 dark:border-zinc-700 rounded-lg text-sm hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors">
             Clear
           </a>
         )}

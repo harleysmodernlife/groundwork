@@ -30,11 +30,11 @@ function LoginForm() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-zinc-50 px-6">
-      <div className="max-w-sm w-full bg-white rounded-2xl border border-zinc-200 p-8 shadow-sm">
-        <Link href="/" className="text-lg font-bold block mb-1">Groundwork</Link>
+    <div className="min-h-screen flex items-center justify-center bg-zinc-50 dark:bg-zinc-950 px-6">
+      <div className="max-w-sm w-full bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-700 p-8 shadow-sm">
+        <Link href="/" className="text-lg font-bold block mb-1 text-zinc-900 dark:text-zinc-100">Groundwork</Link>
         <p className="text-xs text-zinc-400 uppercase tracking-wide mb-8">Employer Portal</p>
-        <h1 className="text-xl font-bold mb-6">
+        <h1 className="text-xl font-bold mb-6 text-zinc-900 dark:text-zinc-100">
           {params.get('signup') ? 'Account created. Log in.' : 'Welcome back'}
         </h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">

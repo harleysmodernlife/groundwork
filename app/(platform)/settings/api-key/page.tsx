@@ -176,8 +176,8 @@ export default function ApiKeyPage() {
               onClick={() => setProvider(p.value)}
               className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors ${
                 provider === p.value
-                  ? 'border-zinc-900 bg-zinc-900 text-white'
-                  : 'border-zinc-200 hover:border-zinc-400'
+                  ? 'border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900'
+                  : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-400 dark:hover:border-zinc-500'
               }`}
             >
               <div className="flex items-center gap-2">
@@ -185,8 +185,8 @@ export default function ApiKeyPage() {
                 {p.badge && (
                   <span className={`text-xs px-1.5 py-0.5 rounded font-medium ${
                     provider === p.value
-                      ? 'bg-zinc-700 text-zinc-200'
-                      : p.badge === 'Paid' ? 'bg-zinc-100 text-zinc-500' : 'bg-green-100 text-green-700'
+                      ? 'bg-zinc-700 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900'
+                      : p.badge === 'Paid' ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400' : 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400'
                   }`}>
                     {p.badge}
                   </span>
@@ -201,9 +201,9 @@ export default function ApiKeyPage() {
       </div>
 
       {selected.instructions && (
-        <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-5 space-y-3 text-sm">
+        <div className="bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-xl p-5 space-y-3 text-sm">
           <p className="font-semibold">{selected.instructions.text}</p>
-          <ol className="list-decimal list-inside space-y-1.5 text-zinc-600">
+          <ol className="list-decimal list-inside space-y-1.5 text-zinc-600 dark:text-zinc-400">
             {selected.instructions.steps.map((step, i) => (
               <li key={i}>{step}</li>
             ))}

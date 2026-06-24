@@ -50,7 +50,7 @@ export default function ProfileSettingsPage() {
           <Textarea id="bio" value={profile.bio} onChange={(e) => setProfile((p) => ({ ...p, bio: e.target.value }))} rows={3} placeholder="A brief intro — skills, goals, background..." />
         </div>
 
-        <div className="border border-zinc-200 rounded-xl p-5 space-y-3">
+        <div className="border border-zinc-200 dark:border-zinc-700 rounded-xl p-5 space-y-3">
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="font-medium text-sm">Appear in employer search</p>
@@ -61,9 +61,9 @@ export default function ProfileSettingsPage() {
             </div>
             <button
               onClick={() => setProfile((p) => ({ ...p, isDiscoverable: !p.isDiscoverable }))}
-              className={`relative inline-flex h-6 w-11 shrink-0 rounded-full transition-colors ${profile.isDiscoverable ? 'bg-zinc-900' : 'bg-zinc-200'}`}
+              className={`relative inline-flex h-6 w-11 shrink-0 rounded-full transition-colors ${profile.isDiscoverable ? 'bg-zinc-900 dark:bg-zinc-100' : 'bg-zinc-200 dark:bg-zinc-600'}`}
             >
-              <span className={`inline-block h-5 w-5 mt-0.5 rounded-full bg-white shadow transition-transform ${profile.isDiscoverable ? 'translate-x-5.5' : 'translate-x-0.5'}`} />
+              <span className={`inline-block h-5 w-5 mt-0.5 rounded-full bg-white dark:bg-zinc-900 shadow transition-transform ${profile.isDiscoverable ? 'translate-x-5.5' : 'translate-x-0.5'}`} />
             </button>
           </div>
           {profile.isDiscoverable && (

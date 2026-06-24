@@ -35,12 +35,12 @@ export default function EmployerSignupPage() {
 
   return (
     <div className="min-h-screen grid md:grid-cols-2">
-      <div className="flex flex-col justify-center px-8 py-12 bg-white">
+      <div className="flex flex-col justify-center px-8 py-12 bg-white dark:bg-zinc-950">
         <div className="max-w-sm w-full mx-auto">
-          <Link href="/" className="text-xl font-bold tracking-tight block mb-2">Groundwork</Link>
+          <Link href="/" className="text-xl font-bold tracking-tight block mb-2 text-zinc-900 dark:text-zinc-100">Groundwork</Link>
           <p className="text-xs text-zinc-400 mb-10 uppercase tracking-wide">Employer Portal</p>
-          <h1 className="text-2xl font-bold mb-2">Create employer account</h1>
-          <p className="text-zinc-500 text-sm mb-8">Access verified graduates. Post jobs for free.</p>
+          <h1 className="text-2xl font-bold mb-2 text-zinc-900 dark:text-zinc-100">Create employer account</h1>
+          <p className="text-zinc-500 dark:text-zinc-400 text-sm mb-8">Access verified graduates. Post jobs for free.</p>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div className="flex flex-col gap-1.5">
               <Label htmlFor="name">Your name</Label>
